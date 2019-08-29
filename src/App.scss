@@ -1,0 +1,106 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+$navBackground: rgba(246, 246, 246, 0);
+$textLight: rgb(54, 54, 54);
+$textDark: rgb(0, 0, 0);
+$bgAbout: rgb(238, 238, 238);
+$bgProjects: radial-gradient(
+  circle,
+  rgba(54, 53, 53, 1) 0%,
+  rgba(27, 27, 27, 1) 100%
+);
+$bgContact: rgb(45, 52, 54);
+$iconSizeLg: 6rem;
+$iconSizeSm: 4rem;
+$accentBlue: rgb(53, 35, 170);
+
+.profile-picture {
+  border-radius: 50%;
+  width: 300px;
+}
+
+.about-me {
+  i.fas,
+  i.fab,
+  i {
+    width: 200px;
+    height: 200px;
+    display: block;
+  }
+}
+
+.html {
+  background: center / contain no-repeat url('./assets/html-5.svg');
+}
+
+.css {
+  background: center / contain no-repeat url('./assets/css-3.svg');
+}
+
+.react {
+  background: center / contain no-repeat
+    url('https://cdn.svgporn.com/logos/react.svg');
+}
+
+.express {
+  background: center / contain no-repeat
+    url('https://cdn.svgporn.com/logos/express.svg');
+}
+
+.javascript {
+  background: center / contain no-repeat
+    url('https://cdn.svgporn.com/logos/javascript.svg');
+  border-radius: 10px;
+}
+
+.npm {
+  background: center / contain no-repeat
+    url('https://cdn.svgporn.com/logos/npm.svg');
+}
+
+.postgresql {
+  background: center / contain no-repeat
+    url('https://cdn.svgporn.com/logos/postgresql.svg');
+}
+
+.ruby {
+  background: center / contain no-repeat url('./assets/ruby.svg');
+}
+
+.aws {
+  background: center / contain no-repeat url('./assets/aws.svg');
+}
+
+.git {
+  background: center / contain no-repeat
+    url('https://cdn.svgporn.com/logos/git-icon.svg');
+}
+
+.github {
+  background: center / contain no-repeat
+    url('https://cdn.svgporn.com/logos/github.svg');
+}
+
+.slack {
+  background: center / contain no-repeat
+    url('https://cdn.svgporn.com/logos/slack-icon.svg');
+}
+
+.jquery {
+  background: center / contain no-repeat url('./assets/jquery.svg');
+}
+
+.nodejs {
+  background: center / contain no-repeat
+    url('https://cdn.svgporn.com/logos/nodejs.svg');
+}
+
+.project-pic {
+  max-width: 500px;
+}

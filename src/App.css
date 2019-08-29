@@ -1,1 +1,83 @@
-/* No CSS *//*# sourceMappingURL=App.css.map */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.profile-picture {
+  border-radius: 50%;
+  width: 300px;
+}
+
+.about-me i.fas,
+.about-me i.fab,
+.about-me i {
+  width: 200px;
+  height: 200px;
+  display: block;
+}
+
+.html {
+  background: center/contain no-repeat url("./assets/html-5.svg");
+}
+
+.css {
+  background: center/contain no-repeat url("./assets/css-3.svg");
+}
+
+.react {
+  background: center/contain no-repeat url("https://cdn.svgporn.com/logos/react.svg");
+}
+
+.express {
+  background: center/contain no-repeat url("https://cdn.svgporn.com/logos/express.svg");
+}
+
+.javascript {
+  background: center/contain no-repeat url("https://cdn.svgporn.com/logos/javascript.svg");
+  border-radius: 10px;
+}
+
+.npm {
+  background: center/contain no-repeat url("https://cdn.svgporn.com/logos/npm.svg");
+}
+
+.postgresql {
+  background: center/contain no-repeat url("https://cdn.svgporn.com/logos/postgresql.svg");
+}
+
+.ruby {
+  background: center/contain no-repeat url("./assets/ruby.svg");
+}
+
+.aws {
+  background: center/contain no-repeat url("./assets/aws.svg");
+}
+
+.git {
+  background: center/contain no-repeat url("https://cdn.svgporn.com/logos/git-icon.svg");
+}
+
+.github {
+  background: center/contain no-repeat url("https://cdn.svgporn.com/logos/github.svg");
+}
+
+.slack {
+  background: center/contain no-repeat url("https://cdn.svgporn.com/logos/slack-icon.svg");
+}
+
+.jquery {
+  background: center/contain no-repeat url("./assets/jquery.svg");
+}
+
+.nodejs {
+  background: center/contain no-repeat url("https://cdn.svgporn.com/logos/nodejs.svg");
+}
+
+.project-pic {
+  max-width: 500px;
+}
+/*# sourceMappingURL=App.css.map */
