@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,700,900');
+
 *,
 *::before,
 *::after {
@@ -20,18 +22,115 @@ $iconSizeLg: 6rem;
 $iconSizeSm: 4rem;
 $accentBlue: rgb(53, 35, 170);
 
+body {
+  font-family: 'Roboto', 'Helvetica Neue', Helvetica, sans-serif;
+  font-weight: 400;
+  background-color: #333333;
+  position: relative;
+  text-align: center;
+}
+
+.nav-header {
+  background: rgba(255, 255, 255, 0.9);
+  position: fixed;
+  top: 0;
+  width: 100%;
+
+  .nav-brand {
+    text-align: center;
+    padding: 0.5rem 1rem;
+  }
+  .nav-menu {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin-left: 1rem;
+  }
+}
+
+.nav-toggle {
+  cursor: pointer;
+  align-items: center;
+  display: flex;
+  height: 100%;
+  margin-left: 1em;
+  position: absolute;
+  top: 0;
+  left: 0;
+  span {
+    background: black;
+    border-radius: 3px;
+    cursor: pointer;
+    display: block;
+    height: 2px;
+    position: absolute;
+    width: 2rem;
+
+    &::before,
+    &::after {
+      content: '';
+      background: inherit;
+      border-radius: 3px;
+      cursor: pointer;
+      display: block;
+      height: 2px;
+      position: relative;
+      width: 2rem;
+    }
+
+    &::before {
+      bottom: 7px;
+    }
+
+    &::after {
+      top: 7px;
+    }
+  }
+}
+
+.hero {
+  height: calc(100vh);
+  background: center / cover no-repeat
+    url('https://images.pexels.com/photos/2120040/pexels-photo-2120040.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+  color: white;
+  font-weight: 100;
+  box-shadow: inset 1000px 100px rgba(0, 0, 0, 0.85);
+  font-size: 3.7rem;
+
+  h1 {
+    font-size: 3.7rem;
+    font-weight: 100;
+  }
+  p {
+    font-size: 2rem;
+  }
+}
+
+.hero-text-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+}
+
 .profile-picture {
+  margin: 1.5rem 0 2.5rem;
+  width: 200px;
   border-radius: 50%;
-  width: 300px;
+  border: 4px solid;
+  border-color: rgba(0, 0, 0, 0.45);
+  transition: border-color 200ms ease-in-out;
 }
 
 .about-me {
+  background: white;
   i.fas,
   i.fab,
   i {
-    width: 200px;
-    height: 200px;
+    width: $iconSizeSm;
+    height: $iconSizeSm;
     display: block;
+    margin: 0 auto;
   }
 }
 
@@ -102,5 +201,6 @@ $accentBlue: rgb(53, 35, 170);
 }
 
 .project-pic {
+  width: 100%;
   max-width: 500px;
 }

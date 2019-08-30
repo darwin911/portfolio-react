@@ -3,8 +3,7 @@ import React from 'react';
 const ListItem = ({ title, styles }) => {
   return (
     <li>
-      <i className={styles}></i>
-      <h4>{title}</h4>
+      <i className={styles} title={title} />
     </li>
   );
 };

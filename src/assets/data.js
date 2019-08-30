@@ -12,7 +12,7 @@ import netherpurge from '../assets/netherpurge.png';
 
 const data = {
   blurb:
-    'New York City based Full Stack Developer, with a background in Law, Human Rights, and experience in the Service and Hospitality industry. I am passionate about quality, efficiency and effective problem-solving. Anything I do, I do to the best of my abilities and circumstances. I am determined, detail-oriented, and excited to make the world and the web a better place.',
+    'New York City based Full Stack Developer, with a background in Law, Human Rights, and experience in the Service and Hospitality industry. I am passionate about quality, efficiency and effective problem-solving. I am determined, detail-oriented, and excited to make the world and the web a better place.',
   skills: [
     {
       title: 'HTML5',
@@ -26,10 +26,9 @@ const data = {
     { title: 'PostgreSQL', styles: 'postgresql' },
     { title: 'Git', styles: 'git' },
     { title: 'Github', styles: 'github' },
-    { title: 'Slack', styles: 'slack' },
     { title: 'npm', styles: 'npm' },
     { title: 'Ruby', styles: 'ruby' },
-    { title: 'AWS', styles: 'aws' },
+    { title: 'Amazon Web Services (AWS)', styles: 'aws' },
     { title: 'Node.js', styles: 'nodejs' }
   ],
   projects: [

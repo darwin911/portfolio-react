@@ -1,7 +1,6 @@
 import React from 'react';
 
 const Project = ({ project }) => {
-  console.log(project);
   return (
     <article>
       <img className='project-pic' src={project.img} alt={project.title} />
