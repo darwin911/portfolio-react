@@ -4,14 +4,14 @@ import data from '../assets/data.js';
 
 import ListItem from './ListItem';
 
-const AboutMe = () => {
+const AboutMe: React.FC = () => {
   return (
-    <section className='about-me'>
+    <section className="about-me">
       <h2>About Me</h2>
       <img
         src={profilePicture}
-        alt='Darwin Smith'
-        className='profile-picture'
+        alt="Darwin Smith"
+        className="profile-picture"
       />
 
       <p>{data.blurb}</p>
