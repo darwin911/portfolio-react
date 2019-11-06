@@ -1,10 +1,10 @@
 import React from 'react';
 import data from '../assets/data';
-import Project from './Project';
+import { Project } from './Project';
 
-const Projects = () => {
+export const Projects = () => {
   return (
-    <section className='projects'>
+    <section className="projects">
       <h2>Projects</h2>
       {data.projects.map(project => (
         <Project project={project} key={project.title} />
@@ -12,5 +12,3 @@ const Projects = () => {
     </section>
   );
 };
-
-export default Projects;

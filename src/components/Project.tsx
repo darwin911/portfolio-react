@@ -1,25 +1,36 @@
 import React from 'react';
 
-const Project = ({ project }) => {
+interface Project {
+  img: string;
+  title: string;
+  link: string;
+  description: string;
+  github?: string | undefined;
+}
+
+interface Props {
+  project: Project;
+}
+
+export const Project: React.FC<Props> = ({ project }) => {
   return (
     <article>
-      <img className='project-pic' src={project.img} alt={project.title} />
-      <div className='project-links'>
+      <img className="project-pic" src={project.img} alt={project.title} />
+      <div className="project-links">
         <a
-          className='live-site'
+          className="live-site"
           href={project.link}
-          target='_blank'
-          rel='noopener noreferrer'>
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           Live Site
         </a>
-        <a href={project.github} target='_blank noreferrer' rel='noopener'>
-          <i className='fab fa-github project-icon-github'></i>
+        <a href={project.github} target="_blank noreferrer" rel="noopener">
+          <i className="fab fa-github project-icon-github"></i>
         </a>
       </div>
 
-      <p className='img-description'>{project.description}</p>
+      <p className="img-description">{project.description}</p>
     </article>
   );
 };
-
-export default Project;

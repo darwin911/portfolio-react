@@ -1,14 +1,12 @@
 import React from 'react';
 
-const Hero = () => {
+export const Hero: React.FC = () => {
   return (
-    <section className='hero'>
-      <article className='hero-text-wrapper'>
-        <h1>Web Developer</h1>
-        <p>Darwin Smith</p>
+    <section className="hero">
+      <article className="hero-text-wrapper">
+        <h1>dev</h1>
+        <p>------</p>
       </article>
     </section>
   );
 };
-
-export default Hero;

@@ -2,9 +2,9 @@ import React from 'react';
 import profilePicture from '../assets/profile-pic.jpg';
 import data from '../assets/data.js';
 
-import ListItem from './ListItem';
+import { ListItem } from './ListItem';
 
-const AboutMe: React.FC = () => {
+export const AboutMe: React.FC = () => {
   return (
     <section className="about-me">
       <h2>About Me</h2>
@@ -25,5 +25,3 @@ const AboutMe: React.FC = () => {
     </section>
   );
 };
-
-export default AboutMe;
