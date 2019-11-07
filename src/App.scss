@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,700,900');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono:100,100i,300,300i,400,400i,500,500i,700,700i&display=swap');
 
 *,
 *::before,
@@ -23,7 +24,7 @@ $iconSizeSm: 4rem;
 $accentBlue: rgb(53, 35, 170);
 
 body {
-  font-family: 'Roboto', 'Helvetica Neue', Helvetica, sans-serif;
+  font-family: 'Roboto Mono', 'Roboto', 'Helvetica Neue', Helvetica, sans-serif;
   font-weight: 400;
   background-color: #333333;
   position: relative;
@@ -48,61 +49,20 @@ body {
   }
 }
 
-.nav-toggle {
-  cursor: pointer;
-  align-items: center;
-  display: flex;
-  height: 100%;
-  margin-left: 1em;
-  position: absolute;
-  top: 0;
-  left: 0;
-  span {
-    background: black;
-    border-radius: 3px;
-    cursor: pointer;
-    display: block;
-    height: 2px;
-    position: absolute;
-    width: 2rem;
-
-    &::before,
-    &::after {
-      content: '';
-      background: inherit;
-      border-radius: 3px;
-      cursor: pointer;
-      display: block;
-      height: 2px;
-      position: relative;
-      width: 2rem;
-    }
-
-    &::before {
-      bottom: 7px;
-    }
-
-    &::after {
-      top: 7px;
-    }
-  }
-}
-
 .hero {
   height: calc(100vh);
   background: center / cover no-repeat
     url('https://images.pexels.com/photos/2120040/pexels-photo-2120040.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
   color: white;
-  font-weight: 100;
-  box-shadow: inset 1000px 100px rgba(0, 0, 0, 0.85);
-  font-size: 3.7rem;
+  font-weight: 500;
+  box-shadow: inset 0 0 50em 50em rgba(0, 0, 0, 0.5);
+  font-size: 3.7em;
 
   h1 {
-    font-size: 3.7rem;
-    font-weight: 100;
+    font-weight: 900;
   }
   p {
-    font-size: 2rem;
+    font-size: 0.8em;
   }
 }
 
