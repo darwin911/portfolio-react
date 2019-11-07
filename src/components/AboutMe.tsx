@@ -1,5 +1,5 @@
 import React from 'react';
-import profilePicture from '../assets/profile-pic.jpg';
+import profilePicture from '../assets/images/profile-pic.jpg';
 import data from '../assets/data.js';
 
 import { ListItem } from './ListItem';
