@@ -1,10 +1,10 @@
 import React from 'react';
 
 export const Nav = () => {
-  const [isOpen, setOpen] = React.useState(false);
+  const isOpen = React.useState(false)[0];
   return (
     <header className="nav-header">
-      <p className="nav-brand">Darwin Smith</p>
+      <p className="nav-brand"></p>
       <div className="nav-toggle">
         <span></span>
       </div>
@@ -14,6 +14,9 @@ export const Nav = () => {
         </a>
         <a href="#projects" className="nav-link">
           Projects
+        </a>
+        <a href="#blog" className="nav-link">
+          Blog
         </a>
         <a href="#contact" className="nav-link">
           Contact
