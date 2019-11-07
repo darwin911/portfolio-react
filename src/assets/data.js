@@ -1,14 +1,14 @@
-import vinyl from '../assets/vinyl.png';
-import octave from '../assets/octave.png';
-import pong from '../assets/pong.png';
-import citibike from '../assets/citibike-stations.png';
-import postPic from '../assets/postpic.png';
-import jcc from '../assets/jcc.png';
-import sagan from '../assets/sagan.png';
-import skywalker from '../assets/skywalker2.png';
-import calc from '../assets/calc.png';
-import FCCProductLandingPage from '../assets/FCCProductLandingPage.png';
-import netherpurge from '../assets/netherpurge.png';
+import vinyl from '../assets/images/vinyl.png';
+import octave from '../assets/images/octave.png';
+import pong from '../assets/images/pong.png';
+import citibike from '../assets/images/citibike-stations.png';
+import postPic from '../assets/images/postpic.png';
+import jcc from '../assets/images/jcc.png';
+// import sagan from '../assets/sagan.png';
+// import skywalker from '../assets/skywalker2.png';
+import calc from '../assets/images/calc.png';
+// import FCCProductLandingPage from '../assets/FCCProductLandingPage.png';
+// import netherpurge from '../assets/netherpurge.png';
 
 const data = {
   blurb:
@@ -27,8 +27,6 @@ const data = {
     { title: 'Git', styles: 'git' },
     { title: 'Github', styles: 'github' },
     { title: 'npm', styles: 'npm' },
-    { title: 'Ruby', styles: 'ruby' },
-    { title: 'Amazon Web Services (AWS)', styles: 'aws' },
     { title: 'Node.js', styles: 'nodejs' }
   ],
   projects: [
@@ -80,39 +78,11 @@ const data = {
       link: 'http://www.juegacomocampeon.org'
     },
     {
-      title: 'Carl Sagan',
-      img: sagan,
-      description:
-        'Created a Carl Sagan tribute website using Bootstrap 4 on CodePen while completing the Front-End Development Course on FreeCodeCamp.',
-      link: 'https://darwinpsmith.com/sagan/index.html'
-    },
-    {
-      title: 'Skywalker',
-      img: skywalker,
-      description:
-        'Skywalker was one of my first websites I made from scratch with only HTML5 and CSS3. It also exemplifies my passion for my favorite hobby other than coding: Cycling.',
-      link: 'https://darwinpsmith.com/bike/index.html'
-    },
-    {
-      title: 'Netherpurge',
-      img: netherpurge,
-      description:
-        'Made Netherpurge while experimenting on new techniques for navbars and CSS3 animations. The small line that pops up on hover was made with pseudo elements (::before & ::after). Used span tags to create different effects within lines of text, linear gradients, and using transparency were among other things I practiced while creating Netherpurge.',
-      link: 'https://darwinpsmith.com/netherpurge/index.html'
-    },
-    {
       title: 'Calculator',
       img: calc,
       description:
         'Created all buttons with an unordered list and added styles to make them look like such. Positioning was a bit tricky but helped me improve my CSS skills. JavaScript is what powers the actual functionality of the calculator. Event Listeners and functional programming was key for this project.',
       link: 'https://darwinpsmith.com/calc/index.html'
-    },
-    {
-      title: 'Product Landing Page',
-      img: FCCProductLandingPage,
-      description:
-        "Created a mockup of a Product Landing Page for freeCodeCamp Web Develeopment course. Used plain CSS to style all form and HTML elements, used SVG's for icons, included a YouTube video with an iframe tag for the first time, applied FlexBox and CSS Grid for layout, as well as media queries for Responsiveness.",
-      link: 'http://darwinpsmith.com/fCC_ProductLandingPage/index.html'
     }
   ]
 };
