@@ -82,7 +82,7 @@ body {
   transition: border-color 200ms ease-in-out;
 }
 
-.about-me {
+.about {
   background: white;
   i.fas,
   i.fab,
@@ -91,6 +91,19 @@ body {
     height: $iconSizeSm;
     display: block;
     margin: 0 auto;
+  }
+
+  &__container {
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+  }
+
+  &__skill-list {
+    display: flex;
+    list-style-type: none;
+    justify-content: center;
+    flex-wrap: wrap;
   }
 }
 

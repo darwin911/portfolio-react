@@ -12,7 +12,7 @@ import calc from '../assets/images/calc.png';
 
 const data = {
   blurb:
-    'New York City based Full Stack Developer, with a background in Law, Human Rights, and experience in the Service and Hospitality industry. I am passionate about quality, efficiency and effective problem-solving. I am determined, detail-oriented, and excited to make the world and the web a better place.',
+    'New York City based Full-stack Developer, with a background in Law, Human Rights, and experience in the Service and Hospitality industry. I am passionate about quality, efficiency and effective problem-solving. I am determined, detail-oriented, and excited to make the world and the web a better place.',
   skills: [
     {
       title: 'HTML5',

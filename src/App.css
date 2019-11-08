@@ -83,17 +83,35 @@ body {
   transition: border-color 200ms ease-in-out;
 }
 
-.about-me {
+.about {
   background: white;
 }
 
-.about-me i.fas,
-.about-me i.fab,
-.about-me i {
+.about i.fas,
+.about i.fab,
+.about i {
   width: 4rem;
   height: 4rem;
   display: block;
   margin: 0 auto;
+}
+
+.about__container {
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.about__skill-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style-type: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .html {
