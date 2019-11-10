@@ -19,6 +19,7 @@ const data = {
       styles: 'html'
     },
     { title: 'CSS3', styles: 'css' },
+    { title: 'Sass', styles: 'sass' },
     { title: 'JavaScript (ES6)', styles: 'javascript' },
     { title: 'React', styles: 'react' },
     { title: 'TypeScript', styles: 'typescript' },

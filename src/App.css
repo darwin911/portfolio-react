@@ -152,7 +152,7 @@ body {
 }
 
 .sass {
-  background: center/container no-repeat url("https://cdn.svgporn.com/logos/sass.svg");
+  background: center/contain no-repeat url("https://cdn.svgporn.com/logos/sass.svg");
 }
 
 .react {
