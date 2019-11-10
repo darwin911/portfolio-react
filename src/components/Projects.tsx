@@ -4,11 +4,13 @@ import { Project } from './Project';
 
 export const Projects = () => {
   return (
-    <section className="projects">
-      <h2>Projects</h2>
-      {data.projects.map(project => (
-        <Project project={project} key={project.title} />
-      ))}
+    <section className='projects'>
+      <h2 className='projects__heading'>Projects</h2>
+      <div className='projects__container'>
+        {data.projects.map(project => (
+          <Project project={project} key={project.title} />
+        ))}
+      </div>
     </section>
   );
 };
