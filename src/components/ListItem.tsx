@@ -7,7 +7,7 @@ interface Props {
 
 export const ListItem: React.FC<Props> = ({ title, styles }) => {
   return (
-    <li>
+    <li className='about__skill-item'>
       <i className={styles} title={title} />
     </li>
   );
