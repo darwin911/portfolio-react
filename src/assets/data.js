@@ -20,14 +20,12 @@ const data = {
     },
     { title: 'CSS3', styles: 'css' },
     { title: 'JavaScript (ES6)', styles: 'javascript' },
-    { title: 'jQuery', styles: 'jquery' },
     { title: 'React', styles: 'react' },
+    { title: 'TypeScript', styles: 'typescript' },
     { title: 'Express.js', styles: 'express' },
+    { title: 'Node.js', styles: 'nodejs' },
     { title: 'PostgreSQL', styles: 'postgresql' },
-    { title: 'Git', styles: 'git' },
-    { title: 'Github', styles: 'github' },
-    { title: 'npm', styles: 'npm' },
-    { title: 'Node.js', styles: 'nodejs' }
+    { title: 'Firebase', styles: 'firebase' }
   ],
   projects: [
     {
