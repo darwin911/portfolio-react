@@ -1,5 +1,9 @@
-@import url("https://fonts.googleapis.com/css?family=Roboto:100,300,400,700,900");
-@import url("https://fonts.googleapis.com/css?family=Roboto+Mono:100,100i,300,300i,400,400i,500,500i,700,700i&display=swap");
+@font-face {
+  font-family: 'Recursive';
+  src: url("./assets/fonts/recursive-MONO_CASL_wght_slnt_ital--2019_11_05-00_13.woff2") format("woff2-variations");
+  font-weight: 100 300 500 700 900;
+}
+
 *,
 *::before,
 *::after {
@@ -10,33 +14,30 @@
 }
 
 body {
-  font-family: 'Roboto Mono', 'Roboto', 'Helvetica Neue', Helvetica, sans-serif;
+  font-family: 'Recursive', 'Roboto Mono', 'Roboto', 'Helvetica Neue', Helvetica, sans-serif;
+  font-variant: normal;
   font-weight: 400;
   background-color: #333333;
   position: relative;
   text-align: center;
 }
 
-.nav-header {
+.nav__header {
   background: rgba(255, 255, 255, 0.9);
   position: fixed;
   top: 0;
   width: 100%;
 }
 
-.nav-header .nav-brand {
+.nav__brand {
   text-align: center;
   padding: 0.5rem 1rem;
 }
 
-.nav-header .nav-menu {
+.nav__menu {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   text-align: left;
   margin-left: 1rem;
 }
@@ -45,21 +46,24 @@ body {
   height: calc(100vh);
   background: center/cover no-repeat url("https://images.pexels.com/photos/2120040/pexels-photo-2120040.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
   color: white;
-  font-weight: 500;
-  -webkit-box-shadow: inset 0 0 50em 50em rgba(0, 0, 0, 0.5);
-          box-shadow: inset 0 0 50em 50em rgba(0, 0, 0, 0.5);
+  font-weight: 300;
+  -webkit-box-shadow: inset 0 0 50em 50em rgba(0, 0, 0, 0.8);
+          box-shadow: inset 0 0 50em 50em rgba(0, 0, 0, 0.8);
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.9);
   font-size: 3.7em;
 }
 
 .hero h1 {
-  font-weight: 900;
+  font-weight: 700;
 }
 
 .hero p {
-  font-size: 0.8em;
+  font-size: 0.5em;
+  opacity: 0.7;
 }
 
-.hero-text-wrapper {
+.hero__text-container {
+  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -67,24 +71,14 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  height: 100%;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
 }
 
-.profile-picture {
-  margin: 1.5rem 0 2.5rem;
-  width: 200px;
-  border-radius: 50%;
-  border: 4px solid;
-  border-color: rgba(0, 0, 0, 0.45);
-  -webkit-transition: border-color 200ms ease-in-out;
-  transition: border-color 200ms ease-in-out;
-}
-
 .about {
   background: white;
+  padding: 15vh 0;
 }
 
 .about i.fas,
@@ -94,6 +88,37 @@ body {
   height: 4rem;
   display: block;
   margin: 0 auto;
+}
+
+.about__heading {
+  font-size: 2em;
+}
+
+.about__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.about__profile-picture {
+  margin: 1.5rem 0;
+  width: 150px;
+  border-radius: 50%;
+  -webkit-box-shadow: 0 0 7px -3px rgba(0, 0, 0, 0.7);
+          box-shadow: 0 0 7px -3px rgba(0, 0, 0, 0.7);
+  -webkit-transition: border-color 200ms ease-in-out;
+  transition: border-color 200ms ease-in-out;
+}
+
+.about__blurb {
+  max-width: 500px;
+  text-align: left;
+  margin: 0 auto 2rem;
 }
 
 .about__container {
@@ -114,6 +139,10 @@ body {
       flex-wrap: wrap;
 }
 
+.about__skill-item {
+  margin: 1rem;
+}
+
 .html {
   background: center/contain no-repeat url("./assets/html-5.svg");
 }
@@ -124,6 +153,11 @@ body {
 
 .react {
   background: center/contain no-repeat url("https://cdn.svgporn.com/logos/react.svg");
+}
+
+.typescript {
+  background: center/contain no-repeat url("https://cdn.svgporn.com/logos/typescript-icon.svg");
+  border-radius: 10px;
 }
 
 .express {
@@ -143,28 +177,8 @@ body {
   background: center/contain no-repeat url("https://cdn.svgporn.com/logos/postgresql.svg");
 }
 
-.ruby {
-  background: center/contain no-repeat url("./assets/ruby.svg");
-}
-
-.aws {
-  background: center/contain no-repeat url("./assets/aws.svg");
-}
-
-.git {
-  background: center/contain no-repeat url("https://cdn.svgporn.com/logos/git-icon.svg");
-}
-
-.github {
-  background: center/contain no-repeat url("https://cdn.svgporn.com/logos/github.svg");
-}
-
-.slack {
-  background: center/contain no-repeat url("https://cdn.svgporn.com/logos/slack-icon.svg");
-}
-
-.jquery {
-  background: center/contain no-repeat url("./assets/jquery.svg");
+.firebase {
+  background: center/contain no-repeat url("https://cdn.svgporn.com/logos/firebase.svg");
 }
 
 .nodejs {
