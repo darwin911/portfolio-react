@@ -1,14 +1,14 @@
+// import FCCProductLandingPage from '../assets/FCCProductLandingPage.png';
+// import netherpurge from '../assets/netherpurge.png';
+// import skywalker from '../assets/skywalker2.png';
+// import sagan from '../assets/sagan.png';
 import vinyl from '../assets/images/vinyl.png';
 import octave from '../assets/images/octave.png';
 import pong from '../assets/images/pong.png';
 import citibike from '../assets/images/citibike-stations.png';
 import postPic from '../assets/images/postpic.png';
 import jcc from '../assets/images/jcc.png';
-// import sagan from '../assets/sagan.png';
-// import skywalker from '../assets/skywalker2.png';
 import calc from '../assets/images/calc.png';
-// import FCCProductLandingPage from '../assets/FCCProductLandingPage.png';
-// import netherpurge from '../assets/netherpurge.png';
 
 const data = {
   blurb:
