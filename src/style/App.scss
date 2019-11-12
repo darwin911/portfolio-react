@@ -57,6 +57,7 @@ body {
   }
   &__menu {
     display: flex;
+    flex-direction: column;
     text-align: left;
     margin-left: 1rem;
   }
@@ -205,3 +206,41 @@ body {
 }
 
 @import './projects';
+
+.contact {
+  background: $bgContact;
+  color: white;
+  padding: 5vh 0;
+
+  &__heading {
+    margin-bottom: 1rem;
+  }
+
+  &__description {
+    font-size: 0.75em;
+    opacity: 0.7;
+    margin-bottom: 1rem;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    max-width: 80%;
+    margin: 0 auto;
+  }
+
+  &__name,
+  &__email,
+  &__message {
+    font-family: inherit;
+    border: none;
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    border-radius: 5px;
+  }
+
+  &__submit {
+    border: none;
+  }
+}
