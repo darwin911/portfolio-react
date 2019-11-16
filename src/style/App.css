@@ -14,7 +14,7 @@
   text-decoration: none;
 }
 
-body {
+.App {
   font-family: 'Recursive', 'Roboto Mono', 'Roboto', 'Helvetica Neue', Helvetica, sans-serif;
   font-variant: normal;
   font-weight: 400;
@@ -24,24 +24,66 @@ body {
 }
 
 .nav__header {
-  background: rgba(255, 255, 255, 0.9);
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 9999;
 }
 
-.nav__brand {
-  text-align: center;
-  padding: 0.5rem 1rem;
-}
-
-.nav__menu {
+.nav__toggle-container {
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.9);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+.nav__menu {
+  background: rgba(255, 255, 255, 0.9);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   text-align: left;
-  margin-left: 1rem;
+  padding-left: 1rem;
+  -webkit-transform: scaleY(0);
+          transform: scaleY(0);
+  -webkit-transition: -webkit-transform 150ms cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition: -webkit-transform 150ms cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition: transform 150ms cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition: transform 150ms cubic-bezier(0.215, 0.61, 0.355, 1), -webkit-transform 150ms cubic-bezier(0.215, 0.61, 0.355, 1);
+  -webkit-transform-origin: top;
+          transform-origin: top;
+}
+
+.nav__menu.is-open {
+  -webkit-transform: scaleY(1);
+          transform: scaleY(1);
+}
+
+.nav__link {
+  color: black;
+  font-weight: 700;
+  font-size: 1.2em;
+  line-height: 1.5;
+  margin-bottom: 0.75rem;
+  -webkit-transition: -webkit-transform 150ms cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition: -webkit-transform 150ms cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition: transform 150ms cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition: transform 150ms cubic-bezier(0.215, 0.61, 0.355, 1), -webkit-transform 150ms cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.nav__link:hover {
+  color: #3523aa;
+  -webkit-transform: translateX(3px);
+          transform: translateX(3px);
+}
+
+#nav__toggle {
+  margin: 3vw;
 }
 
 .hero {
@@ -76,6 +118,52 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+.html {
+  background: center/contain no-repeat url("../assets/html-5.svg");
+}
+
+.css {
+  background: center/contain no-repeat url("../assets/css-3.svg");
+}
+
+.sass {
+  background: center/contain no-repeat url("https://cdn.svgporn.com/logos/sass.svg");
+}
+
+.react {
+  background: center/contain no-repeat url("https://cdn.svgporn.com/logos/react.svg");
+}
+
+.typescript {
+  background: center/contain no-repeat url("https://cdn.svgporn.com/logos/typescript-icon.svg");
+  border-radius: 10px;
+}
+
+.express {
+  background: center/contain no-repeat url("https://cdn.svgporn.com/logos/express.svg");
+}
+
+.javascript {
+  background: center/contain no-repeat url("https://cdn.svgporn.com/logos/javascript.svg");
+  border-radius: 10px;
+}
+
+.npm {
+  background: center/contain no-repeat url("https://cdn.svgporn.com/logos/npm.svg");
+}
+
+.postgresql {
+  background: center/contain no-repeat url("https://cdn.svgporn.com/logos/postgresql.svg");
+}
+
+.firebase {
+  background: center/contain no-repeat url("https://cdn.svgporn.com/logos/firebase.svg");
+}
+
+.nodejs {
+  background: center/contain no-repeat url("https://cdn.svgporn.com/logos/nodejs.svg");
 }
 
 .about {
@@ -155,52 +243,6 @@ body {
   margin: 1rem;
 }
 
-.html {
-  background: center/contain no-repeat url("../assets/html-5.svg");
-}
-
-.css {
-  background: center/contain no-repeat url("../assets/css-3.svg");
-}
-
-.sass {
-  background: center/contain no-repeat url("https://cdn.svgporn.com/logos/sass.svg");
-}
-
-.react {
-  background: center/contain no-repeat url("https://cdn.svgporn.com/logos/react.svg");
-}
-
-.typescript {
-  background: center/contain no-repeat url("https://cdn.svgporn.com/logos/typescript-icon.svg");
-  border-radius: 10px;
-}
-
-.express {
-  background: center/contain no-repeat url("https://cdn.svgporn.com/logos/express.svg");
-}
-
-.javascript {
-  background: center/contain no-repeat url("https://cdn.svgporn.com/logos/javascript.svg");
-  border-radius: 10px;
-}
-
-.npm {
-  background: center/contain no-repeat url("https://cdn.svgporn.com/logos/npm.svg");
-}
-
-.postgresql {
-  background: center/contain no-repeat url("https://cdn.svgporn.com/logos/postgresql.svg");
-}
-
-.firebase {
-  background: center/contain no-repeat url("https://cdn.svgporn.com/logos/firebase.svg");
-}
-
-.nodejs {
-  background: center/contain no-repeat url("https://cdn.svgporn.com/logos/nodejs.svg");
-}
-
 .projects {
   padding: 15vh 0;
   color: white;
@@ -209,6 +251,18 @@ body {
 .projects__container {
   max-width: 90vw;
   margin: 0 auto;
+}
+
+@media (min-width: calc(768px + 10)) {
+  .projects__container {
+    display: -ms-grid;
+    display: grid;
+    background: red;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    -webkit-column-gap: 8vw;
+            column-gap: 8vw;
+  }
 }
 
 .projects__heading {
@@ -299,5 +353,10 @@ body {
   background: rgba(53, 35, 170, 0.7);
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
+}
+
+.contact {
+  background: #222;
+  color: white;
 }
 /*# sourceMappingURL=App.css.map */

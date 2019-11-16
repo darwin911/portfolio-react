@@ -5,6 +5,13 @@
   &__container {
     max-width: 90vw;
     margin: 0 auto;
+    $width: calc(768px + 10);
+    @media (min-width: $width) {
+      display: grid;
+      background: red;
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 8vw;
+    }
   }
 
   &__heading {
