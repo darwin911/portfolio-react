@@ -83,7 +83,7 @@
 }
 
 #nav__toggle {
-  margin: 3vw;
+  margin: 1.5rem;
 }
 
 .hero {
@@ -97,8 +97,9 @@
   font-size: 3.7em;
 }
 
-.hero h1 {
-  font-weight: 700;
+.hero__title {
+  font-size: 1em;
+  font-weight: 100;
 }
 
 .hero p {
@@ -258,7 +259,6 @@
   .projects__container {
     display: -ms-grid;
     display: grid;
-    background: red;
     -ms-grid-columns: (1fr)[2];
         grid-template-columns: repeat(2, 1fr);
     -webkit-column-gap: 8vw;

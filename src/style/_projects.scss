@@ -9,7 +9,6 @@
 
     @media (min-width: 768px) {
       display: grid;
-      background: red;
       grid-template-columns: repeat(2, 1fr);
       column-gap: 8vw;
     }
