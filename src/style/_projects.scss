@@ -22,42 +22,59 @@
 
 .project {
   $project-body-bg: rgba(black, 0.2);
+  background: $project-body-bg;
+  box-shadow: inset 0 0 3px 1px rgba(0, 0, 0, 0.2);
+  padding: 1rem;
+  border-radius: 10px;
+  margin: 2rem 0;
+
+  &.triggered {
+    background: rgba(white, 0.8);
+    color: black;
+  }
+
   &__body {
     color: white;
-    background: $project-body-bg;
-    margin: 2rem 0;
-    padding: 2rem;
-    border-radius: 10px;
-    box-shadow: inset 0 0 3px 1px rgba(0, 0, 0, 0.2);
     transition: background 200ms cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
 
-    &.triggered {
-      background: rgba(white, 0.8);
-      color: black;
-    }
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0.75rem;
+  }
+
+  &__links {
+    display: flex;
   }
 
   &__title {
+    font-family: $fontSet;
     font-size: 1.75em;
-    margin-bottom: 0.75rem;
+    margin: 0;
   }
 
   &__description {
     text-align: left;
-    margin-bottom: 2rem;
-  }
-
-  &__links {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    justify-items: center;
-
-    border-radius: 10px;
-    margin: 1rem 0;
   }
 
   &__img {
-    width: 100%;
+    width: 300px;
+    height: 300px;
+    max-width: 300px;
+    max-height: 300px;
+    object-fit: cover;
+    object-position: center top;
+    border-radius: 3px;
+  }
+
+  &__live-link {
+    font-family: inherit;
+    background: none;
+    border: none;
+    color: white;
+    margin-left: 0.75rem;
   }
 
   &__github-icon {
@@ -66,34 +83,8 @@
     mask-image: url('../assets/github.svg');
     mask-position: 50% 50%;
     mask-repeat: no-repeat;
-    width: 60px;
-    height: 60px;
-  }
-
-  button {
-    font-family: inherit;
-    cursor: pointer;
-    background: rgba($accentBlue, 0.5);
-    padding: 0.25rem 1.5rem;
-    border-radius: 50em;
-    box-shadow: 0 4px 10px -3px rgba($accentBlue, 0.9);
-    transition: 150ms cubic-bezier(0.215, 0.61, 0.355, 1);
-    border: 2px solid rgba($accentBlue, 1);
-
-    & a {
-      color: white;
-      font-size: 1.5em;
-    }
-
-    &:hover {
-      color: white;
-      background: rgba($accentBlue, 0.65);
-      transform: scale(1.05);
-    }
-
-    &:active {
-      background: rgba($accentBlue, 0.7);
-      transform: scale(1.1);
-    }
+    width: 32px;
+    height: 32px;
+    margin-left: 0.75rem;
   }
 }
