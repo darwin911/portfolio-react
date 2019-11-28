@@ -77,13 +77,17 @@
     margin: 0 auto;
   }
 
+  &__profile-picture-container {
+    position: relative;
+    margin-bottom: 2rem;
+  }
+
   &__profile-picture {
-    margin: 1.5rem 0;
     width: 150px;
     border-radius: 50%;
-    box-shadow: 0 0 7px -3px rgba(0, 0, 0, 0.7);
     transition: border-color 200ms ease-in-out;
-    background-blend-mode: color-burn;
+    position: relative;
+    z-index: 2;
   }
 
   &__blurb {

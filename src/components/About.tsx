@@ -10,11 +10,13 @@ export const About: React.FC = () => {
       <div className='about__container'>
         <h2 className='about__heading'>About Me</h2>
         <article className='about__header'>
-          <img
-            src={profilePicture}
-            alt='Darwin Smith'
-            className='about__profile-picture'
-          />
+          <div className='about__profile-picture-container'>
+            <img
+              src={profilePicture}
+              alt='Darwin Smith'
+              className='about__profile-picture'
+            />
+          </div>
 
           <p className='about__blurb'>{data.blurb}</p>
         </article>
