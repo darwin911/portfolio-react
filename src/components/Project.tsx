@@ -13,29 +13,16 @@ interface Props {
 }
 
 export const Project: React.FC<Props> = ({ project }) => {
-  const [isHovered, setIsHovered] = useState<Boolean>(false);
-
-  const handleMouseEnter = () => {
-    setIsHovered(true);
-  };
-
-  const handleMouseLeave = () => {
-    setIsHovered(false);
-  };
-
   return (
-    <article className={`project${isHovered ? ' triggered' : ''}`}>
+    <article className='project'>
       <div className={'project__body'}>
-        <img className='project__img' src={project.img} alt={project.title} />
+        <div className='project__img_wrapper'>
+          <img className='project__img' src={project.img} alt={project.title} />
+        </div>
         <div className='project__header'>
           <h3 className='project__title'>{project.title}</h3>
           <div className='project__links'>
-            <button
-              className='project__live-link'
-              onMouseEnter={handleMouseEnter}
-              onMouseLeave={handleMouseLeave}>
-              Live Site
-            </button>
+            <button className='project__live-link'>Live Site</button>
             <a href={project.github} target='_blank noreferrer' rel='noopener'>
               <i className='fab fa-github project__github-icon'></i>
             </a>

@@ -1,7 +1,3 @@
-// import FCCProductLandingPage from '../assets/FCCProductLandingPage.png';
-// import netherpurge from '../assets/netherpurge.png';
-// import skywalker from '../assets/skywalker2.png';
-// import sagan from '../assets/sagan.png';
 import vinyl from '../assets/images/vinyl.png';
 import octave from '../assets/images/octave.png';
 import pong from '../assets/images/pong.png';
@@ -12,7 +8,7 @@ import calc from '../assets/images/calc.png';
 
 const data = {
   blurb:
-    'New York City based Full-stack Developer, with a background in Law, Human Rights, and previous experience in the Service and Hospitality industry. I am passionate about quality, efficiency and effective problem-solving. I am determined, detail-oriented, and excited to make the world and the web a better place.',
+    'NYC based Full-stack Developer, with interest in UI/UX. I have  experience building and designing responsive Front-end and Full-stack applications. I am passionate about quality, efficiency and effective problem-solving.',
   skills: [
     {
       title: 'HTML5',
@@ -46,14 +42,6 @@ const data = {
       link: 'https://octave-bananas.surge.sh/'
     },
     {
-      title: 'Pong',
-      img: pong,
-      description:
-        'Built a one player version of the classic arcade game Pong in vanilla JavaScript during the Web Development Immersive (WDI) course at General Assembly. Wrote custom collision detection responsive to browser size and mobile devices.',
-      github: 'https://github.com/darwin911/pong',
-      link: 'https://pong-js.netlify.com/'
-    },
-    {
       title: 'CitiBike Stations',
       img: citibike,
       description:
@@ -68,6 +56,14 @@ const data = {
         'React App on Express (node.js) server. This project was built to mimic web-apps/apps such as Instagram.',
       github: 'https://github.com/darwin911/imageSharingCRUD',
       link: 'http://luxuriant-bun.surge.sh/'
+    },
+    {
+      title: 'Pong',
+      img: pong,
+      description:
+        'Built a one player version of the classic arcade game Pong in vanilla JavaScript during the Web Development Immersive (WDI) course at General Assembly. Wrote custom collision detection responsive to browser size and mobile devices.',
+      github: 'https://github.com/darwin911/pong',
+      link: 'https://pong-js.netlify.com/'
     },
     {
       title: 'Juega Como Campeon (JCC)',
