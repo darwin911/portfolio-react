@@ -29,7 +29,7 @@ const data = {
       title: 'Vinyl',
       img: vinyl,
       description:
-        'Vinyl, a CRUD app, built with an Express server and a React front-end. The UI controls are custom made and controlled with state. Tracks are uploaded through the express server to an AWS S3 Bucket.',
+        'CRUD (Create, Read, Update, Delete) application, built with React, Express, Sequelize, Postgres. The UI controls are custom CSS, and are controlled with state. Tracks are uploaded through the server to an AWS S3 Bucket. Authentication implemented with JSON Web Tokens, storing hashed passwords to the database. Login and Register inputs with validation',
       github: 'https://github.com/darwin911/vinyl-express',
       link: 'https://vinyl.surge.sh/'
     },
@@ -37,7 +37,7 @@ const data = {
       title: 'Octave',
       img: octave,
       description:
-        'A collaborative React App built with Express on Node.js and accessing data from the Ticketmaster API. Design based off a mock-up from a UI/UX design team of students at General Assembly.',
+        'A collaborative React App built with Express. Consuming data from the Ticketmaster API, loading database with user selected artists, and venues. Authentication implemented with JSON Web Tokens, storing hashed passwords to the database. Design based off a mock-up from a UI/UX design team of students at General Assembly.',
       github: 'https://github.com/darwin911/octave',
       link: 'https://octave-bananas.surge.sh/'
     },
