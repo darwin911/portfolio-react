@@ -13,7 +13,7 @@ export const Footer = () => {
         <GithubIcon className='footer__github-icon' />
       </div>
       <Divider variant='middle' light={true} />
-      <p>&copy; Darwin Smith 2020</p>
+      <p>&copy; Darwin Smith {new Date().getFullYear()}</p>
     </footer>
   );
 };
