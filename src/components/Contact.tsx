@@ -1,5 +1,4 @@
 import React from 'react';
-import { Form, Input, Button, TextArea } from 'semantic-ui-react';
 
 export const Contact = () => {
   return (
@@ -11,26 +10,27 @@ export const Contact = () => {
           adding the relevent functionality to a form (Send data to someone
           through inputs)
         </p>
-        <Form className='contact__form'>
-          <Form.Field>
-            <Input type='text' placeholder='Name' className='contact__name' />
-          </Form.Field>
-          <Form.Field>
-            <Input type='text' placeholder='Email' className='contact__email' />
-          </Form.Field>
-          <Form.Field>
-            <TextArea
+        <form className='contact__form'>
+          <fieldset>
+            <input type='text' placeholder='Name' className='contact__name' />
+          </fieldset>
+          <fieldset>
+            <input type='text' placeholder='Email' className='contact__email' />
+          </fieldset>
+          <fieldset>
+            <textarea
               name='message'
               id='message'
               cols={30}
               rows={10}
               placeholder='Message'
-              className='contact__message'></TextArea>
-          </Form.Field>
-          <Button color='blue' className='contact__submit'>
+              className='contact__message'
+            />
+          </fieldset>
+          <button color='blue' className='contact__submit'>
             Send!
-          </Button>
-        </Form>
+          </button>
+        </form>
       </div>
     </section>
   );
