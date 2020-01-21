@@ -3,6 +3,7 @@ import MailIcon from '@material-ui/icons/Mail';
 import GithubIcon from '@material-ui/icons/GitHub';
 import LinkedinIcon from '@material-ui/icons/LinkedIn';
 import Divider from '@material-ui/core/Divider';
+import Typography from '@material-ui/core/Typography';
 
 export const Footer = () => {
   return (
@@ -13,7 +14,7 @@ export const Footer = () => {
         <GithubIcon className='footer__github-icon' />
       </div>
       <Divider variant='middle' light={true} />
-      <p>&copy; Darwin Smith {new Date().getFullYear()}</p>
+      <Typography>&copy; Darwin Smith {new Date().getFullYear()}</Typography>
     </footer>
   );
 };
