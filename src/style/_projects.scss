@@ -1,5 +1,5 @@
 .projects {
-  padding: 15vh 0;
+  padding: 10vh 0;
   color: white;
 
   &__container {
@@ -21,8 +21,7 @@
 }
 
 .project {
-  margin: 2rem 0;
-  outline: 1px solid crimson;
+  margin: 1rem 0;
 
   &__body {
     color: white;
@@ -41,7 +40,6 @@
   }
 
   &__title {
-    font-family: $fontSet;
     font-size: 1.25em;
     margin: 0;
   }
@@ -55,24 +53,23 @@
   }
 
   &__img {
-    width: 300px;
-    height: 300px;
     max-width: 300px;
     max-height: 300px;
     object-fit: cover;
     object-position: center top;
-    border-radius: 3px;
+    border-radius: 8px;
   }
 
   &__live-link {
-    font-family: inherit;
-    background: none;
-    border: none;
-    color: white;
     margin-left: 0.75rem;
   }
 
   &__github-icon {
     margin-left: 0.75rem;
+  }
+
+  a:visited,
+  a:link {
+    color: white;
   }
 }
