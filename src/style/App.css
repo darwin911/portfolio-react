@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900&display=swap");
 @font-face {
   font-family: 'Recursive';
   src: url("../assets/fonts/recursive-MONO_CASL_wght_slnt_ital--2019_11_05-00_13.woff2") format("woff2-variations");
@@ -307,7 +308,7 @@
 
 .project__title {
   font-family: "Recursive", "Roboto Mono", "Roboto", "Helvetica Neue", Helvetica, sans-serif;
-  font-size: 1.75em;
+  font-size: 1.25em;
   margin: 0;
 }
 
@@ -340,16 +341,6 @@
 }
 
 .project__github-icon {
-  display: block;
-  background-color: white;
-  -webkit-mask-image: url("../assets/github.svg");
-          mask-image: url("../assets/github.svg");
-  -webkit-mask-position: 50% 50%;
-          mask-position: 50% 50%;
-  -webkit-mask-repeat: no-repeat;
-          mask-repeat: no-repeat;
-  width: 32px;
-  height: 32px;
   margin-left: 0.75rem;
 }
 
@@ -366,13 +357,12 @@
 }
 
 .contact__form {
-  width: 800px;
+  width: 100%;
   margin: 0 auto;
 }
 
 .footer {
   padding: 5vh 0;
-  background: #111;
-  color: #bbb;
+  background: #e0e0e0;
 }
 /*# sourceMappingURL=App.css.map */

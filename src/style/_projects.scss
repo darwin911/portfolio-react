@@ -42,7 +42,7 @@
 
   &__title {
     font-family: $fontSet;
-    font-size: 1.75em;
+    font-size: 1.25em;
     margin: 0;
   }
 
@@ -73,13 +73,6 @@
   }
 
   &__github-icon {
-    display: block;
-    background-color: white;
-    mask-image: url('../assets/github.svg');
-    mask-position: 50% 50%;
-    mask-repeat: no-repeat;
-    width: 32px;
-    height: 32px;
     margin-left: 0.75rem;
   }
 }
