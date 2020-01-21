@@ -10,6 +10,11 @@ const theme = createMuiTheme({
       'Helvetica',
       'sans-serif'
     ].join(',')
+  },
+  palette: {
+    background: {
+      default: '#1b1b1b'
+    }
   }
 });
 
