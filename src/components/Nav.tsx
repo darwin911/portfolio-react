@@ -1,6 +1,6 @@
 import React from 'react';
-import 'semantic-ui-css/semantic.min.css';
-import { Icon } from 'semantic-ui-react';
+import MenuIcon from '@material-ui/icons/Menu';
+import CloseIcon from '@material-ui/icons/Close';
 
 export const Nav = () => {
   const [isOpen, setIsOpen] = React.useState<Boolean>(false);
@@ -8,20 +8,12 @@ export const Nav = () => {
     <header className='nav__header'>
       <div className='nav__toggle-container'>
         {isOpen ? (
-          <Icon
-            name='times'
-            id='nav__toggle'
-            size='large'
+          <CloseIcon
+            className='nav__toggle'
             onClick={() => setIsOpen(prevVal => !prevVal)}
           />
         ) : (
-          <Icon
-            name='bars'
-            id='nav__toggle'
-            className='nav__toggle'
-            size='large'
-            onClick={() => setIsOpen(prevVal => !prevVal)}
-          />
+          <MenuIcon onClick={() => setIsOpen(prevVal => !prevVal)} />
         )}
       </div>
       <nav className={`nav__menu${isOpen ? ' is-open' : ''}`}>

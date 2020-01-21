@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React from 'react';
+import GitHubIcon from '@material-ui/icons/GitHub';
 
 interface Project {
   img: string;
@@ -23,9 +24,14 @@ export const Project: React.FC<Props> = ({ project }) => {
           <h3 className='project__title'>{project.title}</h3>
           <div className='project__links'>
             <button className='project__live-link'>Live Site</button>
-            <a href={project.github} target='_blank noreferrer' rel='noopener'>
-              <i className='fab fa-github project__github-icon'></i>
-            </a>
+            {project.github && (
+              <a
+                href={project.github}
+                target='_blank noreferrer'
+                rel='noopener'>
+                <GitHubIcon className='project__github-icon' />
+              </a>
+            )}
           </div>
         </div>
         <p className='project__description'>{project.description}</p>
