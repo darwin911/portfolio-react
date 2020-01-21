@@ -1,11 +1,16 @@
 import React from 'react';
+import { Typography } from '@material-ui/core';
 
 export const Hero: React.FC = () => {
   return (
     <section className='hero'>
       <article className='hero__text-container'>
-        <h1 className='hero__title'>Darwin Smith</h1>
-        <p className='hero__subtitle'>Full-stack Developer</p>
+        <Typography variant='h3' component='h1'>
+          Darwin Smith
+        </Typography>
+        <Typography variant='h5' component='h2'>
+          Full-stack Developer
+        </Typography>
       </article>
     </section>
   );

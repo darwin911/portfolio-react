@@ -1,37 +1,31 @@
 import React from 'react';
+import {
+  FormControl,
+  TextField,
+  Button,
+  Typography,
+  Container
+} from '@material-ui/core';
+import SendIcon from '@material-ui/icons/Send';
 
 export const Contact = () => {
   return (
     <section className='contact'>
-      <div className='contact__container'>
-        <h2 className='contact__heading'>Contact</h2>
-        <p className='contact__description'>
+      <Container maxWidth='sm'>
+        <Typography variant='h2'>Contact</Typography>
+        <Typography className='contact__description'>
           This is here mostly to showcase the ability to style form inputs, and
-          adding the relevent functionality to a form (Send data to someone
-          through inputs)
-        </p>
-        <form className='contact__form'>
-          <fieldset>
-            <input type='text' placeholder='Name' className='contact__name' />
-          </fieldset>
-          <fieldset>
-            <input type='text' placeholder='Email' className='contact__email' />
-          </fieldset>
-          <fieldset>
-            <textarea
-              name='message'
-              id='message'
-              cols={30}
-              rows={10}
-              placeholder='Message'
-              className='contact__message'
-            />
-          </fieldset>
-          <button color='blue' className='contact__submit'>
-            Send!
-          </button>
-        </form>
-      </div>
+          adding the relevent functionality to a form. It works, try it!
+        </Typography>
+        <FormControl className='contact__form'>
+          <TextField label='Name' margin='normal' />
+          <TextField type='email' label='Email' required margin='normal' />
+          <TextField label='Message' multiline margin='normal' />
+          <Button variant='contained' color='inherit' endIcon={<SendIcon />}>
+            Send
+          </Button>
+        </FormControl>
+      </Container>
     </section>
   );
 };
