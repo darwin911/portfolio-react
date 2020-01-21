@@ -1,5 +1,6 @@
 import React from 'react';
 import GitHubIcon from '@material-ui/icons/GitHub';
+import { Link } from '@material-ui/core';
 
 interface Project {
   img: string;
@@ -23,14 +24,16 @@ export const Project: React.FC<Props> = ({ project }) => {
         <div className='project__header'>
           <h3 className='project__title'>{project.title}</h3>
           <div className='project__links'>
-            <button className='project__live-link'>Live Site</button>
+            <Link href={project.link} className='project__live-link'>
+              Live Site
+            </Link>
             {project.github && (
-              <a
+              <Link
                 href={project.github}
                 target='_blank noreferrer'
                 rel='noopener'>
                 <GitHubIcon className='project__github-icon' />
-              </a>
+              </Link>
             )}
           </div>
         </div>
