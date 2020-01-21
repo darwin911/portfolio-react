@@ -1,6 +1,6 @@
 .projects {
-  padding: 10vh 0;
   color: white;
+  padding: 50px 0;
 
   &__container {
     width: 800px;
@@ -13,15 +13,10 @@
       column-gap: 8vw;
     }
   }
-
-  &__heading {
-    font-size: 2em;
-    margin-bottom: 2rem;
-  }
 }
 
 .project {
-  margin: 1rem 0;
+  margin: 0 0 6rem;
 
   &__body {
     color: white;
@@ -58,6 +53,8 @@
     object-fit: cover;
     object-position: center top;
     border-radius: 8px;
+    border: 1px solid rgba(white, 0.15);
+    box-shadow: 0px 2px 6px black;
   }
 
   &__live-link {

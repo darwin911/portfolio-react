@@ -1,12 +1,16 @@
 .contact {
-  background: #222;
-  color: white;
-  padding: 5vh 0;
+  background: white;
+  color: black;
+  padding: 50px 0;
 
   &__container {
     width: 800px;
     max-width: 90vw;
     margin: 0 auto;
+  }
+
+  &__heading {
+    font-size: $section-heading-size;
   }
 
   &__form {
