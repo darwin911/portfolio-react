@@ -45,7 +45,7 @@ const data = {
       title: 'CitiBike Stations',
       img: citibike,
       description:
-        'React App with custom CSS (Flexbox and Grid), using Mapbox and Google Maps Geocoding API to power search fields. Lots of love, too.',
+        'React App, consuming NYC Open Data API (CitiBike Station Data) using Google Maps, Google Maps Geocoding API to power search fields. Custom styling with CSS3.',
       github: 'https://github.com/darwin911/citibike-react',
       link: 'https://citibike-react.netlify.com/'
     },
