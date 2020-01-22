@@ -5,7 +5,7 @@ import { Typography, Container } from '@material-ui/core';
 
 export const Projects = () => {
   return (
-    <section className='projects'>
+    <section id='projects' className='projects'>
       <Typography variant='h3' component='h2'>
         Projects
       </Typography>
