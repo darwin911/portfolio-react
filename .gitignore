@@ -23,3 +23,6 @@ yarn-debug.log*
 yarn-error.log*
 
 src/style/App.css.map
+
+# Local Netlify folder
+.netlify
