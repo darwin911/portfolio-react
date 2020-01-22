@@ -75,15 +75,7 @@
 
   &__profile-picture-container {
     position: relative;
-    margin-bottom: 2rem;
-  }
-
-  &__profile-picture {
-    width: 150px;
-    border-radius: 50%;
-    transition: border-color 200ms ease-in-out;
-    position: relative;
-    z-index: 2;
+    margin: 1.25rem 0;
   }
 
   &__blurb {
