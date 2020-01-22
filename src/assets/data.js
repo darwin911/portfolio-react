@@ -8,7 +8,7 @@ import calc from '../assets/images/calc.png';
 
 const data = {
   blurb:
-    'NYC based Full-stack Developer, with interest in UI/UX. I have  experience building and designing responsive Front-end and Full-stack applications. I am passionate about quality, efficiency and effective problem-solving.',
+    'NYC based Full-stack Developer, with interest in UI/UX. I have experience designing and building responsive Front-end and Full-stack applications. I am passionate about quality, efficiency and effective problem-solving.',
   skills: [
     {
       title: 'HTML5',
