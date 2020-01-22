@@ -5,7 +5,7 @@ import LinkedinIcon from '@material-ui/icons/LinkedIn';
 import Divider from '@material-ui/core/Divider';
 import Typography from '@material-ui/core/Typography';
 
-export const Footer = () => {
+export const Footer: React.FC = () => {
   return (
     <footer className='footer'>
       <div className='footer__contact-icons'>
