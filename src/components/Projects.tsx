@@ -8,7 +8,7 @@ const styles = {
     padding: '4rem 0'
   },
   SectionHeading: {
-    marginBottom: '1.5rem',
+    marginBottom: '4rem',
     fontWeight: 700
   }
 };
@@ -20,7 +20,12 @@ export const Projects = () => {
         <Typography variant='h3' component='h2' style={styles.SectionHeading}>
           Projects
         </Typography>
-        <Grid container direction='column' justify='center' alignItems='center'>
+        <Grid
+          container
+          spacing={9}
+          direction='column'
+          justify='center'
+          alignItems='center'>
           {data.projects.map(project => (
             <Grid item key={project.id}>
               <Project project={project} />
