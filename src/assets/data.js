@@ -29,7 +29,7 @@ const data = {
       title: 'Vinyl',
       img: vinyl,
       description:
-        'CRUD (Create, Read, Update, Delete) application, built with React, Express, Sequelize, Postgres. The UI controls are custom CSS, and are controlled with state. Tracks are uploaded through the server to an AWS S3 Bucket. Authentication implemented with JSON Web Tokens, storing hashed passwords to the database. Login and Register inputs with validation',
+        'CRUD (Create, Read, Update, Delete) application, built with React, Express, Sequelize, Postgres. The UI controls are custom CSS, and are controlled with state. Tracks are uploaded through the server to an AWS S3 Bucket. Authentication implemented with JSON Web Tokens, storing hashed passwords to the database. Login and Register inputs with validation.',
       github: 'https://github.com/darwin911/vinyl-express',
       link: 'https://vinyl.surge.sh/'
     },
@@ -66,7 +66,7 @@ const data = {
       link: 'https://pong-js.netlify.com/'
     },
     {
-      title: 'Juega Como Campeon (JCC)',
+      title: 'Juega Como Campeon',
       img: jcc,
       description:
         'Designed and built a static website for a non-profit working with underpriviledged children in the Dominican Republic.',
