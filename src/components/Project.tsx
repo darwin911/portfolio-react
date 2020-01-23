@@ -1,6 +1,13 @@
 import React from 'react';
 import GitHubIcon from '@material-ui/icons/GitHub';
-import { Link } from '@material-ui/core';
+import {
+  Typography,
+  Card,
+  CardContent,
+  CardMedia,
+  CardActions,
+  Button
+} from '@material-ui/core';
 
 interface Project {
   img: string;
@@ -14,31 +21,59 @@ interface Props {
   project: Project;
 }
 
+const styles = {
+  Card: {
+    maxWidth: 400,
+    margin: '100px auto',
+    borderRadius: 5,
+    backgroundColor: 'transparent'
+  },
+  CardImg: {
+    height: '250px',
+    backgroundPosition: 'top'
+  }
+};
+
 export const Project: React.FC<Props> = ({ project }) => {
   return (
-    <article className='project'>
-      <div className={'project__body'}>
-        <div className='project__img_wrapper'>
-          <img className='project__img' src={project.img} alt={project.title} />
-        </div>
-        <div className='project__header'>
-          <h3 className='project__title'>{project.title}</h3>
-          <div className='project__links'>
-            <Link href={project.link} className='project__live-link'>
-              Live Site
-            </Link>
-            {project.github && (
-              <Link
-                href={project.github}
-                target='_blank noreferrer'
-                rel='noopener'>
-                <GitHubIcon className='project__github-icon' />
-              </Link>
-            )}
-          </div>
-        </div>
-        <p className='project__description'>{project.description}</p>
-      </div>
-    </article>
+    <Card raised style={styles.Card}>
+      <CardMedia image={project.img} title='Vinyl' style={styles.CardImg} />
+      <CardContent style={{ backgroundColor: 'white' }}>
+        <Typography gutterBottom variant='h5' component='h2' align='left'>
+          {project.title}
+        </Typography>
+
+        <Typography
+          variant='body2'
+          color='textSecondary'
+          component='p'
+          align='left'>
+          {project.description}
+        </Typography>
+      </CardContent>
+
+      <CardActions style={{ backgroundColor: 'white' }}>
+        <Button
+          size='small'
+          color='default'
+          href={project.link}
+          target='_blank noreferrer'
+          rel='noopener'>
+          Live Site
+        </Button>
+        {project.github && (
+          <Button
+            aria-label='github'
+            size='small'
+            color='default'
+            href={project.github}
+            target='_blank noreferrer'
+            rel='noopener'
+            endIcon={<GitHubIcon style={{ color: 'black' }} />}>
+            Source Code
+          </Button>
+        )}
+      </CardActions>
+    </Card>
   );
 };
