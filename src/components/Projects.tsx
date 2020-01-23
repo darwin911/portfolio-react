@@ -1,7 +1,7 @@
 import React from 'react';
 import data from '../assets/data';
 import { Project } from './Project';
-import { Typography, Container } from '@material-ui/core';
+import { Typography, Container, Grid } from '@material-ui/core';
 
 const styles = {
   Section: {
@@ -20,9 +20,13 @@ export const Projects = () => {
         <Typography variant='h3' component='h2' style={styles.SectionHeading}>
           Projects
         </Typography>
-        {data.projects.map(project => (
-          <Project key={project.title} project={project} />
-        ))}
+        <Grid container direction='column' justify='center' alignItems='center'>
+          {data.projects.map(project => (
+            <Grid item key={project.id}>
+              <Project project={project} />
+            </Grid>
+          ))}
+        </Grid>
       </Container>
     </section>
   );
