@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900&display=swap');
+@import url('https://use.typekit.net/xwq0mnh.css');
 
 @font-face {
   font-family: 'Recursive';
@@ -7,16 +8,6 @@
   font-weight: 100 300 500 700 900;
 }
 
-$navBackground: rgba(246, 246, 246, 0);
-$textLight: rgb(54, 54, 54);
-$textDark: rgb(0, 0, 0);
-$bgAbout: rgb(238, 238, 238);
-$bgProjects: radial-gradient(
-  circle,
-  rgba(54, 53, 53, 1) 0%,
-  rgba(27, 27, 27, 1) 100%
-);
-$bgContact: rgb(45, 52, 54);
 $iconSizeLg: 6rem;
 $iconSizeSm: 3rem;
 $accentBlue: rgb(53, 35, 170);

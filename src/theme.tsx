@@ -3,17 +3,18 @@ import { createMuiTheme } from '@material-ui/core';
 const theme = createMuiTheme({
   typography: {
     fontFamily: [
+      'sofia-pro',
       'Recursive',
       'Roboto Mono',
       'Roboto',
       'Helvetica Neue',
       'Helvetica',
       'sans-serif'
-    ].join(',')
+    ].join(', ')
   },
   palette: {
     background: {
-      default: '#1b1b1b'
+      default: '#f6f6f6'
     }
   }
 });
