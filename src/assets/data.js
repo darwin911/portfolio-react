@@ -26,6 +26,7 @@ const data = {
   ],
   projects: [
     {
+      id: 1,
       title: 'Vinyl',
       img: vinyl,
       description:
@@ -34,6 +35,7 @@ const data = {
       link: 'https://vinyl.surge.sh/'
     },
     {
+      id: 2,
       title: 'Octave',
       img: octave,
       description:
@@ -42,6 +44,7 @@ const data = {
       link: 'https://octave-bananas.surge.sh/'
     },
     {
+      id: 3,
       title: 'CitiBike Stations',
       img: citibike,
       description:
@@ -50,6 +53,7 @@ const data = {
       link: 'https://citibike-react.netlify.com/'
     },
     {
+      id: 4,
       title: 'PostPic',
       img: postPic,
       description:
@@ -58,6 +62,7 @@ const data = {
       link: 'http://luxuriant-bun.surge.sh/'
     },
     {
+      id: 5,
       title: 'Pong',
       img: pong,
       description:
@@ -66,6 +71,7 @@ const data = {
       link: 'https://pong-js.netlify.com/'
     },
     {
+      id: 6,
       title: 'Juega Como Campeon',
       img: jcc,
       description:
@@ -73,6 +79,7 @@ const data = {
       link: 'http://www.juegacomocampeon.org'
     },
     {
+      id: 7,
       title: 'Calculator',
       img: calc,
       description:
