@@ -8,9 +8,15 @@ import {
 } from '@material-ui/core';
 import SendIcon from '@material-ui/icons/Send';
 
-export const Contact = () => {
+const styles = {
+  Section: {
+    padding: '4rem 0'
+  }
+};
+
+export const Contact: React.FC = () => {
   return (
-    <section className='contact'>
+    <section id='contact' className='contact' style={styles.Section}>
       <Container maxWidth='sm'>
         <Typography variant='h2'>Contact</Typography>
         <Typography className='contact__description'>
@@ -18,9 +24,20 @@ export const Contact = () => {
           adding the relevent functionality to a form. It works, try it!
         </Typography>
         <FormControl className='contact__form'>
-          <TextField label='Name' margin='normal' />
-          <TextField type='email' label='Email' required margin='normal' />
-          <TextField label='Message' multiline margin='normal' />
+          <TextField label='Name' placeholder='Your Name' margin='normal' />
+          <TextField
+            type='email'
+            label='Email'
+            placeholder='name@email.com'
+            required
+            margin='normal'
+          />
+          <TextField
+            label='Message'
+            placeholder='You are so talented! Send over your Resume ASAP.'
+            multiline
+            margin='normal'
+          />
           <Button variant='contained' color='inherit' endIcon={<SendIcon />}>
             Send
           </Button>
