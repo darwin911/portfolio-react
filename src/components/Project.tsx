@@ -24,9 +24,9 @@ interface Props {
 const styles = {
   Card: {
     maxWidth: 400,
-    margin: '100px auto',
     borderRadius: 5,
-    backgroundColor: 'transparent'
+    backgroundColor: 'transparent',
+    boxShadow: '0px 6px 1.25rem -0.75rem rgba(0, 0, 0, 0.9)'
   },
   CardImg: {
     height: '250px',
@@ -36,7 +36,7 @@ const styles = {
 
 export const Project: React.FC<Props> = ({ project }) => {
   return (
-    <Card raised style={styles.Card}>
+    <Card style={styles.Card}>
       <CardMedia image={project.img} title='Vinyl' style={styles.CardImg} />
       <CardContent style={{ backgroundColor: 'white' }}>
         <Typography gutterBottom variant='h5' component='h2' align='left'>
