@@ -1,35 +1,42 @@
 import React from 'react';
 import MenuIcon from '@material-ui/icons/Menu';
-import CloseIcon from '@material-ui/icons/Close';
+import {
+  AppBar,
+  IconButton,
+  Toolbar,
+  List,
+  ListItem,
+  ListItemText
+} from '@material-ui/core';
 
-export const Nav = () => {
+export const Nav: React.FC = () => {
   const [isOpen, setIsOpen] = React.useState<Boolean>(false);
   return (
-    <header className='nav__header'>
-      <div className='nav__toggle-container'>
-        {isOpen ? (
-          <CloseIcon
-            className='nav__toggle'
-            onClick={() => setIsOpen(prevVal => !prevVal)}
-          />
-        ) : (
-          <MenuIcon onClick={() => setIsOpen(prevVal => !prevVal)} />
-        )}
-      </div>
-      <nav className={`nav__menu${isOpen ? ' is-open' : ''}`}>
-        <a href='#about-me' className='nav__link'>
-          About Me
-        </a>
-        <a href='#projects' className='nav__link'>
-          Projects
-        </a>
-        <a href='#blog' className='nav__link'>
-          Blog
-        </a>
-        <a href='#contact' className='nav__link'>
-          Contact
-        </a>
-      </nav>
-    </header>
+    <AppBar
+      position='fixed'
+      style={{ backgroundColor: 'rgba(255, 255, 255, 0.9)' }}>
+      <Toolbar>
+        <IconButton
+          edge='start'
+          aria-label='menu'
+          onClick={() => setIsOpen(prevState => !prevState)}>
+          <MenuIcon fontSize='large' />
+        </IconButton>
+      </Toolbar>
+
+      {isOpen && (
+        <List component='nav'>
+          <ListItem button style={{ color: 'black' }}>
+            <ListItemText primary='About' />
+          </ListItem>
+          <ListItem button style={{ color: 'black' }}>
+            <ListItemText primary='Projects' />
+          </ListItem>
+          <ListItem button style={{ color: 'black' }}>
+            <ListItemText primary='Contact' />
+          </ListItem>
+        </List>
+      )}
+    </AppBar>
   );
 };
