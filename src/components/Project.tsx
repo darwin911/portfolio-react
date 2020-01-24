@@ -25,9 +25,8 @@ const styles = {
   Card: {
     maxWidth: 400,
     borderRadius: 5,
-    backgroundColor: 'transparent',
     boxShadow: '0px 10px .5rem -0.5rem rgba(0, 0, 0, 0.6)',
-    margin: '0 .5rem 3rem'
+    marginBottom: '3rem'
   },
   CardImg: {
     height: '250px',
@@ -53,7 +52,7 @@ export const Project: React.FC<Props> = ({ project }) => {
         </Typography>
       </CardContent>
 
-      <CardActions style={{ backgroundColor: 'white' }}>
+      <CardActions>
         <Button
           size='small'
           color='default'

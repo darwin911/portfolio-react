@@ -11,60 +11,7 @@
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       column-gap: 8vw;
+      padding-top: 1.5rem;
     }
-  }
-}
-
-.project {
-  margin: 0 0 6rem;
-
-  &__body {
-    color: white;
-    transition: background 200ms cubic-bezier(0.215, 0.61, 0.355, 1);
-  }
-
-  &__header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 0.75rem;
-  }
-
-  &__links {
-    display: flex;
-  }
-
-  &__title {
-    font-size: 1.25em;
-    margin: 0;
-  }
-
-  &__description {
-    text-align: left;
-  }
-
-  &__img_wrapper {
-    margin-bottom: 1rem;
-  }
-
-  &__img {
-    max-width: 300px;
-    object-position: center top;
-    border-radius: 8px;
-    border: 1px solid rgba(white, 0.5);
-    // box-shadow: 0px 2px 6px rgba(black, 0.7);
-  }
-
-  &__live-link {
-    margin-left: 0.75rem;
-  }
-
-  &__github-icon {
-    margin-left: 0.75rem;
-  }
-
-  a:visited,
-  a:link {
-    color: white;
   }
 }

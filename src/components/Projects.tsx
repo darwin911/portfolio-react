@@ -1,7 +1,7 @@
 import React from 'react';
 import data from '../assets/data';
 import { Project } from './Project';
-import { Typography, Container, Grid } from '@material-ui/core';
+import { Typography, Container } from '@material-ui/core';
 import { styles } from './styles';
 
 export const Projects = () => {
@@ -11,17 +11,11 @@ export const Projects = () => {
         <Typography variant='h3' component='h2' style={styles.SectionHeading}>
           Projects
         </Typography>
-        <Grid
-          style={styles.GridContainer}
-          container
-          spacing={2}
-          direction='row'>
+        <div className='projects__container'>
           {data.projects.map(project => (
-            <Grid item key={project.id} sm={12} alignContent='center'>
-              <Project project={project} />
-            </Grid>
+            <Project key={project.id} project={project} />
           ))}
-        </Grid>
+        </div>
       </Container>
     </section>
   );
