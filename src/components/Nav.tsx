@@ -1,40 +1,38 @@
 import React from 'react';
 import MenuIcon from '@material-ui/icons/Menu';
-import {
-  AppBar,
-  IconButton,
-  Toolbar,
-  List,
-  ListItem,
-  ListItemText
-} from '@material-ui/core';
+import CloseIcon from '@material-ui/icons/Close';
+import { AppBar, IconButton, Toolbar, List } from '@material-ui/core';
+import { styles } from './styles';
+import { NavItem } from './NavItem';
 
 export const Nav: React.FC = () => {
   const [isOpen, setIsOpen] = React.useState<Boolean>(false);
+
+  const sections = ['About', 'Projects', 'Contact'];
+
   return (
-    <AppBar
-      position='fixed'
-      style={{ backgroundColor: 'rgba(255, 255, 255, 0.9)' }}>
+    <AppBar position='fixed' style={styles.AppBar}>
       <Toolbar>
         <IconButton
           edge='start'
           aria-label='menu'
+          color='default'
+          size='small'
+          disableRipple
           onClick={() => setIsOpen(prevState => !prevState)}>
-          <MenuIcon fontSize='large' />
+          {!isOpen ? (
+            <MenuIcon fontSize='large' />
+          ) : (
+            <CloseIcon fontSize='large' />
+          )}
         </IconButton>
       </Toolbar>
 
       {isOpen && (
         <List component='nav'>
-          <ListItem button style={{ color: 'black' }}>
-            <ListItemText primary='About' />
-          </ListItem>
-          <ListItem button style={{ color: 'black' }}>
-            <ListItemText primary='Projects' />
-          </ListItem>
-          <ListItem button style={{ color: 'black' }}>
-            <ListItemText primary='Contact' />
-          </ListItem>
+          {sections.map(navItem => (
+            <NavItem key={navItem} section={navItem} />
+          ))}
         </List>
       )}
     </AppBar>
