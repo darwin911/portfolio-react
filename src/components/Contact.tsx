@@ -7,26 +7,13 @@ import {
   Container
 } from '@material-ui/core';
 import SendIcon from '@material-ui/icons/Send';
-
-const styles = {
-  Section: {
-    padding: '4rem 0'
-  },
-  SectionHeading: {
-    marginBottom: '4rem',
-    fontWeight: 700
-  },
-  ContactForm: {
-    width: '100%',
-    margin: '1rem 0'
-  }
-};
+import { styles } from './styles';
 
 export const Contact: React.FC = () => {
   return (
     <section id='contact' className='contact' style={styles.Section}>
       <Container maxWidth='sm'>
-        <Typography variant='h2' style={styles.SectionHeading}>
+        <Typography variant='h2' component='h2' style={styles.SectionHeading}>
           Contact
         </Typography>
         <Typography className='contact__description'>

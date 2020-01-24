@@ -2,16 +2,7 @@ import React from 'react';
 import data from '../assets/data';
 import { Project } from './Project';
 import { Typography, Container, Grid } from '@material-ui/core';
-
-const styles = {
-  Section: {
-    padding: '4rem 0'
-  },
-  SectionHeading: {
-    marginBottom: '4rem',
-    fontWeight: 700
-  }
-};
+import { styles } from './styles';
 
 export const Projects = () => {
   return (
@@ -21,13 +12,12 @@ export const Projects = () => {
           Projects
         </Typography>
         <Grid
+          style={styles.GridContainer}
           container
-          spacing={9}
-          direction='column'
-          justify='center'
-          alignItems='center'>
+          spacing={2}
+          direction='row'>
           {data.projects.map(project => (
-            <Grid item key={project.id}>
+            <Grid item key={project.id} sm={12} alignContent='center'>
               <Project project={project} />
             </Grid>
           ))}

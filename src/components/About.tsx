@@ -1,6 +1,7 @@
 import React from 'react';
 import profilePicture from '../assets/images/profile-pic.jpg';
 import data from '../assets/data.js';
+import { styles } from './styles';
 
 import { ListItem } from './ListItem';
 import {
@@ -32,26 +33,11 @@ const useStyles = makeStyles((theme: Theme) =>
   })
 );
 
-const styles = {
-  Section: {
-    padding: '4rem 0'
-  },
-  SectionHeading: {
-    marginBottom: '1.5rem',
-    fontWeight: 700
-  },
-  Blurb: {
-    maxWidth: '80vw',
-    width: '500px',
-    marginBottom: '1.5rem'
-  }
-};
-
 export const About: React.FC = () => {
   const classes = useStyles();
+
   return (
     <section
-      id='about-me'
       className='about'
       style={{ ...styles.Section, background: 'white' }}>
       <Container maxWidth='sm'>
@@ -60,7 +46,7 @@ export const About: React.FC = () => {
           component='h2'
           gutterBottom
           style={styles.SectionHeading}>
-          About Me
+          About
         </Typography>
         <header className='about__header'>
           <Avatar

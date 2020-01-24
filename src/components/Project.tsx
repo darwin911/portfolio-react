@@ -26,7 +26,8 @@ const styles = {
     maxWidth: 400,
     borderRadius: 5,
     backgroundColor: 'transparent',
-    boxShadow: '0px 6px 1.25rem -0.75rem rgba(0, 0, 0, 0.9)'
+    boxShadow: '0px 10px .5rem -0.5rem rgba(0, 0, 0, 0.6)',
+    margin: '0 .5rem 3rem'
   },
   CardImg: {
     height: '250px',
