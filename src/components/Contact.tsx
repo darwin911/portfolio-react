@@ -11,9 +11,25 @@ export const Contact: React.FC = () => {
   const handleSubmit = (ev: React.FormEvent<HTMLFormElement>) => {
     ev.preventDefault();
 
-    setName('');
-    setEmail('');
-    setMessage('');
+    fetch('http://localhost:3002/send', {
+      method: 'POST',
+      body: JSON.stringify({ name, email, message }),
+      headers: {
+        Accept: 'application/json',
+        'Content-Type': 'application/json'
+      }
+    })
+      .then(res => res.json())
+      .then(res => {
+        if (res.status === 'success') {
+          alert('Message Sent!');
+          setName('');
+          setEmail('');
+          setMessage('');
+        } else if (res.status === 'fail') {
+          alert('Message failed to send.');
+        }
+      });
   };
 
   return (
