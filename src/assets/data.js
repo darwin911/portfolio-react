@@ -32,7 +32,16 @@ const data = {
       description:
         'CRUD (Create, Read, Update, Delete) application, built with React, Express, Sequelize, Postgres. The UI controls are custom CSS, and are controlled with state. Tracks are uploaded through the server to an AWS S3 Bucket. Authentication implemented with JSON Web Tokens, storing hashed passwords to the database. Login and Register inputs with validation.',
       github: 'https://github.com/darwin911/vinyl-express',
-      link: 'https://vinyl.surge.sh/'
+      link: 'https://vinyl.surge.sh/',
+      technologies: [
+        'React',
+        'Express',
+        'Sequelize',
+        'Postgres',
+        'Sass',
+        'CSS',
+        'HTML'
+      ]
     },
     {
       id: 2,
