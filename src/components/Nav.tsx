@@ -10,13 +10,21 @@ export const Nav: React.FC = () => {
 
   const sections = ['About', 'Projects', 'Contact'];
 
+  const transitionStyles = {
+    ...styles.AppBar,
+    backgroundColor: `${
+      isOpen ? 'rgba(110,110, 110, 0.85)' : 'rgba(175, 175, 175, 0.5)'
+    }`
+  };
+
   return (
-    <AppBar position='fixed' style={styles.AppBar}>
+    <AppBar position='fixed' style={transitionStyles}>
       <Toolbar>
         <IconButton
           edge='start'
           aria-label='menu'
           color='default'
+          style={{ color: 'white' }}
           size='small'
           disableRipple
           onClick={() => setIsOpen(prevState => !prevState)}>
@@ -29,7 +37,7 @@ export const Nav: React.FC = () => {
       </Toolbar>
 
       {isOpen && (
-        <List component='nav'>
+        <List component='nav' style={{ padding: 0 }}>
           {sections.map(navItem => (
             <NavItem key={navItem} section={navItem} />
           ))}

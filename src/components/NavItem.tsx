@@ -1,5 +1,5 @@
 import React from 'react';
-import { ListItem, ListItemText } from '@material-ui/core';
+import { ListItem, ListItemText, Divider } from '@material-ui/core';
 import { styles } from './styles';
 import { Link } from 'react-scroll';
 
@@ -18,6 +18,7 @@ export const NavItem: React.FC<Props> = ({ section }) => {
       <ListItem key={section} button>
         <ListItemText primary={section} style={styles.ListItemText} />
       </ListItem>
+      <Divider style={{ backgroundColor: 'rgba(255, 255, 255, 0.2)' }} />
     </Link>
   );
 };

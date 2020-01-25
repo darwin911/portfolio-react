@@ -22,13 +22,13 @@ export const styles = {
     margin: '1rem 0'
   },
   AppBar: {
-    backgroundColor: 'rgba(110, 110, 110, 0.5)',
     color: 'white',
     boxShadow:
-      '0px 2px 2px -1px rgba(0,0,0,0.2), 0px 4px 5px 0px rgba(0,0,0,0.14), 0px 1px 2px 0px rgba(0,0,0,0.12)'
+      '0px 2px 2px -1px rgba(0,0,0,0.2), 0px 4px 5px 0px rgba(0,0,0,0.14), 0px 1px 2px 0px rgba(0,0,0,0.12)',
+    transition: 'all 300ms cubic-bezier(0.02, 0.96, 0.21, 1.11)'
   },
   ListItemText: {
-    color: 'black',
-    fontWeight: 600
+    color: 'white',
+    fontWeight: 700
   }
 };
