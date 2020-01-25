@@ -1,5 +1,6 @@
 import React from 'react';
 import GitHubIcon from '@material-ui/icons/GitHub';
+import { styles } from './styles';
 import {
   Typography,
   Card,
@@ -21,23 +22,15 @@ interface Props {
   project: Project;
 }
 
-const styles = {
-  Card: {
-    maxWidth: 400,
-    borderRadius: 5,
-    boxShadow: '0px 10px .5rem -0.5rem rgba(0, 0, 0, 0.6)',
-    marginBottom: '3rem'
-  },
-  CardImg: {
-    height: '250px',
-    backgroundPosition: 'top'
-  }
-};
-
 export const Project: React.FC<Props> = ({ project }) => {
   return (
-    <Card style={styles.Card}>
-      <CardMedia image={project.img} title='Vinyl' style={styles.CardImg} />
+    <Card style={styles.Card} className='project'>
+      <CardMedia
+        image={project.img}
+        title='Vinyl'
+        style={styles.CardImg}
+        className='project__img'
+      />
       <CardContent style={{ backgroundColor: 'white' }}>
         <Typography gutterBottom variant='h5' component='h2' align='left'>
           {project.title}
