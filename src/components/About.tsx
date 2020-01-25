@@ -42,7 +42,7 @@ export const About: React.FC = () => {
       style={{ ...styles.Section, background: 'white' }}>
       <Container maxWidth='sm'>
         <Typography
-          variant='h3'
+          variant='h1'
           component='h2'
           gutterBottom
           style={styles.SectionHeading}>

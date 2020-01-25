@@ -8,7 +8,7 @@ export const Projects = () => {
   return (
     <section id='projects' style={{ ...styles.Section, background: '#FDD835' }}>
       <Container maxWidth='md'>
-        <Typography variant='h3' component='h2' style={styles.SectionHeading}>
+        <Typography variant='h1' component='h2' style={styles.SectionHeading}>
           Projects
         </Typography>
         <div className='projects__container'>
