@@ -5,10 +5,10 @@ export const Hero: React.FC = () => {
   return (
     <section className='hero'>
       <article className='hero__text-container'>
-        <Typography variant='h3' component='h1'>
+        <Typography variant='h1' component='h1'>
           Darwin Smith
         </Typography>
-        <Typography variant='h5' component='h2'>
+        <Typography variant='h2' component='h2'>
           Full-stack Developer
         </Typography>
       </article>

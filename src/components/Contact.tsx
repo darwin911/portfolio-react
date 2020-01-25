@@ -35,7 +35,7 @@ export const Contact: React.FC = () => {
   return (
     <section id='contact' className='contact' style={styles.Section}>
       <Container maxWidth='sm'>
-        <Typography variant='h2' component='h2' style={styles.SectionHeading}>
+        <Typography variant='h1' component='h2' style={styles.SectionHeading}>
           Contact
         </Typography>
         <Typography className='contact__description'>
