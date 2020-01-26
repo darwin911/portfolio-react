@@ -53,6 +53,10 @@ export const About: React.FC = () => {
             src={profilePicture}
             alt='Darwin Smith Avatar'
             className={classes.avatar}
+            style={{
+              boxShadow:
+                '1px 4px 2px rgba(0, 0, 0, 0.25), -2px 3px 8px rgba(0, 0, 0, 0.25)'
+            }}
           />
 
           <Typography
