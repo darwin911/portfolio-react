@@ -44,7 +44,7 @@ export const Nav: React.FC = () => {
             animate={{ height: '100%' }}
             exit={{ height: 0 }}>
             {sections.map(navItem => (
-              <NavItem key={navItem} section={navItem} />
+              <NavItem key={navItem} section={navItem} setIsOpen={setIsOpen} />
             ))}
           </motion.nav>
         )}

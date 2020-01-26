@@ -5,11 +5,13 @@ import { Link } from 'react-scroll';
 
 interface Props {
   section: string;
+  setIsOpen: React.Dispatch<React.SetStateAction<Boolean>>;
 }
 
-export const NavItem: React.FC<Props> = ({ section }) => {
+export const NavItem: React.FC<Props> = ({ section, setIsOpen }) => {
   return (
     <Link
+      onClick={() => setIsOpen(prevVal => !prevVal)}
       activeClass='active'
       to={section.toLowerCase()}
       smooth={true}
