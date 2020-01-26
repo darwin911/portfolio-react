@@ -1,7 +1,7 @@
 import React from 'react';
 import MenuIcon from '@material-ui/icons/Menu';
 import CloseIcon from '@material-ui/icons/Close';
-import { AppBar, IconButton, Toolbar, List } from '@material-ui/core';
+import { AppBar, IconButton, Toolbar } from '@material-ui/core';
 import { styles } from './styles';
 import { NavItem } from './NavItem';
 import { AnimatePresence, motion } from 'framer-motion';
@@ -14,7 +14,7 @@ export const Nav: React.FC = () => {
   const transitionStyles = {
     ...styles.AppBar,
     backgroundColor: `${
-      isOpen ? 'rgba(110,110, 110, 0.85)' : 'rgba(175, 175, 175, 0.5)'
+      isOpen ? 'rgba(50, 50, 50, 0.925)' : 'rgba(175, 175, 175, 0.65)'
     }`
   };
 
