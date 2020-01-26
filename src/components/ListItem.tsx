@@ -12,7 +12,7 @@ export const ListItem: React.FC<Props> = ({ title, styles }) => {
   return (
     <motion.li
       tabIndex={0}
-      animate={{ transform: `scale(${isHovered ? 1.4 : 1})` }}
+      animate={{ transform: `scale(${isHovered ? 1.25 : 1})` }}
       className='about__skill-item'
       onMouseEnter={() => setHovered(prevVal => !prevVal)}
       onMouseLeave={() => setHovered(prevVal => !prevVal)}>
