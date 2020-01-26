@@ -31,3 +31,16 @@
     }
   }
 }
+
+.project:hover p.MuiTypography-colorTextSecondary {
+  color: rgba(0, 0, 0, 0.9);
+}
+
+.project:focus .project__img {
+  border-radius: 6px;
+  transform: scale(0.97);
+}
+
+p.MuiTypography-colorTextSecondary {
+  transition: 200ms;
+}
