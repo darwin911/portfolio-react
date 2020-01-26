@@ -20,11 +20,13 @@ export const Contact: React.FC = () => {
       if (xhr.readyState !== XMLHttpRequest.DONE) return;
       if (xhr.status === 200) {
         setStatus('SUCCESS');
+        resetForm();
       } else {
         setStatus('ERROR');
       }
     };
     xhr.send(data);
+    console.log('STATUS:', status);
   };
 
   const resetForm = () => {
@@ -32,6 +34,7 @@ export const Contact: React.FC = () => {
     setEmail('');
     setMessage('');
   };
+
   return (
     <section id='contact' className='contact' style={styles.Section}>
       <Container maxWidth='sm'>
@@ -72,7 +75,7 @@ export const Contact: React.FC = () => {
           <TextField
             name='message'
             label='Message'
-            placeholder='You are so talented! Send over your Resume ASAP.'
+            placeholder='I would like to hear more about your work and experience. Send over your resume ASAP!'
             multiline
             margin='normal'
             fullWidth
