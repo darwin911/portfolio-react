@@ -32,15 +32,14 @@ export const styles = {
     fontWeight: 700
   },
   Card: {
+    padding: '0.5rem',
     maxWidth: 400,
     borderRadius: 10,
     boxShadow: '0px 10px .5rem -0.5rem rgba(0, 0, 0, 0.6)',
     marginBottom: '4rem'
   },
   CardImg: {
-    height: '300px',
-    backgroundPosition: 'top',
-    boxShadow:
-      '0px 6px .25rem -0.35rem rgba(0, 0, 0, 0.6), 0px 2px 0.9rem -0.125rem rgba(0, 0, 0, 0.25)'
+    height: '280px',
+    backgroundPosition: 'top'
   }
 };

@@ -20,20 +20,14 @@
 // Save this transition!! Very smooth and natural
 
 .project {
-  padding: 0.5rem;
   &__img {
-    transform: translate(0, 0) scale(0.95);
-    transition: all 825ms cubic-bezier(0.075, 0.82, 0.165, 1) 5ms;
-    border-radius: 10px;
-    background-color: rgba(0, 0, 0, 0.1);
-    background-blend-mode: darken;
-  }
+    transition: all 1225ms cubic-bezier(0.075, 0.82, 0.165, 1) 2ms;
+    border-radius: 8px;
+    position: relative;
 
-  &:hover {
-    .project__img {
-      transform: translate(0) scale(1);
-      border-radius: 4px;
-      background-color: rgba(255, 255, 255, 1);
+    &:hover {
+      border-radius: 6px;
+      transform: scale(0.97);
     }
   }
 }

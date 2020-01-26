@@ -7,7 +7,8 @@ import {
   CardContent,
   CardMedia,
   CardActions,
-  Button
+  Button,
+  CardActionArea
 } from '@material-ui/core';
 
 interface Project {
@@ -25,25 +26,30 @@ interface Props {
 export const Project: React.FC<Props> = ({ project }) => {
   return (
     <Card style={styles.Card} className='project'>
-      <CardMedia
-        image={project.img}
-        title='Vinyl'
-        style={styles.CardImg}
-        className='project__img'
-      />
-      <CardContent style={{ backgroundColor: 'white' }}>
-        <Typography gutterBottom variant='h5' component='h2' align='left'>
-          {project.title}
-        </Typography>
+      <CardActionArea
+        style={{ borderRadius: 10 }}
+        href={project.link}
+        target='_blank'>
+        <CardMedia
+          image={project.img}
+          title='Vinyl'
+          style={styles.CardImg}
+          className='project__img'
+        />
+        <CardContent style={{ backgroundColor: 'white' }}>
+          <Typography gutterBottom variant='h5' component='h2' align='left'>
+            {project.title}
+          </Typography>
 
-        <Typography
-          variant='body2'
-          color='textSecondary'
-          component='p'
-          align='left'>
-          {project.description}
-        </Typography>
-      </CardContent>
+          <Typography
+            variant='body2'
+            color='textSecondary'
+            component='p'
+            align='left'>
+            {project.description}
+          </Typography>
+        </CardContent>
+      </CardActionArea>
 
       <CardActions>
         <Button

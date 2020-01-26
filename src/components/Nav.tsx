@@ -26,7 +26,6 @@ export const Nav: React.FC = () => {
           aria-label='menu'
           color='default'
           style={{ color: 'white' }}
-          size='small'
           disableRipple
           onClick={() => setIsOpen(prevState => !prevState)}>
           {!isOpen ? (
