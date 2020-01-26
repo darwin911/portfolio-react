@@ -7,31 +7,31 @@ export const Contact: React.FC = () => {
   const [name, setName] = useState<string>('');
   const [email, setEmail] = useState<string>('');
   const [message, setMessage] = useState<string>('');
+  const [status, setStatus] = useState<string>('');
 
   const handleSubmit = (ev: React.FormEvent<HTMLFormElement>) => {
     ev.preventDefault();
-
-    fetch('http://localhost:3002/send', {
-      method: 'POST',
-      body: JSON.stringify({ name, email, message }),
-      headers: {
-        Accept: 'application/json',
-        'Content-Type': 'application/json'
+    const form: HTMLFormElement = ev.target as HTMLFormElement;
+    const data: FormData = new FormData(form);
+    const xhr = new XMLHttpRequest();
+    xhr.open(form.method, form.action);
+    xhr.setRequestHeader('Accept', 'application/json');
+    xhr.onreadystatechange = () => {
+      if (xhr.readyState !== XMLHttpRequest.DONE) return;
+      if (xhr.status === 200) {
+        setStatus('SUCCESS');
+      } else {
+        setStatus('ERROR');
       }
-    })
-      .then(res => res.json())
-      .then(res => {
-        if (res.status === 'success') {
-          alert('Message Sent!');
-          setName('');
-          setEmail('');
-          setMessage('');
-        } else if (res.status === 'fail') {
-          alert('Message failed to send.');
-        }
-      });
+    };
+    xhr.send(data);
   };
 
+  const resetForm = () => {
+    setName('');
+    setEmail('');
+    setMessage('');
+  };
   return (
     <section id='contact' className='contact' style={styles.Section}>
       <Container maxWidth='sm'>
@@ -42,8 +42,13 @@ export const Contact: React.FC = () => {
           This is here mostly to showcase the ability to style form inputs, and
           adding the relevent functionality to a form. It works, try it!
         </Typography>
-        <form onSubmit={handleSubmit} style={styles.ContactForm}>
+        <form
+          action='https://formspree.io/darwinpsmith@gmail.com'
+          method='POST'
+          onSubmit={handleSubmit}
+          style={styles.ContactForm}>
           <TextField
+            name='name'
             label='Name'
             placeholder='Your Name'
             margin='normal'
@@ -53,6 +58,7 @@ export const Contact: React.FC = () => {
           />
 
           <TextField
+            name='email'
             type='email'
             label='Email'
             placeholder='name@email.com'
@@ -64,6 +70,7 @@ export const Contact: React.FC = () => {
           />
 
           <TextField
+            name='message'
             label='Message'
             placeholder='You are so talented! Send over your Resume ASAP.'
             multiline
