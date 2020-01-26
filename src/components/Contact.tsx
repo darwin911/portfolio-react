@@ -84,6 +84,7 @@ export const Contact: React.FC = () => {
           />
 
           <Button
+            disabled={!email || !message}
             variant='contained'
             color='inherit'
             endIcon={<SendIcon />}
