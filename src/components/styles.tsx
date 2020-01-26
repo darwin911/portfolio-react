@@ -14,9 +14,6 @@ export const styles = {
     width: '500px',
     marginBottom: '1.5rem'
   },
-  GridContainer: {
-    flexGrow: 1
-  },
   ContactForm: {
     width: '100%',
     margin: '1rem 0'
@@ -36,7 +33,10 @@ export const styles = {
     maxWidth: 400,
     borderRadius: 10,
     boxShadow: '0px 10px .5rem -0.5rem rgba(0, 0, 0, 0.6)',
-    marginBottom: '4rem'
+    marginBottom: '4rem',
+    '&:hover': {
+      maxWidth: 200
+    }
   },
   CardImg: {
     height: '280px',
