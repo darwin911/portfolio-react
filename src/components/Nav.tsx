@@ -4,6 +4,7 @@ import CloseIcon from '@material-ui/icons/Close';
 import { AppBar, IconButton, Toolbar, List } from '@material-ui/core';
 import { styles } from './styles';
 import { NavItem } from './NavItem';
+import { AnimatePresence, motion } from 'framer-motion';
 
 export const Nav: React.FC = () => {
   const [isOpen, setIsOpen] = React.useState<Boolean>(false);
@@ -35,14 +36,19 @@ export const Nav: React.FC = () => {
           )}
         </IconButton>
       </Toolbar>
-
-      {isOpen && (
-        <List component='nav' style={{ padding: 0 }}>
-          {sections.map(navItem => (
-            <NavItem key={navItem} section={navItem} />
-          ))}
-        </List>
-      )}
+      <AnimatePresence>
+        {isOpen && (
+          <motion.nav
+            style={{ padding: 0, overflow: 'hidden' }}
+            initial={{ height: 0 }}
+            animate={{ height: '100%' }}
+            exit={{ height: 0 }}>
+            {sections.map(navItem => (
+              <NavItem key={navItem} section={navItem} />
+            ))}
+          </motion.nav>
+        )}
+      </AnimatePresence>
     </AppBar>
   );
 };
