@@ -41,5 +41,10 @@ export const styles = {
   CardImg: {
     height: '280px',
     backgroundPosition: 'top'
-  }
+  },
+  FooterIcon: {
+    color: 'black',
+    fontSize: 48
+  },
+  Divider: { marginTop: '1rem', marginBottom: '1rem' }
 };
