@@ -25,7 +25,7 @@ interface Props {
 
 export const Project: React.FC<Props> = ({ project }) => {
   return (
-    <Card style={styles.Card} className='project'>
+    <Card style={styles.Card} className='project' tabIndex={0}>
       <CardActionArea
         style={{ borderRadius: 10 }}
         href={project.link}
@@ -36,20 +36,20 @@ export const Project: React.FC<Props> = ({ project }) => {
           style={styles.CardImg}
           className='project__img'
         />
-        <CardContent style={{ backgroundColor: 'white' }}>
-          <Typography gutterBottom variant='h5' component='h2' align='left'>
-            {project.title}
-          </Typography>
-
-          <Typography
-            variant='body2'
-            color='textSecondary'
-            component='p'
-            align='left'>
-            {project.description}
-          </Typography>
-        </CardContent>
       </CardActionArea>
+      <CardContent style={{ backgroundColor: 'white' }}>
+        <Typography gutterBottom variant='h5' component='h2' align='left'>
+          {project.title}
+        </Typography>
+
+        <Typography
+          variant='body2'
+          color='textSecondary'
+          component='p'
+          align='left'>
+          {project.description}
+        </Typography>
+      </CardContent>
 
       <CardActions>
         <Button
