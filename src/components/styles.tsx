@@ -7,7 +7,7 @@ export const styles = {
     marginBottom: '2rem',
     fontWeight: 700,
     textShadow:
-      '1px 4px 2px rgba(0, 0, 0, 0.25), -2px 3px 8px rgba(0, 0, 0, 0.25)'
+      '1px 4px 2px rgba(0, 0, 0, 0.2), -2px 3px 8px rgba(0, 0, 0, 0.2)'
   },
   Blurb: {
     maxWidth: '80vw',
