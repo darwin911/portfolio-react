@@ -6,7 +6,9 @@ import { styles } from './styles';
 
 export const Projects = () => {
   return (
-    <section id='projects' style={{ ...styles.Section, background: '#FDD835' }}>
+    <section
+      className='projects'
+      style={{ ...styles.Section, background: '#FDD835' }}>
       <Container maxWidth='md'>
         <Typography variant='h1' component='h2' style={styles.SectionHeading}>
           Projects
