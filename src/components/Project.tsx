@@ -32,7 +32,7 @@ export const Project: React.FC<Props> = ({ project }) => {
         target='_blank'>
         <CardMedia
           image={project.img}
-          title='Vinyl'
+          title={project.title}
           style={styles.CardImg}
           className='project__img'
         />
