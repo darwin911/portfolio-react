@@ -29,6 +29,7 @@ export const Project: React.FC<Props> = ({ project }) => {
       <CardActionArea
         style={{ borderRadius: 10 }}
         href={project.link}
+        rel='noopener'
         target='_blank'>
         <CardMedia
           image={project.img}
