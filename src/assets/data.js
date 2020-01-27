@@ -1,14 +1,14 @@
-import vinyl from '../assets/images/vinyl_LR.webp';
-import octave from '../assets/images/octave_LR.webp';
-import pong from '../assets/images/pong_LR.webp';
-import citibike from '../assets/images/citibike-stations_LR.webp';
+import vinyl from '../assets/images/vinyl.png';
+import octave from '../assets/images/octave.png';
+import pong from '../assets/images/pong.png';
+import citibike from '../assets/images/citibike-stations.png';
 import postPic from '../assets/images/postpic.png';
-import jcc from '../assets/images/jcc_fireshot.webp';
-import calc from '../assets/images/calc_LR.webp';
+import jcc from '../assets/images/jcc_fireshot.jpg';
+import calc from '../assets/images/calc.png';
 
 const data = {
   blurb:
-    'NYC based Full-stack Developer, with interest in UI/UX. I have experience designing and building responsive Front-end and Full-stack applications. I am passionate about quality, efficiency and effective problem-solving.',
+    "I'm a Full-stack Developer with interest in UI/UX. I have experience designing and building responsive Front-end and Full-stack applications. I am passionate about quality, efficiency and effective problem-solving.",
   skills: [
     {
       title: 'HTML5',
