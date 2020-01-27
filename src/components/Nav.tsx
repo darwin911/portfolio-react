@@ -29,9 +29,17 @@ export const Nav: React.FC = () => {
           disableRipple
           onClick={() => setIsOpen(prevState => !prevState)}>
           {!isOpen ? (
-            <MenuIcon fontSize='large' />
+            <MenuIcon
+              fontSize='large'
+              aria-label='Menu'
+              aria-controls='navigation'
+            />
           ) : (
-            <CloseIcon fontSize='large' />
+            <CloseIcon
+              fontSize='large'
+              aria-label='Menu'
+              aria-controls='navigation'
+            />
           )}
         </IconButton>
       </Toolbar>
