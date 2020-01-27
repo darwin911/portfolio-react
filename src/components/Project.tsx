@@ -39,13 +39,13 @@ export const Project: React.FC<Props> = ({ project }) => {
         />
       </CardActionArea>
       <CardContent style={{ backgroundColor: 'white' }}>
-        <Typography gutterBottom variant='h5' component='h2' align='left'>
+        <Typography gutterBottom variant='h4' component='h3' align='left'>
           {project.title}
         </Typography>
 
         <Typography
-          variant='body2'
-          color='textSecondary'
+          variant='body1'
+          color='textPrimary'
           component='p'
           align='left'>
           {project.description}
