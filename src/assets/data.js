@@ -1,10 +1,10 @@
-import vinyl from '../assets/images/vinyl.png';
-import octave from '../assets/images/octave.png';
-import pong from '../assets/images/pong.png';
-import citibike from '../assets/images/citibike-stations.png';
+import vinyl from '../assets/images/vinyl_LR.webp';
+import octave from '../assets/images/octave_LR.webp';
+import pong from '../assets/images/pong_LR.webp';
+import citibike from '../assets/images/citibike-stations_LR.webp';
 import postPic from '../assets/images/postpic.png';
-import jcc from '../assets/images/jcc.png';
-import calc from '../assets/images/calc.png';
+import jcc from '../assets/images/jcc_fireshot.webp';
+import calc from '../assets/images/calc_LR.webp';
 
 const data = {
   blurb:
