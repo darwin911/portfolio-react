@@ -10,8 +10,10 @@ export const styles = {
       '1px 4px 2px rgba(0, 0, 0, 0.2), -2px 3px 8px rgba(0, 0, 0, 0.2)'
   },
   Blurb: {
+    fontSize: 16,
+    padding: 16,
     maxWidth: '80vw',
-    width: '500px',
+    width: '800px',
     marginBottom: '1.5rem'
   },
   ContactForm: {

@@ -10,7 +10,8 @@ import {
   Theme,
   createStyles,
   Avatar,
-  Container
+  Container,
+  Box
 } from '@material-ui/core';
 
 const useStyles = makeStyles((theme: Theme) =>
@@ -40,7 +41,7 @@ export const About: React.FC = () => {
     <section
       className='about'
       style={{ ...styles.Section, background: 'white' }}>
-      <Container maxWidth='sm'>
+      <Container maxWidth='md'>
         <Typography
           variant='h1'
           component='h2'
@@ -58,6 +59,18 @@ export const About: React.FC = () => {
                 '1px 4px 2px rgba(0, 0, 0, 0.25), -2px 3px 8px rgba(0, 0, 0, 0.25)'
             }}
           />
+          <Typography
+            variant='h5'
+            component='p'
+            align='left'
+            style={{
+              padding: '0 1rem',
+              lineHeight: 1,
+              fontWeight: 900,
+              margin: '1.75vw 0'
+            }}>
+            Hi, I'm Darwin!
+          </Typography>
 
           <Typography
             variant='body1'
@@ -67,18 +80,36 @@ export const About: React.FC = () => {
             {data.blurb}
           </Typography>
         </header>
-        <Typography variant='h5' component='h3' className={classes.subheading}>
-          Skills and Tools
-        </Typography>
-        <ul className='about__skill-list'>
-          {data.skills.map(item => (
-            <ListItem
-              title={item.title}
-              styles={item.styles}
-              key={item.title}
-            />
-          ))}
-        </ul>
+        <Box my={6}>
+          <Typography
+            variant='h3'
+            className={classes.subheading}
+            style={{
+              textShadow:
+                'rgba(0, 0, 0, 0.1) 1px 4px 2px, rgba(0, 0, 0, 0.1) -2px 3px 8px'
+            }}>
+            Skills and Tools
+          </Typography>
+          <ul className='about__skill-list'>
+            {data.skills.map(item => (
+              <ListItem
+                title={item.title}
+                styles={item.styles}
+                key={item.title}
+              />
+            ))}
+          </ul>
+        </Box>
+        {/* <Typography
+          variant='h3'
+          component='h3'
+          className={classes.subheading}
+          style={{
+            textShadow:
+              'rgba(0, 0, 0, 0.1) 1px 4px 2px, rgba(0, 0, 0, 0.1) -2px 3px 8px'
+          }}>
+          Experience
+        </Typography> */}
       </Container>
     </section>
   );
