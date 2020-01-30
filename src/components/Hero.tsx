@@ -1,17 +1,22 @@
 import React from 'react';
 import { Typography } from '@material-ui/core';
+import { motion } from 'framer-motion';
 
 export const Hero: React.FC = () => {
   return (
     <section className='hero'>
-      <article className='hero__text-container'>
+      <motion.article
+        className='hero__text-container'
+        animate={{ opacity: 1, y: 0 }}
+        style={{ opacity: 0, y: 20 }}
+        transition={{ duration: 2.25 }}>
         <Typography variant='h1' component='h1'>
           Darwin Smith
         </Typography>
-        <Typography variant='h2' component='h2'>
-          Full-stack Developer
+        <Typography variant='h3' component='h2'>
+          <motion.span>Full-stack</motion.span> Developer
         </Typography>
-      </article>
+      </motion.article>
     </section>
   );
 };
