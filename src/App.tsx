@@ -6,6 +6,9 @@ import { About } from './components/About';
 import { Projects } from './components/Projects';
 import { Contact } from './components/Contact';
 import { Footer } from './components/Footer';
+import ReactGA from 'react-ga';
+
+ReactGA.initialize('UA-134670953-1');
 
 export const App: React.FC = () => {
   return (
