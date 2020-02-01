@@ -2,16 +2,14 @@ import React from 'react';
 import profilePicture from '../assets/images/profile-pic.jpg';
 import data from '../assets/data.js';
 import { styles } from './styles';
-
-import { ListItem } from './ListItem';
+import { SkillsAndTools } from './SkillsAndTools';
 import {
   Typography,
   makeStyles,
   Theme,
   createStyles,
   Avatar,
-  Container,
-  Box
+  Container
 } from '@material-ui/core';
 
 const useStyles = makeStyles((theme: Theme) =>
@@ -80,26 +78,9 @@ export const About: React.FC = () => {
             {data.blurb}
           </Typography>
         </header>
-        <Box my={6}>
-          <Typography
-            variant='h3'
-            className={classes.subheading}
-            style={{
-              textShadow:
-                'rgba(0, 0, 0, 0.1) 1px 4px 2px, rgba(0, 0, 0, 0.1) -2px 3px 8px'
-            }}>
-            Skills and Tools
-          </Typography>
-          <ul className='about__skill-list'>
-            {data.skills.map(item => (
-              <ListItem
-                title={item.title}
-                styles={item.styles}
-                key={item.title}
-              />
-            ))}
-          </ul>
-        </Box>
+
+        <SkillsAndTools />
+
         {/* <Typography
           variant='h3'
           component='h3'
