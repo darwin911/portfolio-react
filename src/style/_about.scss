@@ -87,6 +87,38 @@
   }
 
   &__skill-item {
-    margin: 1.5rem;
+    margin: 1.25rem;
+  }
+}
+
+.about__github-grid {
+  background: rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 170px;
+  max-width: 280px;
+  border-radius: 8px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 8fr 1fr;
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 10px 0.5rem -0.5rem;
+}
+
+.about__github-item {
+  padding: 0.5rem;
+  background: rgba(255, 255, 255, 0.5);
+  display: flex;
+  transition: background-color 125ms cubic-bezier(0.645, 0.045, 0.355, 1);
+
+  & svg {
+    margin-right: 4px;
+  }
+
+  &.right {
+    border-left: 1px solid rgba(0, 0, 0, 0.15);
+  }
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.15);
   }
 }
