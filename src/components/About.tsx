@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import profilePicture from '../assets/images/profile-pic.jpg';
 import data from '../assets/data.js';
 import { styles } from './styles';
 import { SkillsAndTools } from './SkillsAndTools';
+import { Github } from './Github';
 import {
   Typography,
   makeStyles,
@@ -11,6 +12,7 @@ import {
   Avatar,
   Container
 } from '@material-ui/core';
+import axios from 'axios';
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -34,7 +36,19 @@ const useStyles = makeStyles((theme: Theme) =>
 
 export const About: React.FC = () => {
   const classes = useStyles();
+  const [githubData, setGithubData] = useState();
 
+  const loadGithubData = async () => {
+    const resp = await axios(
+      `https://api.github.com/users/darwin911?client_id=${process.env.REACT_APP_CLIENT_ID}&client_secret=${process.env.REACT_APP_CLIENT_SECRET}`
+    );
+
+    setGithubData(resp.data);
+  };
+
+  useEffect(() => {
+    loadGithubData();
+  }, []);
   return (
     <section
       className='about'
@@ -58,14 +72,12 @@ export const About: React.FC = () => {
             }}
           />
           <Typography
-            variant='h5'
+            variant='caption'
             component='p'
             align='left'
             style={{
               padding: '0 1rem',
-              lineHeight: 1,
-              fontWeight: 900,
-              margin: '1.75vw 0'
+              fontWeight: 900
             }}>
             Hi, I'm Darwin!
           </Typography>
@@ -79,6 +91,13 @@ export const About: React.FC = () => {
           </Typography>
         </header>
 
+        {githubData && (
+          <Github
+            repos={githubData.public_repos}
+            followers={githubData.followers}
+            following={githubData.following}
+          />
+        )}
         <SkillsAndTools />
 
         {/* <Typography
