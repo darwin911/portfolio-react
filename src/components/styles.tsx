@@ -48,5 +48,11 @@ export const styles = {
     color: 'black',
     fontSize: 48
   },
-  Divider: { marginTop: '1rem', marginBottom: '1rem' }
+  Divider: { marginTop: '1rem', marginBottom: '1rem' },
+  AboutSubHeading: {
+    fontWeight: 900,
+    margin: 8,
+    textShadow:
+      'rgba(0, 0, 0, 0.1) 1px 4px 2px, rgba(0, 0, 0, 0.1) -2px 3px 8px'
+  }
 };
