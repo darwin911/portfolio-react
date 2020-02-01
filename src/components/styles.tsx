@@ -12,8 +12,7 @@ export const styles = {
   Blurb: {
     fontSize: 16,
     padding: 16,
-    maxWidth: '90vw',
-    marginBottom: '1.5rem'
+    maxWidth: '90vw'
   },
   ContactForm: {
     width: '100%',
@@ -50,7 +49,7 @@ export const styles = {
   Divider: { marginTop: '1rem', marginBottom: '1rem' },
   AboutSubHeading: {
     fontWeight: 900,
-    marginBottom: 8,
+    marginBottom: 16,
     textShadow:
       'rgba(0, 0, 0, 0.1) 1px 4px 2px, rgba(0, 0, 0, 0.1) -2px 3px 8px'
   }
