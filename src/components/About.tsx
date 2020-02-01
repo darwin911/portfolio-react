@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import profilePicture from '../assets/images/profile-pic.jpg';
+import profilePicture from '../assets/images/profilepic_white-bg.jpg';
 import data from '../assets/data.js';
 import { styles } from './styles';
 import { SkillsAndTools } from './SkillsAndTools';
@@ -62,14 +62,10 @@ export const About: React.FC = () => {
           About
         </Typography>
         <header className='about__header'>
-          <Avatar
+          <img
             src={profilePicture}
-            alt='Darwin Smith Avatar'
-            className={classes.avatar}
-            style={{
-              boxShadow:
-                '1px 4px 2px rgba(0, 0, 0, 0.25), -2px 3px 8px rgba(0, 0, 0, 0.25)'
-            }}
+            alt="Darwin Smith's profile picture"
+            className='about__avatar'
           />
           <Typography
             variant='caption'
