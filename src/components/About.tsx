@@ -53,7 +53,7 @@ export const About: React.FC = () => {
     <section
       className='about'
       style={{ ...styles.Section, background: 'white' }}>
-      <Container maxWidth='md'>
+      <Container maxWidth='sm'>
         <Typography
           variant='h1'
           component='h2'
@@ -61,31 +61,18 @@ export const About: React.FC = () => {
           style={styles.SectionHeading}>
           About
         </Typography>
-        <header className='about__header'>
-          <img
-            src={profilePicture}
-            alt="Darwin Smith's profile picture"
-            className='about__avatar'
-          />
-          <Typography
-            variant='caption'
-            component='p'
-            align='left'
-            style={{
-              padding: '0 1rem',
-              fontWeight: 900
-            }}>
-            Hi, I'm Darwin!
-          </Typography>
+        <div className='about__card'>
+          <div className='about__card-inner-container'>
+            <img
+              src={profilePicture}
+              alt="Darwin Smith's profile picture"
+              className='about__avatar'
+            />
+            <h6 className='about__avatar-headline'>Hi, I'm Darwin!</h6>
+          </div>
 
-          <Typography
-            variant='body1'
-            align='justify'
-            gutterBottom
-            style={styles.Blurb}>
-            {data.blurb}
-          </Typography>
-        </header>
+          <p className='about__blurb'>{data.blurb}</p>
+        </div>
 
         {githubData && (
           <Github

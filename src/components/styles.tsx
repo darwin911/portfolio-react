@@ -4,15 +4,10 @@ export const styles = {
   },
   SectionHeading: {
     maxWidth: '100%',
-    marginBottom: '2rem',
+    marginBottom: '4rem',
     fontWeight: 700,
     textShadow:
       '1px 4px 2px rgba(0, 0, 0, 0.2), -2px 3px 8px rgba(0, 0, 0, 0.2)'
-  },
-  Blurb: {
-    fontSize: 16,
-    padding: 16,
-    maxWidth: '90vw'
   },
   ContactForm: {
     width: '100%',
@@ -49,7 +44,7 @@ export const styles = {
   Divider: { marginTop: '1rem', marginBottom: '1rem' },
   AboutSubHeading: {
     fontWeight: 900,
-    marginBottom: 16,
+    marginBottom: '2rem',
     textShadow:
       'rgba(0, 0, 0, 0.1) 1px 4px 2px, rgba(0, 0, 0, 0.1) -2px 3px 8px'
   }
