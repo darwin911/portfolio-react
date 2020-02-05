@@ -16,7 +16,7 @@ export const NavItem: React.FC<Props> = ({ section, setIsOpen }) => {
       to={section.toLowerCase()}
       smooth={true}
       duration={500}
-      offset={0}>
+      offset={-64}>
       <ListItem button>
         <ListItemText primary={section} style={styles.ListItemText} />
       </ListItem>
