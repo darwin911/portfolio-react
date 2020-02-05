@@ -4,14 +4,7 @@ import data from '../assets/data.js';
 import { styles } from './styles';
 import { SkillsAndTools } from './SkillsAndTools';
 import { Github } from './Github';
-import {
-  Typography,
-  makeStyles,
-  Theme,
-  createStyles,
-  Avatar,
-  Container
-} from '@material-ui/core';
+import { Typography, Container } from '@material-ui/core';
 import axios from 'axios';
 
 const github = axios.create({
