@@ -34,15 +34,19 @@ const useStyles = makeStyles((theme: Theme) =>
   })
 );
 
+const github = axios.create({
+  baseURL: 'https://api.github.com',
+  headers: {
+    Authorization: `token ${process.env.REACT_APP_GITHUB_PERSONAL_ACCESS_TOKEN}`
+  }
+});
+
 export const About: React.FC = () => {
   const classes = useStyles();
   const [githubData, setGithubData] = useState();
 
   const loadGithubData = async () => {
-    const resp = await axios(
-      `https://api.github.com/users/darwin911?client_id=${process.env.REACT_APP_CLIENT_ID}&client_secret=${process.env.REACT_APP_CLIENT_SECRET}`
-    );
-
+    const resp = await github.get('/users/darwin911');
     setGithubData(resp.data);
   };
 
