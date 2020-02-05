@@ -2,7 +2,6 @@ import React from 'react';
 import MenuIcon from '@material-ui/icons/Menu';
 import CloseIcon from '@material-ui/icons/Close';
 import { AppBar, IconButton, Toolbar } from '@material-ui/core';
-import { styles } from './styles';
 import { NavItem } from './NavItem';
 import { AnimatePresence, motion } from 'framer-motion';
 
@@ -11,22 +10,20 @@ export const Nav: React.FC = () => {
 
   const sections = ['About', 'Projects', 'Contact'];
 
-  const transitionStyles = {
-    ...styles.AppBar,
+  const transitionBg = {
     backgroundColor: `${
       isOpen ? 'rgba(50, 50, 50, 0.925)' : 'rgba(175, 175, 175, 0.65)'
     }`
   };
 
   return (
-    <AppBar position='fixed' style={transitionStyles}>
+    <AppBar position='fixed' style={transitionBg} className='navbar'>
       <Toolbar>
         <IconButton
           edge='start'
           aria-label='menu'
           color='default'
           style={{ color: 'white' }}
-          disableRipple
           onClick={() => setIsOpen(prevState => !prevState)}>
           {!isOpen ? (
             <MenuIcon

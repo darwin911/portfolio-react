@@ -27,9 +27,7 @@ export const About: React.FC = () => {
   }, []);
 
   return (
-    <section
-      className='about'
-      style={{ ...styles.Section, background: 'white' }}>
+    <section className='about'>
       <Container maxWidth='sm'>
         <Typography
           variant='h1'
