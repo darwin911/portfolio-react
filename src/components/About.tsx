@@ -14,26 +14,6 @@ import {
 } from '@material-ui/core';
 import axios from 'axios';
 
-const useStyles = makeStyles((theme: Theme) =>
-  createStyles({
-    heading: {
-      margin: theme.spacing(2)
-    },
-    subheading: {
-      margin: theme.spacing(1),
-      fontWeight: theme.typography.fontWeightBold
-    },
-    blurb: {
-      margin: theme.spacing(2)
-    },
-    avatar: {
-      margin: theme.spacing(2),
-      width: 100,
-      height: 100
-    }
-  })
-);
-
 const github = axios.create({
   baseURL: 'https://api.github.com',
   headers: {
@@ -42,7 +22,6 @@ const github = axios.create({
 });
 
 export const About: React.FC = () => {
-  const classes = useStyles();
   const [githubData, setGithubData] = useState();
 
   const loadGithubData = async () => {
