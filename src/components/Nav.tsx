@@ -44,9 +44,9 @@ export const Nav: React.FC = () => {
         {isOpen && (
           <motion.nav
             style={{ padding: 0, overflow: 'hidden' }}
-            initial={{ height: 0 }}
-            animate={{ height: '100%' }}
-            exit={{ height: 0 }}>
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: '100%', opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}>
             {sections.map(navItem => (
               <NavItem key={navItem} section={navItem} setIsOpen={setIsOpen} />
             ))}
