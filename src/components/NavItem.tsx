@@ -17,7 +17,7 @@ export const NavItem: React.FC<Props> = ({ section, setIsOpen }) => {
       smooth={true}
       duration={500}
       offset={0}>
-      <ListItem key={section} button>
+      <ListItem button>
         <ListItemText primary={section} style={styles.ListItemText} />
       </ListItem>
       <Divider style={{ backgroundColor: 'rgba(255, 255, 255, 0.2)' }} />
