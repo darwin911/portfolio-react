@@ -32,6 +32,7 @@ export const About: React.FC = () => {
   useEffect(() => {
     loadGithubData();
   }, []);
+
   return (
     <section
       className='about'
@@ -48,7 +49,7 @@ export const About: React.FC = () => {
           <div className='about__card-inner-container'>
             <img
               src={profilePicture}
-              alt="Darwin Smith's profile picture"
+              alt="Darwin Smith's profile"
               className='about__avatar'
             />
             <h6 className='about__avatar-headline'>Hi, I'm Darwin!</h6>
