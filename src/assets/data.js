@@ -5,6 +5,7 @@ import citibike from '../assets/images/citibike-stations.png';
 import postPic from '../assets/images/postpic.png';
 import jcc from '../assets/images/jcc_fireshot.jpg';
 import calc from '../assets/images/calc.png';
+import exerciseTracker from '../assets/images/exercise-tracker.png';
 
 const data = {
   blurb:
@@ -12,7 +13,7 @@ const data = {
   skills: [
     {
       title: 'HTML5',
-      styles: 'html'
+      styles: 'html',
     },
     { title: 'CSS3', styles: 'css' },
     { title: 'Sass', styles: 'sass' },
@@ -22,9 +23,19 @@ const data = {
     { title: 'Express.js', styles: 'express' },
     { title: 'Node.js', styles: 'nodejs' },
     { title: 'PostgreSQL', styles: 'postgresql' },
-    { title: 'Firebase', styles: 'firebase' }
+    { title: 'Firebase', styles: 'firebase' },
   ],
   projects: [
+    {
+      id: 0,
+      title: 'Exercise Tracker',
+      img: exerciseTracker,
+      description:
+        'Logging, Tracking and Visualizing exercise and workouts. Built with React, Mongo, Express.',
+      github: 'https://github.com/darwin911/exercise-tracker',
+      link: 'https://exercise-tracker-blink.netlify.com/',
+      technologies: ['React', 'Express', 'MongoDb', 'Mongoose', 'Formik', 'framer-motion'],
+    },
     {
       id: 1,
       title: 'Vinyl',
@@ -33,15 +44,7 @@ const data = {
         'CRUD (Create, Read, Update, Delete) application, built with React, Express, Sequelize, Postgres. The UI controls are custom CSS, and are controlled with state. Tracks are uploaded through the server to an AWS S3 Bucket. Authentication implemented with JSON Web Tokens, storing hashed passwords to the database. Login and Register inputs with validation.',
       github: 'https://github.com/darwin911/vinyl-express',
       link: 'https://vinyl.surge.sh/',
-      technologies: [
-        'React',
-        'Express',
-        'Sequelize',
-        'Postgres',
-        'Sass',
-        'CSS',
-        'HTML'
-      ]
+      technologies: ['React', 'Express', 'Sequelize', 'Postgres', 'Sass', 'CSS', 'HTML'],
     },
     {
       id: 2,
@@ -50,7 +53,7 @@ const data = {
       description:
         'A collaborative React App built with Express. Consuming data from the Ticketmaster API, loading database with user selected artists, and venues. Authentication implemented with JSON Web Tokens, storing hashed passwords to the database. Design based off a mock-up from a UI/UX design team of students at General Assembly.',
       github: 'https://github.com/darwin911/octave',
-      link: 'https://octave-bananas.surge.sh/'
+      link: 'https://octave-bananas.surge.sh/',
     },
     {
       id: 3,
@@ -59,7 +62,7 @@ const data = {
       description:
         'React App, consuming NYC Open Data API (CitiBike Station Data) using Google Maps, Google Maps Geocoding API to power search fields. Custom styling with CSS3.',
       github: 'https://github.com/darwin911/citibike-react',
-      link: 'https://citibike-react.netlify.com/'
+      link: 'https://citibike-react.netlify.com/',
     },
     {
       id: 4,
@@ -68,7 +71,7 @@ const data = {
       description:
         'React App on Express (node.js) server. This project was built to mimic web-apps/apps such as Instagram.',
       github: 'https://github.com/darwin911/imageSharingCRUD',
-      link: 'http://luxuriant-bun.surge.sh/'
+      link: 'http://luxuriant-bun.surge.sh/',
     },
     {
       id: 5,
@@ -77,7 +80,7 @@ const data = {
       description:
         'Built a one player version of the classic arcade game Pong in vanilla JavaScript during the Web Development Immersive (WDI) course at General Assembly. Wrote custom collision detection responsive to browser size and mobile devices.',
       github: 'https://github.com/darwin911/pong',
-      link: 'https://pong-js.netlify.com/'
+      link: 'https://pong-js.netlify.com/',
     },
     {
       id: 6,
@@ -85,7 +88,7 @@ const data = {
       img: jcc,
       description:
         'Designed and built a static website for a non-profit working with underpriviledged children in the Dominican Republic.',
-      link: 'http://www.juegacomocampeon.org'
+      link: 'http://www.juegacomocampeon.org',
     },
     {
       id: 7,
@@ -93,9 +96,9 @@ const data = {
       img: calc,
       description:
         'Created all buttons with an unordered list and added styles to make them look like such. Positioning was a bit tricky but helped me improve my CSS skills. JavaScript is what powers the actual functionality of the calculator. Event Listeners and functional programming was key for this project.',
-      link: 'https://darwinpsmith.com/calc/index.html'
-    }
-  ]
+      link: 'https://darwinpsmith.com/calc/index.html',
+    },
+  ],
 };
 
 export default data;
