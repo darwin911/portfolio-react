@@ -11,8 +11,6 @@ import ReactGA from 'react-ga';
 export const App: React.FC = () => {
   useEffect(() => {
     ReactGA.initialize('UA-134670953-1');
-    console.log();
-    debugger;
   }, []);
   return (
     <div className='App'>

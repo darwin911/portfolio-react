@@ -18,12 +18,11 @@ export const Github: React.FC = () => {
     following: 0,
   });
 
-  const loadGithubData = async () => {
-    const resp = await github.get('/users/darwin911');
-    setGithubData(resp.data);
-  };
-
   useEffect(() => {
+    const loadGithubData = async () => {
+      const resp = await github.get('/users/darwin911');
+      setGithubData(resp.data);
+    };
     loadGithubData();
   }, []);
 
