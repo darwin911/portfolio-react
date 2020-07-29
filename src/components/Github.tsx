@@ -34,17 +34,17 @@ export const Github: React.FC = () => {
       <div className='about__github-grid'>
         <div className='about__github-item'>
           <DeviceHub />
-          <Typography component='span'>Repositories</Typography>
+          <Typography variant='h6'>Public Repositories</Typography>
         </div>
         <Typography className='about__github-item right'>{githubData.public_repos}</Typography>
         <div className='about__github-item'>
           <PeopleAlt />
-          <Typography>Following</Typography>
+          <Typography variant='h6'>Following</Typography>
         </div>
         <Typography className='about__github-item right'>{githubData.following}</Typography>
         <div className='about__github-item'>
           <PeopleAlt />
-          <Typography>Followers</Typography>
+          <Typography variant='h6'>Followers</Typography>
         </div>
         <Typography className='about__github-item right'>{githubData.followers}</Typography>
       </div>

@@ -7,50 +7,41 @@
 }
 
 .sass {
-  background: center/ contain no-repeat
-    url('https://cdn.svgporn.com/logos/sass.svg');
+  background: center/ contain no-repeat url('https://cdn.svgporn.com/logos/sass.svg');
 }
 
 .react {
-  background: center / contain no-repeat
-    url('https://cdn.svgporn.com/logos/react.svg');
+  background: center / contain no-repeat url('https://cdn.svgporn.com/logos/react.svg');
 }
 
 .typescript {
-  background: center / contain no-repeat
-    url('https://cdn.svgporn.com/logos/typescript-icon.svg');
+  background: center / contain no-repeat url('https://cdn.svgporn.com/logos/typescript-icon.svg');
   border-radius: 10px;
 }
 
 .express {
-  background: center / contain no-repeat
-    url('https://cdn.svgporn.com/logos/express.svg');
+  background: center / contain no-repeat url('https://cdn.svgporn.com/logos/express.svg');
 }
 
 .javascript {
-  background: center / contain no-repeat
-    url('https://cdn.svgporn.com/logos/javascript.svg');
+  background: center / contain no-repeat url('https://cdn.svgporn.com/logos/javascript.svg');
   border-radius: 10px;
 }
 
 .npm {
-  background: center / contain no-repeat
-    url('https://cdn.svgporn.com/logos/npm.svg');
+  background: center / contain no-repeat url('https://cdn.svgporn.com/logos/npm.svg');
 }
 
 .postgresql {
-  background: center / contain no-repeat
-    url('https://cdn.svgporn.com/logos/postgresql.svg');
+  background: center / contain no-repeat url('https://cdn.svgporn.com/logos/postgresql.svg');
 }
 
 .firebase {
-  background: center / contain no-repeat
-    url('https://cdn.svgporn.com/logos/firebase.svg');
+  background: center / contain no-repeat url('https://cdn.svgporn.com/logos/firebase.svg');
 }
 
 .nodejs {
-  background: center / contain no-repeat
-    url('https://cdn.svgporn.com/logos/nodejs.svg');
+  background: center / contain no-repeat url('https://cdn.svgporn.com/logos/nodejs.svg');
 }
 
 .about {
@@ -70,8 +61,7 @@
     max-width: 400px;
     margin: 0 auto 4rem;
     border-radius: 1rem;
-    box-shadow: rgba(0, 0, 0, 0.2) 0px 10px 0.5rem -0.5rem,
-      0px 0px 5px 0px rgba(37, 29, 29, 0.125);
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 10px 0.5rem -0.5rem, 0px 0px 5px 0px rgba(37, 29, 29, 0.125);
     overflow: hidden;
     // background-color: #03334f
     @media screen and (min-width: 768px) {
@@ -97,8 +87,7 @@
     border-radius: 50%;
     background-color: white;
     object-fit: cover;
-    box-shadow: 0px 2px 3px 1px rgba(37, 29, 29, 0.125),
-      0px 0px 5px 1px rgba(80, 80, 80, 0.05);
+    box-shadow: 0px 2px 3px 1px rgba(37, 29, 29, 0.125), 0px 0px 5px 1px rgba(80, 80, 80, 0.05);
   }
 
   &__avatar-headline {
@@ -143,21 +132,25 @@
 .about__github-grid {
   background: rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  width: 170px;
   max-width: 280px;
   border-radius: 8px;
   margin: 0 auto 4rem;
   display: grid;
   grid-template-columns: 8fr 1fr;
-  border: none;
+  border: 1px solid rgba(0, 0, 0, 0.05);
   box-shadow: rgba(0, 0, 0, 0.2) 0px 10px 0.5rem -0.5rem;
 }
 
 .about__github-item {
-  padding: 0.5rem;
+  padding: 0.85rem;
   background: rgba(255, 255, 255, 0.5);
   display: flex;
   transition: background-color 125ms cubic-bezier(0.645, 0.045, 0.355, 1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+
+  &:last-of-type {
+    border: none;
+  }
 
   & svg {
     margin-right: 4px;

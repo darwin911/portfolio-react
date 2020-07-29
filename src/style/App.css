@@ -249,7 +249,6 @@
 .about__github-grid {
   background: rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  width: 170px;
   max-width: 280px;
   border-radius: 8px;
   margin: 0 auto 4rem;
@@ -257,19 +256,24 @@
   display: grid;
   -ms-grid-columns: 8fr 1fr;
       grid-template-columns: 8fr 1fr;
-  border: none;
+  border: 1px solid rgba(0, 0, 0, 0.05);
   -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0px 10px 0.5rem -0.5rem;
           box-shadow: rgba(0, 0, 0, 0.2) 0px 10px 0.5rem -0.5rem;
 }
 
 .about__github-item {
-  padding: 0.5rem;
+  padding: 0.85rem;
   background: rgba(255, 255, 255, 0.5);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-transition: background-color 125ms cubic-bezier(0.645, 0.045, 0.355, 1);
   transition: background-color 125ms cubic-bezier(0.645, 0.045, 0.355, 1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.about__github-item:last-of-type {
+  border: none;
 }
 
 .about__github-item svg {
