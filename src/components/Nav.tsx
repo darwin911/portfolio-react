@@ -11,9 +11,7 @@ export const Nav: React.FC = () => {
   const sections = ['About', 'Projects', 'Contact'];
 
   const transitionBg = {
-    backgroundColor: `${
-      isOpen ? 'rgba(50, 50, 50, 0.925)' : 'rgba(175, 175, 175, 0.65)'
-    }`
+    backgroundColor: `${isOpen ? 'rgba(24, 24, 24, 0.925)' : 'rgba(24, 24, 24, 0.95)'}`,
   };
 
   return (
@@ -24,19 +22,11 @@ export const Nav: React.FC = () => {
           aria-label='menu'
           color='default'
           style={{ color: 'white' }}
-          onClick={() => setIsOpen(prevState => !prevState)}>
+          onClick={() => setIsOpen((prevState) => !prevState)}>
           {!isOpen ? (
-            <MenuIcon
-              fontSize='large'
-              aria-label='Menu'
-              aria-controls='navigation'
-            />
+            <MenuIcon fontSize='large' aria-label='Menu' aria-controls='navigation' />
           ) : (
-            <CloseIcon
-              fontSize='large'
-              aria-label='Menu'
-              aria-controls='navigation'
-            />
+            <CloseIcon fontSize='large' aria-label='Menu' aria-controls='navigation' />
           )}
         </IconButton>
       </Toolbar>
@@ -47,7 +37,7 @@ export const Nav: React.FC = () => {
             initial={{ height: 0, opacity: 0 }}
             animate={{ height: '100%', opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}>
-            {sections.map(navItem => (
+            {sections.map((navItem) => (
               <NavItem key={navItem} section={navItem} setIsOpen={setIsOpen} />
             ))}
           </motion.nav>

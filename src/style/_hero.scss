@@ -1,4 +1,5 @@
 .hero {
+  position: relative;
   height: calc(100vh);
   background: center / cover no-repeat
     url('https://images.pexels.com/photos/2120040/pexels-photo-2120040.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
@@ -16,11 +17,59 @@
   }
 
   .MuiTypography-h2 {
-    color: rgba(255, 255, 255, 0.75);
+    color: rgba(255, 255, 255, 0.85);
   }
 
   .MuiTypography-h5 {
     color: rgba(255, 255, 255, 0.35);
+  }
+
+  aside {
+    position: absolute;
+    right: 2rem;
+    bottom: 5rem;
+    @media screen and (max-width: 414px) {
+      top: 15vh;
+    }
+    span {
+      font-size: 1.75rem;
+      color: rgba(255, 255, 255, 0.25);
+      display: block;
+      line-height: 1;
+      font-family: monospace;
+    }
+    small {
+      position: absolute;
+      right: 0;
+      opacity: 0.5;
+      font-weight: 500;
+      font-family: monospace;
+    }
+  }
+
+  &__down-arrow {
+    cursor: pointer;
+    position: absolute;
+    bottom: 8vh;
+    transform: translate(-50%, 0);
+    opacity: 0.85;
+    filter: drop-shadow(0px 0px 1.5rem rgba(255, 255, 255, 0.5));
+    transition: all 250ms ease-in-out;
+    border: 2px solid rgba(white, 0);
+    padding: 1rem;
+    border-radius: 50%;
+    &:hover,
+    &:focus {
+      border: 2px solid rgba(white, 0.15);
+      opacity: 1;
+      transform: translate(-50%, -2px);
+      background: rgba(0, 0, 0, 1);
+      filter: none;
+    }
+
+    svg {
+      transform: translateY(5px);
+    }
   }
 }
 

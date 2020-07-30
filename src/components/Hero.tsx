@@ -1,6 +1,7 @@
 import React from 'react';
 import { Typography } from '@material-ui/core';
 import { motion } from 'framer-motion';
+import { Countdown } from './Countdown';
 
 export const Hero: React.FC = () => {
   return (
@@ -17,6 +18,7 @@ export const Hero: React.FC = () => {
           <span>Full-stack</span> Developer | New York City
         </Typography>
       </motion.article>
+      <Countdown />
     </section>
   );
 };
