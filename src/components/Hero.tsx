@@ -13,8 +13,8 @@ export const Hero: React.FC = () => {
         <Typography variant='h2' component='h1'>
           Darwin Smith
         </Typography>
-        <Typography variant='h4' component='h2'>
-          <motion.span>Full-stack</motion.span> Developer | New York City
+        <Typography variant='h5' component='h2'>
+          <span>Full-stack</span> Developer | New York City
         </Typography>
       </motion.article>
     </section>

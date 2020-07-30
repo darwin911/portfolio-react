@@ -11,7 +11,7 @@ export const SkillsAndTools = () => {
         Skills and Tools
       </Typography>
       <ul className='about__skill-list'>
-        {data.skills.map(item => (
+        {data.skills.map((item) => (
           <ListItem title={item.title} styles={item.styles} key={item.title} />
         ))}
       </ul>
