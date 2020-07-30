@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import profilePicture from '../assets/images/profilepic_white-bg.jpg';
 import data from '../assets/data.js';
 import { styles } from './styles';

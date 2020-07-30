@@ -72,9 +72,11 @@
   height: calc(100vh);
   background: center/cover no-repeat url("https://images.pexels.com/photos/2120040/pexels-photo-2120040.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
   color: white;
-  -webkit-box-shadow: inset 0 0 50em 50em rgba(0, 0, 0, 0.925);
-          box-shadow: inset 0 0 50em 50em rgba(0, 0, 0, 0.925);
+  -webkit-box-shadow: inset 0 0 50em 50em rgba(0, 0, 0, 0.425);
+          box-shadow: inset 0 0 50em 50em rgba(0, 0, 0, 0.425);
   text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.9);
+  -webkit-animation: fadeInShadow 1250ms ease-out 500ms forwards;
+          animation: fadeInShadow 1250ms ease-out 500ms forwards;
 }
 
 .hero__text-container {
@@ -89,6 +91,28 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+@-webkit-keyframes fadeInShadow {
+  0% {
+    -webkit-box-shadow: inset 0 0 50em 50em rgba(0, 0, 0, 0.425);
+            box-shadow: inset 0 0 50em 50em rgba(0, 0, 0, 0.425);
+  }
+  100% {
+    -webkit-box-shadow: inset 0 0 50em 50em rgba(0, 0, 0, 0.925);
+            box-shadow: inset 0 0 50em 50em rgba(0, 0, 0, 0.925);
+  }
+}
+
+@keyframes fadeInShadow {
+  0% {
+    -webkit-box-shadow: inset 0 0 50em 50em rgba(0, 0, 0, 0.425);
+            box-shadow: inset 0 0 50em 50em rgba(0, 0, 0, 0.425);
+  }
+  100% {
+    -webkit-box-shadow: inset 0 0 50em 50em rgba(0, 0, 0, 0.925);
+            box-shadow: inset 0 0 50em 50em rgba(0, 0, 0, 0.925);
+  }
 }
 
 .html {
