@@ -69,6 +69,7 @@
 }
 
 .hero {
+  position: relative;
   height: calc(100vh);
   background: center/cover no-repeat url("https://images.pexels.com/photos/2120040/pexels-photo-2120040.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
   color: white;
@@ -94,11 +95,56 @@
 }
 
 .hero .MuiTypography-h2 {
-  color: rgba(255, 255, 255, 0.75);
+  color: rgba(255, 255, 255, 0.85);
 }
 
 .hero .MuiTypography-h5 {
   color: rgba(255, 255, 255, 0.35);
+}
+
+.hero aside {
+  position: absolute;
+  right: 10vw;
+  bottom: 10vh;
+}
+
+.hero aside span {
+  font-size: 2rem;
+  color: rgba(255, 255, 255, 0.2);
+  display: block;
+  line-height: 1;
+  font-family: Consolas, monospace;
+}
+
+.hero__down-arrow {
+  cursor: pointer;
+  position: absolute;
+  bottom: 8vh;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+  opacity: 0.85;
+  -webkit-filter: drop-shadow(0px 0px 1.5rem rgba(255, 255, 255, 0.5));
+          filter: drop-shadow(0px 0px 1.5rem rgba(255, 255, 255, 0.5));
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+  border: 2px solid rgba(255, 255, 255, 0);
+  padding: 1rem;
+  border-radius: 50%;
+}
+
+.hero__down-arrow:hover, .hero__down-arrow:focus {
+  border: 2px solid rgba(255, 255, 255, 0.15);
+  opacity: 1;
+  -webkit-transform: translate(-50%, -2px);
+          transform: translate(-50%, -2px);
+  background: black;
+  -webkit-filter: none;
+          filter: none;
+}
+
+.hero__down-arrow svg {
+  -webkit-transform: translateY(5px);
+          transform: translateY(5px);
 }
 
 @-webkit-keyframes fadeInShadow {
