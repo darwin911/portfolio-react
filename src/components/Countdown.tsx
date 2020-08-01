@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import moment from 'moment';
 import { Link } from 'react-scroll';
+import { motion } from 'framer-motion';
 
 export const Countdown = () => {
   const [elapsedTime, setElapsedTime] = useState<string>((0.0).toFixed(2));
@@ -36,7 +36,10 @@ export const Countdown = () => {
       )}
       {Number(elapsedTime) > 10 && (
         <Link to='about' className='hero__down-arrow' smooth={true} duration={500} offset={-64}>
-          <svg
+          <motion.svg
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.25 }}
             fill='#fff'
             version='1.1'
             id='Layer_1'
@@ -53,7 +56,7 @@ export const Countdown = () => {
 	c-2.109,6.011-0.19,12.699,4.784,16.678l150.004,120c2.739,2.191,6.055,3.287,9.37,3.287c3.316,0,6.631-1.096,9.371-3.287
 	l149.996-120C329.346,112.734,331.264,106.047,329.155,100.036z'
             />
-          </svg>
+          </motion.svg>
         </Link>
       )}
     </>
