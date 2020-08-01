@@ -27,7 +27,7 @@ export const Hero: React.FC = () => {
   React.useEffect(() => {
     const debouncedHandleResize = debounce(function handleResize() {
       setInnerHeight(window.innerHeight);
-    }, 100);
+    }, 15);
     window.addEventListener('resize', debouncedHandleResize);
     return () => window.removeEventListener('resize', debouncedHandleResize);
   });
