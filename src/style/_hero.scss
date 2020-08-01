@@ -1,6 +1,6 @@
 .hero {
   position: relative;
-  height: calc(100vh);
+  min-height: 500px;
   background: center / cover no-repeat
     url('https://images.pexels.com/photos/2120040/pexels-photo-2120040.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
   // background: center / cover no-repeat url('../assets/images/hero-bg.webp');
