@@ -33,7 +33,7 @@ export const Hero: React.FC = () => {
   });
 
   return (
-    <section className='hero' style={{ height: innerHeight }}>
+    <motion.section className='hero' animate={{ height: innerHeight }}>
       <motion.article
         className='hero__text-container'
         initial={{ opacity: 0, x: 0, y: -15 }}
@@ -53,6 +53,6 @@ export const Hero: React.FC = () => {
         </motion.span>
       </motion.article>
       <Countdown />
-    </section>
+    </motion.section>
   );
 };
