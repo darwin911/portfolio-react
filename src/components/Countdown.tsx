@@ -5,41 +5,36 @@ import { motion } from 'framer-motion';
 export const Countdown = () => {
   const [elapsedTime, setElapsedTime] = useState<string>((0.0).toFixed(2));
   const [completed, setCompleted] = useState<boolean>(false);
+  const isDebug = false;
 
   useEffect(() => {
     if (elapsedTime === '') return;
 
-    if (Number(elapsedTime) > 15) {
+    if (Number(elapsedTime) > 8) {
       setCompleted(true);
       return () => clearInterval(timer);
     }
 
     const timer = setInterval(() => {
-      setElapsedTime((prevTime: string) => (Number(prevTime) + 0.075).toFixed(2));
-    }, 75);
+      setElapsedTime((prevTime: string) => (Number(prevTime) + 1).toFixed(2));
+    }, 1000);
 
     return () => clearInterval(timer);
   }, [elapsedTime]);
 
-  const showMessage = Number(elapsedTime) >= 5;
   return (
     <>
-      {!completed && (
+      {!completed && isDebug && (
         <aside>
           <span>{elapsedTime}s</span>
-          {showMessage && (
-            <p>
-              <small>This is how long you've been here.</small>
-            </p>
-          )}
         </aside>
       )}
-      {Number(elapsedTime) > 10 && (
+      {Number(elapsedTime) >= 4 && (
         <Link to='about' className='hero__down-arrow' smooth={true} duration={500} offset={-64}>
           <motion.svg
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.25 }}
+            transition={{ duration: 1.0 }}
             fill='#fff'
             version='1.1'
             id='Layer_1'
