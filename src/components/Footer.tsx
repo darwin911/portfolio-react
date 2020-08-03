@@ -13,10 +13,10 @@ export const Footer: React.FC = () => {
           <MailIcon style={styles.FooterIcon} />
         </IconButton>
       </Tooltip>
-      <IconButton href='https://linkedin.com/in/darwinpsmith' target='_blank'>
+      <IconButton href='https://linkedin.com/in/darwinpsmith' target='_blank' rel="noopener noreferrer">
         <LinkedinIcon style={styles.FooterIcon} />
       </IconButton>
-      <IconButton href={'https://github.com/darwin911'}>
+      <IconButton href='https://github.com/darwin911' target='_blank' rel="noopener noreferrer">
         <GithubIcon style={styles.FooterIcon} />
       </IconButton>
       <Divider variant='middle' style={styles.Divider} />

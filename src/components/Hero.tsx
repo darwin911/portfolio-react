@@ -18,7 +18,6 @@ export function debounce(fn: Function, ms: number) {
 export const Hero: React.FC = () => {
   const [visible, setVisible] = React.useState<boolean>(false);
   const [innerHeight, setInnerHeight] = React.useState<number>(window.innerHeight);
-  const [scrollY, setScrollY] = React.useState<number>(window.scrollY);
 
   const variants = {
     visible: { opacity: 1, x: 0, y: 0 },
@@ -27,13 +26,12 @@ export const Hero: React.FC = () => {
 
   React.useEffect(() => {
     const debouncedHandleResize = debounce(function handleResize() {
-      if (window.scrollY <= 200) {
+      if (window.scrollY <= 5) {
         setInnerHeight(window.innerHeight);
-        setScrollY(window.scrollY);
       }
-    }, 250);
-    window.addEventListener('resize', debouncedHandleResize);
-    return () => window.removeEventListener('resize', debouncedHandleResize);
+    }, 5);
+    window.addEventListener('scroll', debouncedHandleResize);
+    return () => window.removeEventListener('scroll', debouncedHandleResize);
   });
 
   return (
