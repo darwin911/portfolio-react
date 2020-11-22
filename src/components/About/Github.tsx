@@ -1,8 +1,9 @@
-import React, { useState, useEffect } from 'react';
-import { Typography, Box } from '@material-ui/core';
+import { Box, Typography } from '@material-ui/core';
 import { DeviceHub, PeopleAlt } from '@material-ui/icons/';
-import { styles } from './styles';
+import React, { useEffect, useState } from 'react';
+
 import axios from 'axios';
+import { styles } from '../styles';
 
 const github = axios.create({
   baseURL: 'https://api.github.com',
