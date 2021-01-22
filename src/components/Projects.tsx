@@ -1,18 +1,18 @@
+import { Container } from '@material-ui/core';
+import { Project } from './Project';
 import React from 'react';
 import data from '../assets/data';
-import { Project } from './Project';
-import { Typography, Container } from '@material-ui/core';
 import { styles } from './styles';
 
 export const Projects = () => {
   return (
     <section
       className='projects'
-      style={{ ...styles.Section, background: '#FDD835' }}>
+      style={{ ...styles.Section,  }}>
       <Container maxWidth='md'>
-        <Typography variant='h1' component='h2' style={styles.SectionHeading}>
+        <h2 className="section-heading">
           Projects
-        </Typography>
+        </h2>
         <div className='projects__container'>
           {data.projects.map(project => (
             <Project key={project.id} project={project} />
