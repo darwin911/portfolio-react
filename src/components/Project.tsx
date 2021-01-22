@@ -1,15 +1,15 @@
-import React from 'react';
-import GitHubIcon from '@material-ui/icons/GitHub';
-import { styles } from './styles';
 import {
-  Typography,
+  Button,
   Card,
+  CardActionArea,
+  CardActions,
   CardContent,
   CardMedia,
-  CardActions,
-  Button,
-  CardActionArea
+  Typography
 } from '@material-ui/core';
+
+import GitHubIcon from '@material-ui/icons/GitHub';
+import React from 'react';
 
 interface Project {
   img: string;
@@ -17,6 +17,7 @@ interface Project {
   link: string;
   description: string;
   github?: string | undefined;
+  commits?: number | undefined;
 }
 
 interface Props {
@@ -24,23 +25,47 @@ interface Props {
 }
 
 export const Project: React.FC<Props> = ({ project }) => {
+  const { link, img, title, github, description, commits } = project;
   return (
-    <Card style={styles.Card} className='project' tabIndex={0}>
+    <Card className='project' tabIndex={0}>
       <CardActionArea
         style={{ borderRadius: 10 }}
-        href={project.link}
+        href={link}
         rel='noopener'
         target='_blank'>
         <CardMedia
-          image={project.img}
-          title={project.title}
-          style={styles.CardImg}
+          image={img}
+          title={title}
           className='project__img'
         />
       </CardActionArea>
-      <CardContent style={{ backgroundColor: 'white' }}>
+
+      <CardActions>
+        <Button
+          size='small'
+          color='default'
+          href={link}
+          target='_blank noreferrer'
+          rel='noopener'>
+          Live Site
+        </Button>
+        {github && (
+          <Button
+            aria-label='github'
+            size='small'
+            color='default'
+            href={github}
+            target='_blank noreferrer'
+            rel='noopener'
+            endIcon={<GitHubIcon style={{ color: 'black' }} />}>
+            Source Code
+          </Button>
+        )}
+        {commits && <span className="project__commits">Commits: {commits}</span>}
+      </CardActions>
+      <CardContent>
         <Typography gutterBottom variant='h4' component='h3' align='left'>
-          {project.title}
+          {title}
         </Typography>
 
         <Typography
@@ -48,32 +73,10 @@ export const Project: React.FC<Props> = ({ project }) => {
           color='textPrimary'
           component='p'
           align='left'>
-          {project.description}
+          {description}
         </Typography>
       </CardContent>
 
-      <CardActions>
-        <Button
-          size='small'
-          color='default'
-          href={project.link}
-          target='_blank noreferrer'
-          rel='noopener'>
-          Live Site
-        </Button>
-        {project.github && (
-          <Button
-            aria-label='github'
-            size='small'
-            color='default'
-            href={project.github}
-            target='_blank noreferrer'
-            rel='noopener'
-            endIcon={<GitHubIcon style={{ color: 'black' }} />}>
-            Source Code
-          </Button>
-        )}
-      </CardActions>
     </Card>
   );
 };
