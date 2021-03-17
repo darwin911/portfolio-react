@@ -7,41 +7,50 @@
 }
 
 .sass {
-  background: center/ contain no-repeat url('https://cdn.svgporn.com/logos/sass.svg');
+  background: center/ contain no-repeat
+    url('https://cdn.svgporn.com/logos/sass.svg');
 }
 
 .react {
-  background: center / contain no-repeat url('https://cdn.svgporn.com/logos/react.svg');
+  background: center / contain no-repeat
+    url('https://cdn.svgporn.com/logos/react.svg');
 }
 
 .typescript {
-  background: center / contain no-repeat url('https://cdn.svgporn.com/logos/typescript-icon.svg');
+  background: center / contain no-repeat
+    url('https://cdn.svgporn.com/logos/typescript-icon.svg');
   border-radius: 10px;
 }
 
 .express {
-  background: center / contain no-repeat url('https://cdn.svgporn.com/logos/express.svg');
+  background: center / contain no-repeat
+    url('https://cdn.svgporn.com/logos/express.svg');
 }
 
 .javascript {
-  background: center / contain no-repeat url('https://cdn.svgporn.com/logos/javascript.svg');
+  background: center / contain no-repeat
+    url('https://cdn.svgporn.com/logos/javascript.svg');
   border-radius: 10px;
 }
 
 .npm {
-  background: center / contain no-repeat url('https://cdn.svgporn.com/logos/npm.svg');
+  background: center / contain no-repeat
+    url('https://cdn.svgporn.com/logos/npm.svg');
 }
 
 .postgresql {
-  background: center / contain no-repeat url('https://cdn.svgporn.com/logos/postgresql.svg');
+  background: center / contain no-repeat
+    url('https://cdn.svgporn.com/logos/postgresql.svg');
 }
 
 .firebase {
-  background: center / contain no-repeat url('https://cdn.svgporn.com/logos/firebase.svg');
+  background: center / contain no-repeat
+    url('https://cdn.svgporn.com/logos/firebase.svg');
 }
 
 .nodejs {
-  background: center / contain no-repeat url('https://cdn.svgporn.com/logos/nodejs.svg');
+  background: center / contain no-repeat
+    url('https://cdn.svgporn.com/logos/nodejs.svg');
 }
 
 .about {
@@ -61,7 +70,9 @@
     max-width: 400px;
     margin: 0 auto 4rem;
     border-radius: 1rem;
-    box-shadow: rgba(0, 0, 0, 0.2) 0px 10px 0.5rem -0.5rem, 0px 0px 5px 0px rgba(37, 29, 29, 0.125);
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 10px 0.5rem -0.5rem,
+      0px 0px 5px 0px rgba(37, 29, 29, 0.125),
+      0px 0px 25px -1px rgba(0, 0, 228, 0.15);
     overflow: hidden;
     // background-color: #03334f
     @media screen and (min-width: 768px) {
@@ -87,7 +98,8 @@
     border-radius: 50%;
     background-color: white;
     object-fit: cover;
-    box-shadow: 0px 2px 3px 1px rgba(37, 29, 29, 0.125), 0px 0px 5px 1px rgba(80, 80, 80, 0.05);
+    box-shadow: 0px 2px 3px 1px rgba(37, 29, 29, 0.125),
+      0px 0px 5px 1px rgba(80, 80, 80, 0.05);
   }
 
   &__avatar-headline {
