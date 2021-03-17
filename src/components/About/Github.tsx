@@ -20,11 +20,11 @@ export const Github: React.FC = () => {
   });
 
   useEffect(() => {
-    const loadGithubData = async () => {
-      const resp = await github.get('/users/darwin911');
+    const loadGithubData = async (userName: string) => {
+      const resp = await github.get(`/users/${userName}`);
       setGithubData(resp.data);
     };
-    loadGithubData();
+    loadGithubData('darwin911');
   }, []);
 
   return (
@@ -37,17 +37,23 @@ export const Github: React.FC = () => {
           <DeviceHub />
           <Typography variant='h6'>Public Repositories</Typography>
         </div>
-        <Typography className='about__github-item right'>{githubData.public_repos}</Typography>
+        <Typography className='about__github-item right'>
+          {githubData.public_repos}
+        </Typography>
         <div className='about__github-item'>
           <PeopleAlt />
           <Typography variant='h6'>Following</Typography>
         </div>
-        <Typography className='about__github-item right'>{githubData.following}</Typography>
+        <Typography className='about__github-item right'>
+          {githubData.following}
+        </Typography>
         <div className='about__github-item'>
           <PeopleAlt />
           <Typography variant='h6'>Followers</Typography>
         </div>
-        <Typography className='about__github-item right'>{githubData.followers}</Typography>
+        <Typography className='about__github-item right'>
+          {githubData.followers}
+        </Typography>
       </div>
     </Box>
   );
