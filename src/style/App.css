@@ -10,6 +10,10 @@
           box-shadow: 0px 2px 2px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 2px 0px rgba(0, 0, 0, 0.12);
 }
 
+.navbar .MuiToolbar-regular {
+  min-height: 72px;
+}
+
 .nav__header {
   position: fixed;
   top: 0;
@@ -98,13 +102,16 @@
   padding: 5vw;
 }
 
-.hero .MuiTypography-h2 {
-  color: #fff;
-  line-height: 1.5;
+.hero .MuiTypography-h1 {
+  color: #ffffffb0;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: #ffffffb8;
+  margin-bottom: 0.35em;
 }
 
 .hero .MuiTypography-h5 {
-  color: rgba(255, 255, 255, 0.35);
+  color: #a3a3a3;
+  text-align: right;
 }
 
 .hero aside.debug {

@@ -1,9 +1,10 @@
-import React from 'react';
-import MenuIcon from '@material-ui/icons/Menu';
-import CloseIcon from '@material-ui/icons/Close';
-import { AppBar, IconButton, Toolbar } from '@material-ui/core';
-import { NavItem } from './NavItem';
 import { AnimatePresence, motion } from 'framer-motion';
+import { AppBar, IconButton, Toolbar } from '@material-ui/core';
+
+import CloseIcon from '@material-ui/icons/Close';
+import MenuIcon from '@material-ui/icons/Menu';
+import { NavItem } from './NavItem';
+import React from 'react';
 
 export const Nav: React.FC = () => {
   const [isOpen, setIsOpen] = React.useState<Boolean>(false);
@@ -11,7 +12,9 @@ export const Nav: React.FC = () => {
   const sections = ['About', 'Projects', 'Contact'];
 
   const transitionBg = {
-    backgroundColor: `${isOpen ? 'rgba(24, 24, 24, 0.925)' : 'rgba(24, 24, 24, 0.95)'}`,
+    backgroundColor: `${
+      isOpen ? 'rgba(24, 24, 24, 0.925)' : 'rgba(24, 24, 24, 0.95)'
+    }`,
   };
 
   return (
@@ -24,9 +27,17 @@ export const Nav: React.FC = () => {
           style={{ color: 'white' }}
           onClick={() => setIsOpen((prevState) => !prevState)}>
           {!isOpen ? (
-            <MenuIcon fontSize='large' aria-label='Menu' aria-controls='navigation' />
+            <MenuIcon
+              fontSize='large'
+              aria-label='Menu'
+              aria-controls='navigation'
+            />
           ) : (
-            <CloseIcon fontSize='large' aria-label='Menu' aria-controls='navigation' />
+            <CloseIcon
+              fontSize='large'
+              aria-label='Menu'
+              aria-controls='navigation'
+            />
           )}
         </IconButton>
       </Toolbar>
