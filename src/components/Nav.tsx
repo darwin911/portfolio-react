@@ -23,7 +23,6 @@ export const Nav: React.FC = () => {
         <IconButton
           edge='start'
           aria-label='menu'
-          color='default'
           style={{ color: 'white' }}
           onClick={() => setIsOpen((prevState) => !prevState)}>
           {!isOpen ? (

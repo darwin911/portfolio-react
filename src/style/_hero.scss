@@ -18,17 +18,9 @@
     padding: 5vw;
   }
 
-  .MuiTypography-h1 {
-    color: #ffffffb0;
-    -webkit-text-stroke-width: 2px;
-    -webkit-text-stroke-color: #ffffffb8;
-
-    margin-bottom: 0.35em;
-  }
-
   .MuiTypography-h5 {
-    color: rgb(163, 163, 163);
-    text-align: right;
+    color: rgba(48, 245, 252, 0.685);
+    text-shadow: 0px 0px 0.25em currentColor;
   }
 
   aside.debug {

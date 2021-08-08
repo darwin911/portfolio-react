@@ -1,7 +1,8 @@
-import React from 'react';
-import { ListItem, ListItemText, Divider } from '@material-ui/core';
-import { styles } from './styles';
+import { Divider, ListItem, ListItemText } from '@material-ui/core';
+
 import { Link } from 'react-scroll';
+import React from 'react';
+import { styles } from './styles';
 
 interface Props {
   section: string;
@@ -9,16 +10,23 @@ interface Props {
 }
 
 export const NavItem: React.FC<Props> = ({ section, setIsOpen }) => {
+  const toggleMenu = () => {
+    setIsOpen((prevVal) => !prevVal);
+  };
   return (
     <Link
-      onClick={() => setIsOpen(prevVal => !prevVal)}
+      onClick={toggleMenu}
       activeClass='active'
       to={section.toLowerCase()}
       smooth={true}
       duration={500}
       offset={-64}>
       <ListItem button>
-        <ListItemText primary={section} style={styles.ListItemText} />
+        <ListItemText
+          primary={section}
+          style={styles.ListItemText}
+          disableTypography
+        />
       </ListItem>
       <Divider style={{ backgroundColor: 'rgba(255, 255, 255, 0.2)' }} />
     </Link>

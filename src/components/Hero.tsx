@@ -44,7 +44,7 @@ export const Hero: React.FC = () => {
         animate={{ opacity: 1, x: 0, y: 0 }}
         transition={{ ease: 'easeInOut', duration: 0.45, delay: 1.75 }}
         onAnimationComplete={() => setVisible(true)}>
-        <Typography variant='h1' component='h1'>
+        <Typography variant='h2' component='h1'>
           Darwin Smith
         </Typography>
         <motion.span
@@ -52,7 +52,7 @@ export const Hero: React.FC = () => {
           variants={variants}
           transition={{ duration: 0.75, delay: 0.5 }}>
           <Typography variant='h5' component='h2'>
-            Full-stack Developer | NYC
+            Full-stack Developer
           </Typography>
         </motion.span>
       </motion.article>

@@ -6,7 +6,8 @@ export const styles = {
     maxWidth: '100%',
     marginBottom: '4rem',
     fontWeight: 700,
-    textShadow: '1px 4px 2px rgba(0, 0, 0, 0.2), -2px 3px 8px rgba(0, 0, 0, 0.2)',
+    textShadow:
+      '1px 4px 2px rgba(0, 0, 0, 0.2), -2px 3px 8px rgba(0, 0, 0, 0.2)',
   },
   ContactForm: {
     width: '100%',
@@ -21,6 +22,9 @@ export const styles = {
   ListItemText: {
     color: 'white',
     fontWeight: 700,
+    fontSize: '1.25em',
+    lineHeight: 2,
+    marginLeft: '0.8rem',
   },
   Card: {
     padding: '0.5rem',
@@ -44,6 +48,7 @@ export const styles = {
   AboutSubHeading: {
     fontWeight: 700,
     marginBottom: '2rem',
-    textShadow: 'rgba(0, 0, 0, 0.1) 1px 4px 2px, rgba(0, 0, 0, 0.1) -2px 3px 8px',
+    textShadow:
+      'rgba(0, 0, 0, 0.1) 1px 4px 2px, rgba(0, 0, 0, 0.1) -2px 3px 8px',
   },
 };
