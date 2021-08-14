@@ -2,7 +2,7 @@ import { Box, Typography } from '@material-ui/core';
 
 import { ListItem } from '../ListItem';
 import React from 'react';
-import data from '../../assets/data.js';
+import { data } from '../../assets/data.js';
 import { styles } from '../styles';
 
 export const SkillsAndTools = () => {

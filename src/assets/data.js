@@ -7,9 +7,9 @@ import pong from '../assets/images/pong.png';
 import postPic from '../assets/images/postpic.png';
 import vinyl from '../assets/images/vinyl.png';
 
-const data = {
+export const data = {
   blurb:
-    "I'm a Full-stack Developer with interest in UI/UX. I have experience designing and building responsive Front-end and Full-stack applications. I am passionate about quality, efficiency and effective problem-solving.",
+    "Full-stack Developer, with some skills in UI/UX. I've designed mockups, but I mostly focus on taking requirements, feature lists, and design mockups from a team to build responsive and resilient Web Applications, from development to production.  Quality, efficiency and effective problem-solving.",
   skills: [
     {
       title: 'HTML5',
@@ -112,8 +112,7 @@ const data = {
       description:
         'Created all buttons with an unordered list and added styles to make them look like such. Positioning was a bit tricky but helped me improve my CSS skills. JavaScript is what powers the actual functionality of the calculator. Event Listeners and functional programming was key for this project.',
       link: 'https://darwinpsmith.com/calc/index.html',
+      disabled: true,
     },
   ],
 };
-
-export default data;
