@@ -1,22 +1,26 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React, { useState } from "react";
 
-interface Props {
+import { motion } from "framer-motion";
+
+interface ListProps {
   title: string;
   styles: string;
 }
 
-export const ListItem: React.FC<Props> = ({ title, styles }) => {
-  const [isHovered, setHovered] = React.useState(false);
-
+export function ListItem({ title, styles }: ListProps) {
+  const [isHovered, setHovered] = useState(false);
+  const toggle = () => setHovered((hovered) => !hovered);
   return (
     <motion.li
       tabIndex={0}
       animate={{ transform: `scale(${isHovered ? 1.25 : 1})` }}
-      className='about__skill-item'
-      onMouseEnter={() => setHovered(prevVal => !prevVal)}
-      onMouseLeave={() => setHovered(prevVal => !prevVal)}>
+      className="about__skill-item"
+      onMouseEnter={toggle}
+      onFocus={toggle}
+      onMouseLeave={toggle}
+      onBlur={toggle}
+    >
       <i className={styles} title={title} />
     </motion.li>
   );
-};
+}
