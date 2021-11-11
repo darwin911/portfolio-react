@@ -1,9 +1,9 @@
 import { Button, Container, TextField, Typography } from "@material-ui/core";
 import React, { useState } from "react";
+import { ValidationError, useForm } from "@formspree/react";
 
 import SendIcon from "@material-ui/icons/Send";
 import { styles } from "./styles";
-import { useForm } from "@formspree/react";
 
 export const Contact: React.FC = () => {
   const [state, handleSubmit] = useForm("mnvnpjrm");
@@ -29,7 +29,7 @@ export const Contact: React.FC = () => {
           This is here mostly to showcase the ability to style form inputs, and
           adding the relevent functionality to a form. It works, try it!
         </Typography>
-        <form onSubmit={handleSubmit} style={styles.ContactForm}>
+        <form onSubmit={handleSubmit} style={styles.ContactForm} noValidate>
           <TextField
             name="name"
             label="Name"
@@ -38,6 +38,7 @@ export const Contact: React.FC = () => {
             fullWidth
             value={name}
             onChange={(e) => setName(e.target.value)}
+            disabled={state.submitting}
           />
 
           <TextField
@@ -50,7 +51,10 @@ export const Contact: React.FC = () => {
             fullWidth
             value={email}
             onChange={(e) => setEmail(e.target.value)}
+            disabled={state.submitting}
           />
+
+          <ValidationError prefix="Email" field="email" errors={state.errors} />
 
           <TextField
             name="message"
@@ -61,10 +65,11 @@ export const Contact: React.FC = () => {
             fullWidth
             value={message}
             onChange={(e) => setMessage(e.target.value)}
+            disabled={state.submitting}
           />
 
           <Button
-            disabled={!email || !message}
+            disabled={!email || !message || state.succeeded}
             variant="contained"
             color="inherit"
             endIcon={<SendIcon />}
@@ -73,6 +78,7 @@ export const Contact: React.FC = () => {
             Send
           </Button>
         </form>
+        {state.succeeded && <p>Thank you for submitting!</p>}
       </Container>
     </section>
   );
