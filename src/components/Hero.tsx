@@ -1,7 +1,7 @@
-import { Countdown } from './Countdown';
-import React from 'react';
-import { Typography } from '@material-ui/core';
-import { motion } from 'framer-motion';
+import { Countdown } from "./Countdown";
+import React from "react";
+import { Typography } from "@material-ui/core";
+import { motion } from "framer-motion";
 
 export function debounce(fn: Function, ms: number) {
   let timer: any;
@@ -32,26 +32,28 @@ export const Hero: React.FC = () => {
         setInnerHeight(window.innerHeight);
       }
     }, 5);
-    window.addEventListener('scroll', debouncedHandleResize);
-    return () => window.removeEventListener('scroll', debouncedHandleResize);
+    window.addEventListener("scroll", debouncedHandleResize);
+    return () => window.removeEventListener("scroll", debouncedHandleResize);
   });
 
   return (
-    <motion.section className='hero' animate={{ height: innerHeight }}>
+    <motion.section className="hero" animate={{ height: innerHeight }}>
       <motion.article
-        className='hero__text-container'
+        className="hero__text-container"
         initial={{ opacity: 0, x: -18, y: 0 }}
         animate={{ opacity: 1, x: 0, y: 0 }}
-        transition={{ ease: 'easeInOut', duration: 0.45, delay: 1.75 }}
-        onAnimationComplete={() => setVisible(true)}>
-        <Typography variant='h2' component='h1'>
+        transition={{ ease: "easeInOut", duration: 0.45, delay: 1.75 }}
+        onAnimationComplete={() => setVisible(true)}
+      >
+        <Typography variant="h2" component="h1">
           Darwin Smith
         </Typography>
         <motion.span
-          animate={visible ? 'visible' : 'hidden'}
+          animate={visible ? "visible" : "hidden"}
           variants={variants}
-          transition={{ duration: 0.75, delay: 0.5 }}>
-          <Typography variant='h5' component='h2'>
+          transition={{ duration: 0.75, delay: 0.5 }}
+        >
+          <Typography variant="h5" component="h2">
             Full-stack Developer
           </Typography>
         </motion.span>
