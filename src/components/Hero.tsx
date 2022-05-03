@@ -32,8 +32,8 @@ export const Hero: React.FC = () => {
         setInnerHeight(window.innerHeight);
       }
     }, 5);
-    window.addEventListener("scroll", debouncedHandleResize);
-    return () => window.removeEventListener("scroll", debouncedHandleResize);
+    window.addEventListener("resize", debouncedHandleResize);
+    return () => window.removeEventListener("resize", debouncedHandleResize);
   });
 
   return (
