@@ -1,6 +1,5 @@
-import { Countdown } from "./Countdown";
+import { Link } from "react-scroll";
 import React from "react";
-import { Typography } from "@material-ui/core";
 import { motion } from "framer-motion";
 
 export function debounce(fn: Function, ms: number) {
@@ -42,23 +41,49 @@ export const Hero: React.FC = () => {
         className="hero__text-container"
         initial={{ opacity: 0, x: -18, y: 0 }}
         animate={{ opacity: 1, x: 0, y: 0 }}
-        transition={{ ease: "easeInOut", duration: 0.45, delay: 1.75 }}
+        transition={{ ease: "anticipate", duration: 0.75, delay: 1.5 }}
         onAnimationComplete={() => setVisible(true)}
       >
-        <Typography variant="h2" component="h1">
-          Darwin Smith
-        </Typography>
-        <motion.span
+        <h1 className="hero__title">Darwin Smith</h1>
+        <motion.h2
           animate={visible ? "visible" : "hidden"}
           variants={variants}
-          transition={{ duration: 0.75, delay: 0.5 }}
+          transition={{ duration: 0.25, delay: 0.35 }}
+          className="hero__subtitle"
         >
-          <Typography variant="h5" component="h2">
-            Full-stack Developer
-          </Typography>
-        </motion.span>
+          Full-stack Developer
+        </motion.h2>
       </motion.article>
-      <Countdown />
+      <Link
+        to="about"
+        className="hero__down-arrow"
+        smooth={true}
+        duration={500}
+        offset={-64}
+      >
+        <motion.svg
+          initial={{ opacity: 0, y: -10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.35, delay: 3.5 }}
+          fill="#fff"
+          version="1.1"
+          id="Layer_1"
+          xmlns="http://www.w3.org/2000/svg"
+          xmlnsXlink="http://www.w3.org/1999/xlink"
+          x="0px"
+          y="0px"
+          width="3rem"
+          height="3rem"
+          viewBox="0 0 330.002 330.002"
+        >
+          <path
+            id="XMLID_23_"
+            d="M329.155,100.036c-2.108-6.011-7.784-10.035-14.154-10.035h-300c-6.371,0-12.046,4.024-14.154,10.035
+	c-2.109,6.011-0.19,12.699,4.784,16.678l150.004,120c2.739,2.191,6.055,3.287,9.37,3.287c3.316,0,6.631-1.096,9.371-3.287
+	l149.996-120C329.346,112.734,331.264,106.047,329.155,100.036z"
+          />
+        </motion.svg>
+      </Link>
     </motion.section>
   );
 };
