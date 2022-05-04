@@ -29,6 +29,10 @@ export const Github: React.FC = () => {
     loadGithubData("darwin911");
   }, []);
 
+  if (!githubData) {
+    return null;
+  }
+
   return (
     <Box mb={6}>
       <Typography variant="h3" style={styles.AboutSubHeading}>
@@ -39,9 +43,9 @@ export const Github: React.FC = () => {
           <DeviceHub />
           <Typography variant="h6">Public Repositories</Typography>
         </div>
-        <Typography className="about__github-item right">
+        <span className="about__github-item right" data-testid="repo-count">
           {githubData?.public_repos}
-        </Typography>
+        </span>
         <div className="about__github-item">
           <PeopleAlt />
           <Typography variant="h6">Following</Typography>
