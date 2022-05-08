@@ -2,32 +2,31 @@ import { Box, Typography } from "@material-ui/core";
 import { DeviceHub, PeopleAlt } from "@material-ui/icons/";
 import React, { useEffect, useState } from "react";
 
-import axios from "axios";
+import { fetchGithubData } from "../../helpers/github";
 import { styles } from "../styles";
-
-const github = axios.create({
-  baseURL: "https://api.github.com",
-  headers: {
-    Authorization: `token ${process.env.REACT_APP_GITHUB_TOKEN}`,
-  },
-});
 
 interface GitHubData {
   followers: number;
   following: number;
   public_repos: number;
+  avatar_url: string;
 }
 
 export const Github: React.FC = () => {
-  const [githubData, setGithubData] = useState<GitHubData>();
+  const [githubData, setGithubData] = useState<GitHubData | null>(null);
+
+  const fetchData = async () => {
+    const data = await fetchGithubData();
+    if (data) {
+      setGithubData(data);
+    }
+  };
 
   useEffect(() => {
-    const loadGithubData = async (userName: string) => {
-      const resp = await github.get(`/users/${userName}`);
-      setGithubData(resp.data);
-    };
-    loadGithubData("darwin911");
-  }, []);
+    if (!githubData) {
+      fetchData();
+    }
+  }, [githubData]);
 
   if (!githubData) {
     return null;
