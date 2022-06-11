@@ -1,18 +1,11 @@
 import { AnimatePresence, motion } from "framer-motion";
-import { AppBar, IconButton, Toolbar } from "@material-ui/core";
 import React, { useCallback, useEffect, useRef, useState } from "react";
 
-import CloseIcon from "@material-ui/icons/Close";
-import MenuIcon from "@material-ui/icons/Menu";
 import { NavItem } from "./NavItem";
 
 export const Nav: React.FC = () => {
   const [isOpen, setIsOpen] = useState<Boolean>(false);
-  const navElementRef = useRef<HTMLElement>();
-
-  const transitionBg = {
-    backgroundColor: `rgba(24, 24, 24, ${isOpen ? 0.925 : 0.95})`,
-  };
+  const navElementRef = useRef<HTMLElement | null>(null);
 
   const isVisible = (elem: HTMLElement) =>
     !!elem &&
@@ -21,7 +14,7 @@ export const Nav: React.FC = () => {
   const outsideClickListener: (event: any) => void = useCallback(
     (event: any) => {
       // https://stackoverflow.com/questions/152975/how-do-i-detect-a-click-outside-an-element
-      const element: HTMLElement | undefined = navElementRef.current;
+      const element = navElementRef.current;
       if (!element) return;
       if (!element.contains(event.target) && isVisible(element)) {
         // or use: event.target.closest(selector) === null
@@ -43,34 +36,19 @@ export const Nav: React.FC = () => {
   }, [outsideClickListener]);
 
   return (
-    <AppBar
-      position="fixed"
-      style={transitionBg}
+    <header
+      style={{ backgroundColor: `rgba(24, 24, 24, ${isOpen ? 0.925 : 0.95})` }}
       className="navbar"
       ref={navElementRef}
     >
-      <Toolbar>
-        <IconButton
-          edge="start"
-          aria-label="menu"
-          style={{ color: "white" }}
+      <div className="navbar__wrapper">
+        <button
+          aria-label="Menu"
           onClick={() => setIsOpen((prevState) => !prevState)}
         >
-          {!isOpen ? (
-            <MenuIcon
-              fontSize="large"
-              aria-label="Menu"
-              aria-controls="navigation"
-            />
-          ) : (
-            <CloseIcon
-              fontSize="large"
-              aria-label="Menu"
-              aria-controls="navigation"
-            />
-          )}
-        </IconButton>
-      </Toolbar>
+          <span className={`${isOpen ? "menu-open" : "menu-closed"}`} />
+        </button>
+      </div>
       <AnimatePresence>
         {isOpen && (
           <motion.nav
@@ -85,6 +63,6 @@ export const Nav: React.FC = () => {
           </motion.nav>
         )}
       </AnimatePresence>
-    </AppBar>
+    </header>
   );
 };

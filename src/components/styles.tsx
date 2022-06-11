@@ -24,7 +24,6 @@ export const styles = {
     fontWeight: 700,
     fontSize: "1.25em",
     lineHeight: 2,
-    marginLeft: "0.8rem",
   },
   Card: {
     padding: "0.5rem",

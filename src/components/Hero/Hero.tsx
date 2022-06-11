@@ -6,7 +6,7 @@ export function debounce(fn: Function, ms: number) {
   let timer: any;
   return (_: any) => {
     clearTimeout(timer);
-    timer = setTimeout(function (_) {
+    timer = setTimeout(function (_: any) {
       timer = null;
       fn.apply(_, arguments);
     }, ms);
