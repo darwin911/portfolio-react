@@ -27,7 +27,7 @@ export const Contact: React.FC = () => {
           </strong>
           .
         </p>
-        <form onSubmit={handleSubmit} noValidate>
+        <form onSubmit={handleSubmit} noValidate method="POST">
           <label htmlFor="name" className="label">
             Name
             <strong>
@@ -40,6 +40,7 @@ export const Contact: React.FC = () => {
               type="text"
               placeholder="First and Last Name"
               value={name}
+              name="name"
               onChange={(e) => setName(e.target.value)}
             />
           </label>
@@ -57,6 +58,7 @@ export const Contact: React.FC = () => {
               placeholder="name@email.com"
               required
               onChange={(e) => setEmail(e.target.value)}
+              name="email"
               value={email}
             />
           </label>
@@ -73,6 +75,7 @@ export const Contact: React.FC = () => {
               required
               onChange={(e) => setMessage(e.target.value)}
               disabled={state.submitting}
+              name="message"
             />
           </label>
 
