@@ -41,7 +41,7 @@ export const Hero: React.FC = () => {
         className="hero__text-container"
         initial={{ opacity: 0, x: -18, y: 0 }}
         animate={{ opacity: 1, x: 0, y: 0 }}
-        transition={{ ease: "anticipate", duration: 0.75, delay: 1.5 }}
+        transition={{ ease: "anticipate", duration: 0.5, delay: 0.5 }}
         onAnimationComplete={() => setVisible(true)}
       >
         <h1 className="hero__title">Darwin Smith</h1>
@@ -62,9 +62,9 @@ export const Hero: React.FC = () => {
         offset={-64}
       >
         <motion.svg
-          initial={{ opacity: 0, y: -10 }}
+          initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.35, delay: 3.5 }}
+          transition={{ duration: 0.3, delay: 1.75 }}
           fill="#fff"
           version="1.1"
           id="Layer_1"
