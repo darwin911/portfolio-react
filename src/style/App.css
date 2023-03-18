@@ -586,4 +586,15 @@ span {
   grid-template-columns: repeat(3, minmax(1rem, 1fr));
   gap: 2.5rem;
   max-width: 400px;
+  height: 100%;
+}
+
+.icon-link {
+  height: 4rem;
+}
+.icon-link svg {
+  height: 100%;
+}
+.icon-link svg path {
+  height: 100%;
 }/*# sourceMappingURL=App.css.map */
