@@ -1,21 +1,16 @@
-import { Box, Typography } from "@material-ui/core";
-
 import { ListItem } from "../ListItem";
 import React from "react";
 import { data } from "../../assets/data.js";
-import { styles } from "../styles";
 
 export const SkillsAndTools = () => {
   return (
-    <Box mb={6}>
-      <Typography variant="h3" style={styles.AboutSubHeading}>
-        Skills and Tools
-      </Typography>
+    <div className="about__skills-and-tools">
+      <h3 className="about__sub-heading">Skills and Tools</h3>
       <ul className="about__skill-list">
         {data.skills.map((item) => (
-          <ListItem title={item.title} styles={item.styles} key={item.title} />
+          <ListItem item={item} key={item.title} />
         ))}
       </ul>
-    </Box>
+    </div>
   );
 };

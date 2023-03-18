@@ -1,9 +1,6 @@
-import { Box, Typography } from "@material-ui/core";
-import { DeviceHub, PeopleAlt } from "@material-ui/icons/";
 import React, { useEffect, useState } from "react";
 
 import { fetchGithubData } from "../../helpers/github";
-import { styles } from "../styles";
 
 interface GitHubData {
   followers: number;
@@ -33,33 +30,24 @@ export const Github: React.FC = () => {
   }
 
   return (
-    <Box mb={6}>
-      <Typography variant="h3" style={styles.AboutSubHeading}>
-        Github
-      </Typography>
+    <div className="about__github">
+      <h3 className="about__sub-heading">Github</h3>
       <div className="about__github-grid">
         <div className="about__github-item">
-          <DeviceHub />
-          <Typography variant="h6">Public Repositories</Typography>
+          <p>Public Repositories</p>
         </div>
         <span className="about__github-item right" data-testid="repo-count">
           {githubData?.public_repos}
         </span>
         <div className="about__github-item">
-          <PeopleAlt />
-          <Typography variant="h6">Following</Typography>
+          <p>Following</p>
         </div>
-        <Typography className="about__github-item right">
-          {githubData?.following}
-        </Typography>
+        <p className="about__github-item right">{githubData?.following}</p>
         <div className="about__github-item">
-          <PeopleAlt />
-          <Typography variant="h6">Followers</Typography>
+          <p>Followers</p>
         </div>
-        <Typography className="about__github-item right">
-          {githubData?.followers}
-        </Typography>
+        <p className="about__github-item right">{githubData?.followers}</p>
       </div>
-    </Box>
+    </div>
   );
 };

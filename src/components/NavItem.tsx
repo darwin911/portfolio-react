@@ -1,8 +1,5 @@
-import { Divider, ListItem, ListItemText } from "@material-ui/core";
-
 import { Link } from "react-scroll";
 import React from "react";
-import { styles } from "./styles";
 
 interface Props {
   section: string;
@@ -22,14 +19,8 @@ export const NavItem: React.FC<Props> = ({ section, setIsOpen }) => {
       duration={500}
       offset={-64}
     >
-      <ListItem button>
-        <ListItemText
-          primary={section}
-          style={styles.ListItemText}
-          disableTypography
-        />
-      </ListItem>
-      <Divider style={{ backgroundColor: "rgba(255, 255, 255, 0.2)" }} />
+      <p className="list-item-text">{section}</p>
+      <hr className="horizontal-rule" />
     </Link>
   );
 };

@@ -1,26 +1,26 @@
-// @import url('https://use.typekit.net/xwq0mnh.css');
-
-// @font-face {
-//   font-family: 'Recursive';
-//   src: url('../assets/fonts/recursive-MONO_CASL_wght_slnt_ital--2019_11_05-00_13.woff2')
-//     format('woff2-variations');
-//   font-weight: 100 300 500 700 900;
-// }
-
 $iconSizeSm: 3.4rem;
 $accentBlue: rgb(53, 35, 170);
 $inset-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
 $section-heading-size: 2.7em;
 
+body {
+  margin: 0;
+  height: 100%;
+  box-sizing: border-box;
+}
+
 .App {
   position: relative;
   text-align: center;
   scroll-behavior: smooth;
+  font-family: "sofia-pro", "Recursive", "Roboto Mono", "Roboto",
+    "Helvetica Neue", "Helvetica", "sans-serif";
 }
 
-@import './nav';
-@import './hero';
-@import './about';
-@import './projects';
-@import './contact';
-@import './footer';
+@import "./shared";
+@import "./nav";
+@import "./hero";
+@import "./about";
+@import "./projects";
+@import "./contact";
+@import "./footer";

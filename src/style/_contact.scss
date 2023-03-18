@@ -4,12 +4,43 @@
   padding: 50px 0;
 
   &__container {
-    width: 800px;
-    max-width: 90vw;
     margin: 0 auto;
+    max-width: 90vw;
+    width: 800px;
   }
 
   &__heading {
     font-size: $section-heading-size;
+  }
+
+  &__submit-btn {
+    border: 1px solid rgba(0, 0, 0, 0.24);
+    font-size: 1rem;
+
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.24);
+    }
+
+    &:disabled {
+      color: rgba(0, 0, 0, 0.26);
+      background-color: rgba(0, 0, 0, 0.12);
+      pointer-events: none;
+      user-select: none;
+    }
+  }
+
+  .label {
+    text-align: left;
+    display: block;
+    margin-bottom: 1.5rem;
+  }
+
+  .input {
+    border: none;
+    border-bottom: 1px solid black;
+    display: block;
+    font-size: inherit;
+    margin-top: 0.5em;
+    width: 100%;
   }
 }

@@ -1,24 +1,14 @@
-import { Container, Typography } from "@material-ui/core";
-
 import { Github } from "./Github";
 import React from "react";
 import { SkillsAndTools } from "./SkillsAndTools";
 import { data } from "../../assets/data.js";
 import profilePicture from "../../assets/images/profilepic_white-bg.jpg";
-import { styles } from "../styles";
 
 export const About: React.FC = () => {
   return (
-    <section className="about">
-      <Container maxWidth="lg">
-        <Typography
-          variant="h1"
-          component="h2"
-          gutterBottom
-          style={styles.SectionHeading}
-        >
-          About
-        </Typography>
+    <section className="about container-md">
+      <div className="about__layout-wrapper">
+        <h2 className="section-heading">About</h2>
         <div className="about__card">
           <div className="about__card-inner-container">
             <img
@@ -34,7 +24,7 @@ export const About: React.FC = () => {
 
         <Github />
         <SkillsAndTools />
-      </Container>
+      </div>
     </section>
   );
 };

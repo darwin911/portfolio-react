@@ -58,7 +58,7 @@ export const Hero: React.FC = () => {
         to="about"
         className="hero__down-arrow"
         smooth={true}
-        duration={500}
+        duration={250}
         offset={-64}
       >
         <motion.svg
@@ -72,8 +72,8 @@ export const Hero: React.FC = () => {
           xmlnsXlink="http://www.w3.org/1999/xlink"
           x="0px"
           y="0px"
-          width="3rem"
-          height="3rem"
+          width="2.5rem"
+          height="2.5rem"
           viewBox="0 0 330.002 330.002"
         >
           <path

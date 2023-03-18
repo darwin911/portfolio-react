@@ -3,6 +3,8 @@ import React, { useCallback, useEffect, useRef, useState } from "react";
 
 import { NavItem } from "./NavItem";
 
+const NAV_LINKS = ["About", "Projects", "Contact"];
+
 export const Nav: React.FC = () => {
   const [isOpen, setIsOpen] = useState<Boolean>(false);
   const navElementRef = useRef<HTMLElement | null>(null);
@@ -54,10 +56,11 @@ export const Nav: React.FC = () => {
           <motion.nav
             style={{ padding: 0, overflow: "hidden" }}
             initial={{ height: 0, opacity: 0 }}
-            animate={{ height: "100%", opacity: 1 }}
+            animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
+            transition={{ duration: 0.125 }}
           >
-            {["About", "Projects", "Contact"].map((navItem) => (
+            {NAV_LINKS.map((navItem) => (
               <NavItem key={navItem} section={navItem} setIsOpen={setIsOpen} />
             ))}
           </motion.nav>

@@ -3,11 +3,13 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 
 interface ListProps {
-  title: string;
-  styles: string;
+  item: {
+    title: string;
+    styles: string;
+  };
 }
 
-export function ListItem({ title, styles }: ListProps) {
+export function ListItem({ item: { title, styles } }: ListProps) {
   const [isHovered, setHovered] = useState(false);
   const toggle = () => setHovered((hovered) => !hovered);
   return (

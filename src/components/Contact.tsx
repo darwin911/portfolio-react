@@ -1,8 +1,5 @@
-import { Button, Container, TextField, Typography } from "@material-ui/core";
 import React, { useState } from "react";
 import { ValidationError, useForm } from "@formspree/react";
-
-import SendIcon from "@material-ui/icons/Send";
 import { styles } from "./styles";
 
 export const Contact: React.FC = () => {
@@ -21,65 +18,74 @@ export const Contact: React.FC = () => {
 
   return (
     <section id="contact" className="contact" style={styles.Section}>
-      <Container maxWidth="sm">
-        <Typography variant="h1" component="h2" style={styles.SectionHeading}>
-          Contact
-        </Typography>
-        <Typography className="contact__description">
-          This is here mostly to showcase the ability to style form inputs, and
-          adding the relevent functionality to a form. It works, try it!
-        </Typography>
-        <form onSubmit={handleSubmit} style={styles.ContactForm} noValidate>
-          <TextField
-            name="name"
-            label="Name"
-            placeholder="Your Name"
-            margin="normal"
-            fullWidth
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-            disabled={state.submitting}
-          />
+      <div className="container-sm">
+        <h2 className="section-heading">Contact</h2>
+        <p>
+          Required fields are followed by
+          <strong>
+            <span aria-label="required">*</span>
+          </strong>
+          .
+        </p>
+        <form onSubmit={handleSubmit} noValidate>
+          <label htmlFor="name" className="label">
+            Name
+            <strong>
+              <span aria-label="required">*</span>
+            </strong>
+            <input
+              className="input"
+              disabled={state.submitting}
+              id="name"
+              type="text"
+              placeholder="First and Last Name"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+            />
+          </label>
 
-          <TextField
-            name="email"
-            type="email"
-            label="Email"
-            placeholder="name@email.com"
-            required
-            margin="normal"
-            fullWidth
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            disabled={state.submitting}
-          />
+          <label htmlFor="email" className="label">
+            Email
+            <strong>
+              <span aria-label="required">*</span>
+            </strong>
+            <input
+              className="input"
+              disabled={state.submitting}
+              id="email"
+              type="email"
+              placeholder="name@email.com"
+              required
+              onChange={(e) => setEmail(e.target.value)}
+              value={email}
+            />
+          </label>
 
           <ValidationError prefix="Email" field="email" errors={state.errors} />
 
-          <TextField
-            name="message"
-            label="Message"
-            placeholder="I would like to hear more about your work and experience. Send over your resume ASAP!"
-            multiline
-            margin="normal"
-            fullWidth
-            value={message}
-            onChange={(e) => setMessage(e.target.value)}
-            disabled={state.submitting}
-          />
+          <label htmlFor="message" className="label">
+            Message:
+            <textarea
+              className="input"
+              rows={1}
+              id="message"
+              value={message}
+              required
+              onChange={(e) => setMessage(e.target.value)}
+              disabled={state.submitting}
+            />
+          </label>
 
-          <Button
-            disabled={!email || !message || state.succeeded}
-            variant="contained"
-            color="inherit"
-            endIcon={<SendIcon />}
+          <button
+            className={["button", "contact__submit-btn"].join(" ")}
             type="submit"
+            disabled={!email || !message || state.succeeded}
           >
             Send
-          </Button>
+          </button>
         </form>
         {state.succeeded && <p>Thank you for submitting!</p>}
-      </Container>
+      </div>
     </section>
   );
 };

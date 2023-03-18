@@ -1,14 +1,7 @@
 import { App } from "./App";
-import CssBaseLine from "@material-ui/core/CssBaseline";
 import React from "react";
-import ReactDOM from "react-dom";
-import { ThemeProvider } from "@material-ui/core/styles";
-import theme from "./theme";
+import { createRoot } from "react-dom/client";
 
-ReactDOM.render(
-  <ThemeProvider theme={theme}>
-    <CssBaseLine />
-    <App />
-  </ThemeProvider>,
-  document.getElementById("root")
-);
+const container = document.getElementById("app");
+const root = createRoot(container!);
+root.render(<App />);
