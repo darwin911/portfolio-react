@@ -13,8 +13,8 @@ $smooth-transition: all 625ms cubic-bezier(0.075, 0.82, 0.165, 1) 2ms;
     justify-content: center;
 
     @media (min-width: 768px) {
-      grid-template-columns: repeat(2, 1fr);
-      column-gap: 5vw;
+      grid-template-columns: 1fr 1fr;
+      column-gap: 1.5rem;
       padding-top: 2vw;
     }
   }
