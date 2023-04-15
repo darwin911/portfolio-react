@@ -1,4 +1,3 @@
-import calc from "../assets/images/calc.png";
 import citibike from "../assets/images/citibike-stations.png";
 import exerciseTracker from "../assets/images/exercise-tracker.png";
 import jcc from "../assets/images/jcc_fireshot.jpg";
@@ -104,15 +103,6 @@ export const data = {
       description:
         "Designed and built a static website for a non-profit working with underpriviledged children in the Dominican Republic.",
       link: "http://www.juegacomocampeon.org",
-    },
-    {
-      id: 7,
-      title: "Calculator",
-      img: calc,
-      description:
-        "Created all buttons with an unordered list and added styles to make them look like such. Positioning was a bit tricky but helped me improve my CSS skills. JavaScript is what powers the actual functionality of the calculator. Event Listeners and functional programming was key for this project.",
-      link: "https://darwinpsmith.com/calc/index.html",
-      disabled: true,
     },
   ],
 };
