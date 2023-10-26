@@ -11,20 +11,16 @@ import {
 import GitHubIcon from "@material-ui/icons/GitHub";
 import React from "react";
 
-interface Project {
+type ProjectProps = {
   img: string;
   title: string;
   link: string;
   description: string;
   github?: string | undefined;
   commits?: number | undefined;
-}
+};
 
-interface Props {
-  project: Project;
-}
-
-export const Project: React.FC<Props> = ({ project }) => {
+export const Project = ({ project }: { project: ProjectProps }) => {
   const { link, img, title, github, description, commits } = project;
   return (
     <Card className="project" tabIndex={0}>
