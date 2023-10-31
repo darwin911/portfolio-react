@@ -7,7 +7,14 @@ const config: Config = {
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      dropShadow: {
+        heading: [
+          "rgba(0, 0, 0, 0.2) 1px 4px 2px",
+          "rgba(0, 0, 0, 0.2) -2px 3px 8px",
+        ],
+      },
+    },
   },
   plugins: [],
 };
