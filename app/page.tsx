@@ -2,22 +2,22 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <main className="relative flex flex-col items-center justify-center p-8 sm:p-20 md:p-24 h-full">
+    <main className="relative flex h-full flex-col items-center justify-center overflow-hidden p-8 sm:p-20 md:p-24">
       <Image
-        className="absolute top-0 left-0 bottom-0 -z-10 opacity-30 flex-grow object-cover min-h-screen"
+        className="absolute inset-y-0 left-0 -z-10 min-h-full grow object-cover opacity-30"
         src="https://images.pexels.com/photos/2120040/pexels-photo-2120040.jpeg?auto=compress"
         alt="bg"
         width={3000}
         height={1987}
         priority
       />
-      <div className="max-w-7xl w-full">
-        <div className="border-8 border-white/10 backdrop-blur p-14 rounded-lg leading-none space-y-1  transition-all w-full max-w-3xl shadow-lg">
-          <h1 className="text-2xl sm:text-4xl md:text-7xl text-stone-800 drop-shadow-heading tracking-tighter font-semibold">
+      <div className="mt-10 w-full max-w-7xl">
+        <div className="w-full max-w-3xl space-y-1 rounded-lg border-8 border-white/10 p-14  leading-none shadow-lg backdrop-blur transition-all">
+          <h1 className="text-2xl font-semibold tracking-tighter text-stone-800 drop-shadow-heading sm:text-4xl md:text-7xl">
             Darwin Smith
           </h1>
-          <p className="drop-shadow-sm text-base sm:text-xl text-left opacity-50">
-            Software Developer | Web
+          <p className="text-left text-sm opacity-50 drop-shadow-sm sm:text-xl">
+            Software & Web Development
           </p>
         </div>
       </div>
