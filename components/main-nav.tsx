@@ -10,7 +10,7 @@ export default function MainNav() {
   return (
     <header className="relative">
       <nav className="fixed w-full bg-gray-300 p-4 mx-auto z-10">
-        <ul className="max-w-6xl mx-auto flex gap-4">
+        <ul className="max-w-7xl mx-auto flex gap-4">
           {MAIN_NAV_LINKS.map((item) => {
             const isMatchingSegment =
               (segment === null && item.label.toLowerCase() === "home") ||
