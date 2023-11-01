@@ -4,10 +4,6 @@ export const MAIN_NAV_LINKS = [
     href: "/",
   },
   {
-    label: "About",
-    href: "/about",
-  },
-  {
     label: "Projects",
     href: "/projects",
   },
