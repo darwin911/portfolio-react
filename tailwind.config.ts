@@ -20,6 +20,10 @@ const config: Config = {
         "rgba(0, 0, 0, 0.2) 1px 4px 2px",
         "rgba(0, 0, 0, 0.2) -2px 3px 8px",
       ],
+      "heading-light": [
+        "rgba(255, 255, 255, 0.2) 1px 4px 2px",
+        "rgba(255, 255, 255, 0.2) -2px 3px 8px",
+      ],
     },
     extend: {
       colors: {
