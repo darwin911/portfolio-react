@@ -1,5 +1,4 @@
 import Image from "next/image";
-// import GithubLight from "@/public/github-mark-white.svg";
 import GithubDark from "@/public/github-mark.svg";
 import LinkedInIcon from "@/public/linkedin-icon.svg";
 import ProfilePic from "@/public/profilepic_white-bg.jpg";
@@ -8,7 +7,6 @@ import {
   Card,
   CardContent,
   CardDescription,
-  CardFooter,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
@@ -37,7 +35,7 @@ export default function Home() {
                 height={96}
               />
               <div className="flex flex-col items-start justify-center rounded px-2 py-0">
-                <CardTitle className="text-2xl font-semibold tracking-tighter text-stone-800 drop-shadow-heading sm:text-5xl md:text-7xl lg:whitespace-nowrap">
+                <CardTitle className="text-2xl font-semibold tracking-tighter text-stone-800 drop-shadow-heading dark:text-zinc-50  dark:drop-shadow-heading-light sm:text-5xl md:text-7xl lg:whitespace-nowrap">
                   Darwin Smith
                 </CardTitle>
                 <CardDescription className="whitespace-nowrap font-light sm:text-xl md:text-2xl">
@@ -60,6 +58,7 @@ export default function Home() {
                   className="flex flex-col items-center justify-center gap-2"
                 >
                   <Image
+                    className="dark:invert"
                     src={GithubDark}
                     alt="Darwin's Github Account"
                     width={24}

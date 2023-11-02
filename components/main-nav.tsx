@@ -1,5 +1,6 @@
 "use client";
 
+import ModeToggle from "@/components/mode-toggle";
 import { MAIN_NAV_LINKS } from "@/components/shared/shared";
 import Link from "next/link";
 import { useSelectedLayoutSegment } from "next/navigation";
@@ -9,26 +10,29 @@ export default function MainNav() {
 
   return (
     <header className="relative">
-      <nav className="fixed z-10 mx-auto w-full overflow-hidden bg-zinc-100 p-4 shadow-md">
-        <ul className="mx-auto flex max-w-7xl gap-4">
-          {MAIN_NAV_LINKS.map((item) => {
-            const isMatchingSegment =
-              (segment === null && item.label.toLowerCase() === "home") ||
-              item.label?.toLowerCase() === segment;
+      <nav className="fixed z-10 mx-auto w-full overflow-hidden bg-background py-4 shadow-md">
+        <div className="container flex items-center justify-between">
+          <ul className="flex gap-4">
+            {MAIN_NAV_LINKS.map((item) => {
+              const isMatchingSegment =
+                (segment === null && item.label.toLowerCase() === "home") ||
+                item.label?.toLowerCase() === segment;
 
-            const linkClassName = isMatchingSegment
-              ? "text-gray-800 underline underline-offset-2"
-              : "text-gray-500";
+              const linkClassName = isMatchingSegment
+                ? "opacity-100 underline underline-offset-2"
+                : "opacity-80";
 
-            return (
-              <li key={item.href}>
-                <Link href={item.href} className={linkClassName}>
-                  {item.label}
-                </Link>
-              </li>
-            );
-          })}
-        </ul>
+              return (
+                <li key={item.href}>
+                  <Link href={item.href} className={linkClassName}>
+                    {item.label}
+                  </Link>
+                </li>
+              );
+            })}
+          </ul>
+          <ModeToggle />
+        </div>
       </nav>
     </header>
   );
