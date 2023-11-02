@@ -81,13 +81,13 @@ export default function Home() {
                 </Link>
               </div>
             </div>
-            <p className="rounded bg-card px-10 py-6 text-lg leading-relaxed tracking-tighter">
+            <p className="rounded bg-card px-4 py-6 text-sm leading-relaxed tracking-tighter sm:px-10 sm:text-base md:text-lg">
               Hey there! I&apos;m a software developer with 4 years of
               experience who&apos;s passionate about creating awesome web
-              applications. Right now, my jam is building with{" "}
+              applications. Lately, my favorite stack includes{" "}
               <strong>Next.js</strong>, <strong>TypeScript</strong>, and{" "}
-              <strong>Tailwind</strong>. I&apos;ve got a knack for making things
-              look great and ensuring a top-notch user experience.
+              <strong>Tailwind CSS</strong>. I enjoy making things work well and
+              look great.
             </p>
           </CardContent>
         </Card>
