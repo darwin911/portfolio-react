@@ -3,6 +3,7 @@ import GithubDark from "@/public/github-mark.svg";
 import LinkedInIcon from "@/public/linkedin-icon.svg";
 import ProfilePic from "@/public/profilepic_white-bg.jpg";
 import Link from "next/link";
+import HeroBg from "@/public/hero-bg.jpeg";
 import {
   Card,
   CardContent,
@@ -14,28 +15,28 @@ import { GlobeAmericasIcon } from "@heroicons/react/24/solid";
 
 export default function Home() {
   return (
-    <main className="relative flex h-full flex-col items-center justify-center overflow-hidden p-8 sm:p-20 md:p-24">
+    <main className="relative flex h-full flex-col items-center justify-center overflow-hidden px-4 py-8 sm:px-8 sm:py-20 md:py-24">
       <Image
         className="absolute inset-y-0 left-0 -z-10 min-h-full grow object-cover opacity-30"
-        src="https://images.pexels.com/photos/2120040/pexels-photo-2120040.jpeg?auto=compress"
-        alt="bg"
-        width={3000}
-        height={1987}
+        src={HeroBg}
+        alt=""
+        quality={15}
+        placeholder="blur"
         priority
       />
-      <div className="mt-10 w-full max-w-7xl">
+      <div className="mb-5 mt-10 w-full max-w-7xl">
         <Card className="max-w-3xl bg-card/80 sm:flex sm:flex-col">
           <CardHeader className="w-full flex-row">
-            <div className="flex w-full flex-col items-center gap-4 md:flex-row">
+            <div className="flex w-full flex-row flex-wrap items-center gap-4">
               <Image
                 src={ProfilePic}
                 alt="Darwin Smith headshot"
-                className="border-current/50 h-28 w-28 rounded-full border-4 object-cover shadow-sm"
+                className="border-current/50 h-20 w-20  rounded-full border-4 object-cover shadow-sm sm:h-28 sm:w-28"
                 width={96}
                 height={96}
               />
               <div className="flex flex-col items-start justify-center rounded px-2 py-0">
-                <CardTitle className="text-2xl font-semibold tracking-tighter text-stone-800 drop-shadow-heading dark:text-zinc-50  dark:drop-shadow-heading-light sm:text-5xl md:text-7xl lg:whitespace-nowrap">
+                <CardTitle className="text-3xl font-semibold tracking-tighter text-stone-800 drop-shadow-heading dark:text-zinc-50  dark:drop-shadow-heading-light sm:text-5xl md:text-7xl lg:whitespace-nowrap">
                   Darwin Smith
                 </CardTitle>
                 <CardDescription className="whitespace-nowrap font-light sm:text-xl md:text-2xl">
@@ -81,14 +82,18 @@ export default function Home() {
                 </Link>
               </div>
             </div>
-            <p className="rounded bg-card px-4 py-6 text-sm leading-relaxed tracking-tighter sm:px-10 sm:text-base md:text-lg">
-              Hey there! I&apos;m a software developer with 4 years of
-              experience who&apos;s passionate about creating awesome web
-              applications. Lately, my favorite stack includes{" "}
-              <strong>Next.js</strong>, <strong>TypeScript</strong>, and{" "}
-              <strong>Tailwind CSS</strong>. I enjoy making things work well and
-              look great.
-            </p>
+            <div className="rounded bg-card px-4 py-6 text-sm tracking-tight sm:px-10 sm:text-base md:text-lg">
+              <p className="leading-relaxed">
+                <span className="inline-block animate-rainbow-scroll bg-gradient-to-r from-sky-400 via-green-400 to-sky-400 bg-clip-text text-lg font-black leading-relaxed tracking-normal text-transparent transition-all">
+                  Hello world!
+                </span>{" "}
+                I&apos;m a software developer with 4 years of experience
+                who&apos;s passionate about creating awesome web applications.
+                Lately, my favorite stack includes <strong>Next.js</strong>,{" "}
+                <strong>TypeScript</strong>, and <strong>Tailwind CSS</strong>.
+                I enjoy making things work well and look great.
+              </p>
+            </div>
           </CardContent>
         </Card>
       </div>

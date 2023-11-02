@@ -15,16 +15,6 @@ const config: Config = {
         "2xl": "1400px",
       },
     },
-    dropShadow: {
-      heading: [
-        "rgba(0, 0, 0, 0.2) 1px 4px 2px",
-        "rgba(0, 0, 0, 0.2) -2px 3px 8px",
-      ],
-      "heading-light": [
-        "rgba(255, 255, 255, 0.2) 1px 4px 2px",
-        "rgba(255, 255, 255, 0.2) -2px 3px 8px",
-      ],
-    },
     extend: {
       colors: {
         border: "hsl(var(--border))",
@@ -66,20 +56,29 @@ const config: Config = {
         md: `calc(var(--radius) - 2px)`,
         sm: "calc(var(--radius) - 4px)",
       },
-
+      dropShadow: {
+        heading: [
+          "rgba(0, 0, 0, 0.2) 1px 4px 2px",
+          "rgba(0, 0, 0, 0.2) -2px 3px 8px",
+        ],
+        "heading-light": [
+          "rgba(255, 255, 255, 0.2) 1px 4px 2px",
+          "rgba(255, 255, 255, 0.2) -2px 3px 8px",
+        ],
+      },
       keyframes: {
-        "accordion-down": {
-          from: { height: "0" },
-          to: { height: "var(--radix-accordion-content-height)" },
-        },
-        "accordion-up": {
-          from: { height: "var(--radix-accordion-content-height)" },
-          to: { height: "0" },
+        rainbow: {
+          "0%": { "background-position-x": "0%", "background-size": "200%" },
+          "100%": {
+            "background-position-x": "200%",
+            "background-size": "200%",
+          },
         },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "rainbow-scroll": "rainbow 3s linear infinite",
       },
     },
   },
