@@ -6,15 +6,16 @@ import { MoonIcon, SunIcon } from "@heroicons/react/24/solid";
 import { useTheme } from "next-themes";
 
 export default function ModeToggle({ className = "" }: { className?: string }) {
-  const { theme, setTheme } = useTheme();
+  const { theme, setTheme, systemTheme } = useTheme();
 
   function handleToggleDarkMode() {
-    if (theme === "dark") {
-      setTheme("light");
-    } else if (theme === "light") {
-      setTheme("dark");
+    if (theme === "system") {
+      setTheme(systemTheme === "dark" ? "light" : "dark");
+    } else {
+      setTheme(theme === "dark" ? "light" : "dark");
     }
   }
+
   return (
     <Button
       variant="outline"
