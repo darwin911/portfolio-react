@@ -39,7 +39,7 @@ export default function ProjectCard({
         placeholder="blur"
       />
       <div className="max-w-full shrink p-4 lg:p-8">
-        <div className="flex w-full items-center justify-between">
+        <div className="flex w-full flex-wrap items-center justify-between">
           <h2 className="mb-4 text-2xl font-bold tracking-tighter">{title}</h2>
 
           <div className="flex items-center gap-4 tracking-tighter text-muted-foreground">
