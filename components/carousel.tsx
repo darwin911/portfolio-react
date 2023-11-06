@@ -93,14 +93,14 @@ export default function Carousel({ children }: CarouselProps) {
       <div className="absolute inset-x-0 top-0 flex aspect-[4/3] flex-col items-center justify-center px-4 md:py-4">
         <div className="mt-auto flex w-full justify-between">
           <Button
-            className="rounded-full border border-secondary lg:h-14 lg:w-14"
+            className="rounded-full border border-secondary dark:border-primary dark:bg-muted dark:text-primary lg:h-14 lg:w-14"
             size="icon"
             onClick={previousSlide}
           >
             <ChevronLeftIcon className="h-6 w-6 lg:h-8 lg:w-8" />
           </Button>
           <Button
-            className="rounded-full border border-secondary lg:h-14 lg:w-14"
+            className="rounded-full border border-secondary dark:border-primary dark:bg-muted dark:text-primary lg:h-14 lg:w-14"
             size="icon"
             onClick={nextSlide}
           >
