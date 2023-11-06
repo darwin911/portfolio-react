@@ -31,14 +31,14 @@ export default function ProjectCard({
   }
 
   return (
-    <div className="relative w-96 min-w-full snap-center bg-card md:w-[512px] lg:w-[1024px]">
+    <div className="relative w-96 min-w-full snap-center overflow-hidden rounded-xl border md:w-[512px] lg:w-[1024px]">
       <Image
         src={imgSrc}
         alt={title}
-        className="h-96 w-96 bg-muted/90 object-contain md:w-[512px] lg:h-[620px] lg:w-[1024px]"
+        className="aspect-[4/3] w-full bg-muted/90 object-contain md:w-[512px] lg:w-[1024px]"
         placeholder="blur"
       />
-      <div className="flex max-w-full flex-col items-start p-4">
+      <div className="max-w-full shrink p-4 lg:p-8">
         <div className="flex w-full items-center justify-between">
           <h2 className="mb-4 text-2xl font-bold tracking-tighter">{title}</h2>
 

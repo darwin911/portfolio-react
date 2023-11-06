@@ -33,7 +33,7 @@ export default function Carousel({ children }: CarouselProps) {
   }
 
   return (
-    <div className="relative z-10 snap-x snap-mandatory overflow-hidden rounded-xl shadow-md ring-1 ring-zinc-800/10">
+    <div className="relative z-0 snap-x snap-mandatory overflow-hidden ring-zinc-800/10">
       <div
         className={clsx(
           "flex flex-row transition-transform duration-150 ease-in-out"
@@ -46,7 +46,7 @@ export default function Carousel({ children }: CarouselProps) {
           return React.cloneElement(child, { setCurrent });
         })}
       </div>
-      <div className="absolute inset-x-0 inset-y-1/2 flex items-center justify-between p-4">
+      <div className="absolute inset-x-0 top-1/3 flex items-center justify-between px-4 md:py-4">
         <Button
           className="rounded-full border border-secondary lg:h-14 lg:w-14"
           size="icon"
