@@ -22,7 +22,7 @@ export default function Home() {
         alt=""
         quality={15}
         placeholder="blur"
-        priority
+        loading="lazy"
       />
       <div className="mb-5 mt-10 w-full max-w-7xl">
         <Card className="max-w-3xl bg-card/80 sm:flex sm:flex-col">
@@ -31,9 +31,10 @@ export default function Home() {
               <Image
                 src={ProfilePic}
                 alt="Darwin Smith headshot"
-                className="border-current/50 h-20 w-20  rounded-full border-4 object-cover shadow-sm sm:h-28 sm:w-28"
-                width={96}
-                height={96}
+                className="h-20 w-20 rounded-full border-4 border-card-foreground/25 object-cover shadow-sm sm:h-28 sm:w-28"
+                priority
+                quality={80}
+                placeholder="blur"
               />
               <div className="flex flex-col items-start justify-center rounded px-2 py-0">
                 <CardTitle className="text-3xl font-semibold tracking-tighter text-stone-800 drop-shadow-heading dark:text-zinc-50  dark:drop-shadow-heading-light sm:text-5xl md:text-7xl lg:whitespace-nowrap">
