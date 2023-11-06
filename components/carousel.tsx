@@ -10,6 +10,7 @@ interface CarouselProps {
 }
 
 export interface CarouselChildProps {
+  current?: number;
   setCurrent?: React.Dispatch<React.SetStateAction<number>>;
 }
 
@@ -33,17 +34,17 @@ export default function Carousel({ children }: CarouselProps) {
   }
 
   return (
-    <div className="relative z-0 snap-x snap-mandatory overflow-hidden ring-zinc-800/10">
+    <div className="relative z-0 ring-zinc-800/10">
       <div
         className={clsx(
-          "flex flex-row transition-transform duration-150 ease-in-out"
+          "ease-[cubic-bezier(0.95,0.05,0.795,0.035)] flex snap-x flex-row transition-transform duration-300"
         )}
         style={{
           transform: `translateX(-${current * 100}%)`,
         }}
       >
         {React.Children.map(children, (child: React.ReactElement) => {
-          return React.cloneElement(child, { setCurrent });
+          return React.cloneElement(child, { setCurrent, current });
         })}
       </div>
       <div className="absolute inset-x-0 top-1/3 flex items-center justify-between px-4 md:py-4">

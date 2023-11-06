@@ -8,6 +8,7 @@ import { Project } from "@/components/shared/shared";
 import Github from "@/public/github-mark.svg";
 import { GlobeAltIcon } from "@heroicons/react/24/outline";
 import { CarouselChildProps } from "@/components/carousel";
+import clsx from "clsx";
 
 interface ProjectCardProps extends Omit<Project, "id">, CarouselChildProps {
   index: number;
@@ -19,19 +20,18 @@ export default function ProjectCard({
   imgSrc,
   title,
   index,
-  setCurrent,
+  current,
 }: ProjectCardProps) {
-  function handleLinkFocus() {
-    if (!setCurrent) {
-      console.error("setCurrent is not defined");
-      return;
-    }
-
-    setCurrent(index);
-  }
-
+  const isCurrent = index === current;
   return (
-    <div className="relative w-96 min-w-full snap-center overflow-hidden rounded-xl border md:w-[512px] lg:w-[1024px]">
+    <div
+      className={clsx(
+        "relative w-96 min-w-full snap-center overflow-hidden rounded-xl border transition-all duration-200  md:w-[512px] lg:w-[1024px]",
+        isCurrent
+          ? "animate-in zoom-in-75"
+          : "rotate-12 scale-75 opacity-0 zoom-in-90"
+      )}
+    >
       <Image
         src={imgSrc}
         alt={title}
@@ -41,12 +41,10 @@ export default function ProjectCard({
       <div className="max-w-full shrink p-4 lg:p-8">
         <div className="flex w-full flex-wrap items-center justify-between">
           <h2 className="mb-4 text-2xl font-bold tracking-tighter">{title}</h2>
-
           <div className="flex items-center gap-4 tracking-tighter text-muted-foreground">
             <Link
               href={href}
               target="_blank"
-              onFocus={handleLinkFocus}
               className="flex flex-col items-center gap-1 underline underline-offset-2 transition-colors hover:text-primary"
             >
               <GlobeAltIcon className="h-6 w-6" />
@@ -57,8 +55,7 @@ export default function ProjectCard({
               href="https://www.github.com/darwin911"
               target="_blank"
               rel="noopener noreferrer"
-              onFocus={handleLinkFocus}
-              className="flex flex-col items-center justify-center gap-1 underline underline-offset-2"
+              className="flex flex-col items-center justify-center gap-1 underline underline-offset-2 transition-colors hover:text-primary"
             >
               <Image
                 className="dark:invert"

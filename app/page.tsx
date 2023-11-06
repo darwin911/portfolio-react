@@ -15,7 +15,7 @@ import { GlobeAmericasIcon } from "@heroicons/react/24/solid";
 
 export default function Home() {
   return (
-    <main className="relative flex h-full flex-col items-center justify-center overflow-hidden px-4 py-8 sm:px-8 sm:py-20 md:py-24">
+    <main className="relative flex h-full flex-col items-center justify-center px-4 py-8 sm:px-8 sm:py-20 md:py-24">
       <Image
         className="absolute inset-y-0 left-0 -z-10 min-h-full grow object-cover opacity-30"
         src={HeroBg}
