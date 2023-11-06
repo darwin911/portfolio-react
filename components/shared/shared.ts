@@ -34,7 +34,8 @@ export const PROJECTS: Project[] = [
     href: "https://pong-js.netlify.app/",
     imgSrc: Pong,
     title: "PONG",
-    description: "Pong! was my first game. It was built with JavaScript.",
+    description:
+      "Developed my first game, 'Pong!', using JavaScript. It's a classic table tennis arcade game where players earn points by hitting the paddle.",
     githubLink: "https://github.com/darwin911/pong",
   },
   {
@@ -43,7 +44,7 @@ export const PROJECTS: Project[] = [
     imgSrc: Vinyl,
     title: "Vinyl",
     description:
-      "CRUD (Create, Read, Update, Delete) application, built with React, Express, Sequelize, Postgres. The UI controls are custom CSS, and are controlled with state. Tracks are uploaded through the server to an AWS S3 Bucket. Authentication implemented with JSON Web Tokens, storing hashed passwords to the database. Login and Register inputs with validation.",
+      "This CRUD app, built with React, Express, Sequelize, and Postgres, features custom UI controls, AWS S3 track uploads, JWT authentication, and input validation for user registration and login.",
     githubLink: "https://github.com/darwin911/vinyl-express",
   },
   {
@@ -52,7 +53,7 @@ export const PROJECTS: Project[] = [
     imgSrc: ExerciseTracker,
     title: "Exercise Tracker",
     description:
-      "Logging, filtering and viewing exercises. Built with React, Mongo, Express. I also used framer-motion for various animations.",
+      "Developed a logging and filtering system for exercises using React, Mongo, Express, and react-hook-form for client-side form handling, with added animations via framer-motion for a dynamic user experience.",
     githubLink: "https://github.com/darwin911/exercise-tracker",
   },
   {
@@ -61,7 +62,7 @@ export const PROJECTS: Project[] = [
     imgSrc: JCC,
     title: "Juega Como Campeon",
     description:
-      "Designed and built a static website for a non-profit working with underpriviledged children in the Dominican Republic.",
+      "Designed and developed a static website for a Dominican Republic-based non-profit serving underprivileged children, and also responsible for ongoing site maintenance and updates.",
     githubLink: "",
   },
 ];
