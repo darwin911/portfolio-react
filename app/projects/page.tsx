@@ -10,9 +10,10 @@ export default function ProjectsPage() {
       </h1>
       <div className="max-w-sm md:max-w-lg lg:max-w-5xl">
         <Carousel>
-          {PROJECTS.map((data) => {
+          {PROJECTS.map((data, index) => {
             return (
               <ProjectCard
+                index={index}
                 key={data.id}
                 href={data.href}
                 imgSrc={data.imgSrc}
