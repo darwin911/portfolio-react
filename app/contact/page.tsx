@@ -1,0 +1,27 @@
+import { EnvelopeIcon } from "@heroicons/react/24/outline";
+import Link from "next/link";
+
+export default function ContactPage() {
+  return (
+    <main className="relative flex h-full flex-col items-center justify-center overflow-hidden px-4 py-8 sm:px-8 sm:py-20 md:p-0">
+      <div className="grid h-full w-full place-items-center sm:grid-cols-2">
+        <div>
+          <h1 className="text-3xl font-semibold tracking-tighter text-stone-800 drop-shadow-heading dark:text-zinc-50  dark:drop-shadow-heading-light sm:text-5xl md:text-7xl lg:whitespace-nowrap">
+            Contact
+          </h1>
+        </div>
+        <div className="flex h-full w-full items-center justify-center bg-card invert">
+          <ul>
+            <li className="flex items-center gap-2">
+              <span className="sr-only">Email:</span>
+              <EnvelopeIcon className="h-10 w-10" />
+              <Link href="mailto:darwinpsmith@gmail.com" target="_blank">
+                darwinpsmith@gmail.com
+              </Link>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </main>
+  );
+}
