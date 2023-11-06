@@ -36,7 +36,7 @@ export default function ProjectCard({
         src={imgSrc}
         alt={title}
         className="h-96 w-96 bg-muted/90 object-contain md:w-[512px] lg:h-[620px] lg:w-[1024px]"
-        priority
+        placeholder="blur"
       />
       <div className="flex max-w-full flex-col items-start p-4">
         <div className="flex w-full items-center justify-between">
