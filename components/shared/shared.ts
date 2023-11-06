@@ -2,6 +2,7 @@ import Pong from "@/public/pong.png";
 import JCC from "@/public/jcc.jpg";
 import ExerciseTracker from "@/public/exercise-tracker.png";
 import { StaticImageData } from "next/image";
+import Vinyl from "@/public/vinyl.png";
 
 export const MAIN_NAV_LINKS = [
   {
@@ -38,6 +39,15 @@ export const PROJECTS: Project[] = [
   },
   {
     id: 1,
+    href: "https://vinyl.surge.sh/",
+    imgSrc: Vinyl,
+    title: "Vinyl",
+    description:
+      "CRUD (Create, Read, Update, Delete) application, built with React, Express, Sequelize, Postgres. The UI controls are custom CSS, and are controlled with state. Tracks are uploaded through the server to an AWS S3 Bucket. Authentication implemented with JSON Web Tokens, storing hashed passwords to the database. Login and Register inputs with validation.",
+    githubLink: "https://github.com/darwin911/vinyl-express",
+  },
+  {
+    id: 2,
     href: "https://exercise-tracker-blink.netlify.app/",
     imgSrc: ExerciseTracker,
     title: "Exercise Tracker",
@@ -46,7 +56,7 @@ export const PROJECTS: Project[] = [
     githubLink: "https://github.com/darwin911/exercise-tracker",
   },
   {
-    id: 2,
+    id: 3,
     href: "https://www.juegacomocampeon.org/",
     imgSrc: JCC,
     title: "Juega Como Campeon",
