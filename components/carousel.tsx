@@ -90,21 +90,42 @@ export default function Carousel({ children }: CarouselProps) {
           return React.cloneElement(child, { setCurrent, current });
         })}
       </div>
-      <div className="absolute inset-x-0 top-1/3 flex items-center justify-between px-4 md:py-4">
-        <Button
-          className="rounded-full border border-secondary lg:h-14 lg:w-14"
-          size="icon"
-          onClick={previousSlide}
-        >
-          <ChevronLeftIcon className="h-6 w-6 lg:h-8 lg:w-8" />
-        </Button>
-        <Button
-          className="rounded-full border border-secondary lg:h-14 lg:w-14"
-          size="icon"
-          onClick={nextSlide}
-        >
-          <ChevronRightIcon className="h-6 w-6 lg:h-8 lg:w-8" />
-        </Button>
+      <div className="absolute inset-x-0 top-0 flex aspect-[4/3] flex-col items-center justify-center px-4 md:py-4">
+        <div className="mt-auto flex w-full justify-between">
+          <Button
+            className="rounded-full border border-secondary lg:h-14 lg:w-14"
+            size="icon"
+            onClick={previousSlide}
+          >
+            <ChevronLeftIcon className="h-6 w-6 lg:h-8 lg:w-8" />
+          </Button>
+          <Button
+            className="rounded-full border border-secondary lg:h-14 lg:w-14"
+            size="icon"
+            onClick={nextSlide}
+          >
+            <ChevronRightIcon className="h-6 w-6 lg:h-8 lg:w-8" />
+          </Button>
+        </div>
+        <div className="mt-auto flex justify-center rounded-full">
+          {children.map((_, index) => (
+            <Button
+              variant="ghost"
+              className={clsx("p-2 hover:bg-transparent")}
+              key={index}
+              onClick={() => setCurrent(index)}
+            >
+              <span
+                className={clsx(
+                  "block h-4 w-4 rounded-full border border-muted-foreground",
+                  current === index
+                    ? "bg-card/80 dark:bg-card-foreground/80"
+                    : "bg-card/25"
+                )}
+              ></span>
+            </Button>
+          ))}
+        </div>
       </div>
     </div>
   );
