@@ -88,7 +88,7 @@ export default function Home() {
                 <span className="inline-block animate-rainbow-scroll bg-gradient-to-r from-sky-400 via-green-400 to-sky-400 bg-clip-text text-lg font-black leading-relaxed tracking-normal text-transparent transition-all">
                   Hello world!
                 </span>{" "}
-                I&apos;m a software developer with 4 years of experience
+                I&apos;m a software developer with 5 years of experience
                 who&apos;s passionate about creating awesome web applications.
                 Lately, my favorite stack includes <strong>Next.js</strong>,{" "}
                 <strong>TypeScript</strong>, and <strong>Tailwind CSS</strong>.
