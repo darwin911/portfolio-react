@@ -47,7 +47,7 @@ export default function ProjectCard({
               target="_blank"
               className="flex flex-col items-center gap-1 underline underline-offset-2 transition-colors hover:text-primary"
             >
-              <GlobeAltIcon className="h-6 w-6" />
+              <GlobeAltIcon className="size-6" />
               <small>Live Site</small>
             </Link>
 

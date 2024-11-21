@@ -31,7 +31,7 @@ export default function Home() {
               <Image
                 src={ProfilePic}
                 alt="Darwin Smith headshot"
-                className="h-20 w-20 rounded-full border-4 border-card-foreground/25 object-cover shadow-sm sm:h-28 sm:w-28"
+                className="size-20 rounded-full border-4 border-card-foreground/25 object-cover shadow-sm sm:size-28"
                 priority
                 quality={80}
                 placeholder="blur"
@@ -49,7 +49,7 @@ export default function Home() {
           <CardContent>
             <div className="mb-3 flex justify-between">
               <div className="flex items-center gap-1">
-                <GlobeAmericasIcon className="h-6 w-6" />
+                <GlobeAmericasIcon className="size-6" />
                 <small>GMT-4 (ET)</small>
               </div>
               <div className="flex gap-4">

@@ -24,9 +24,9 @@ export default function ModeToggle({ className = "" }: { className?: string }) {
       size="icon"
     >
       {theme === "dark" ? (
-        <SunIcon className="h-5 w-5" />
+        <SunIcon className="size-5" />
       ) : (
-        <MoonIcon className="h-5 w-5" />
+        <MoonIcon className="size-5" />
       )}
     </Button>
   );

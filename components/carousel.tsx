@@ -93,18 +93,18 @@ export default function Carousel({ children }: CarouselProps) {
       <div className="absolute inset-x-0 top-0 flex aspect-[4/3] flex-col items-center justify-center px-4 md:py-4">
         <div className="mt-auto flex w-full justify-between">
           <Button
-            className="rounded-full border border-secondary dark:border-primary dark:bg-muted dark:text-primary lg:h-14 lg:w-14"
+            className="rounded-full border border-secondary dark:border-primary dark:bg-muted dark:text-primary lg:size-14"
             size="icon"
             onClick={previousSlide}
           >
-            <ChevronLeftIcon className="h-6 w-6 lg:h-8 lg:w-8" />
+            <ChevronLeftIcon className="size-6 lg:size-8" />
           </Button>
           <Button
-            className="rounded-full border border-secondary dark:border-primary dark:bg-muted dark:text-primary lg:h-14 lg:w-14"
+            className="rounded-full border border-secondary dark:border-primary dark:bg-muted dark:text-primary lg:size-14"
             size="icon"
             onClick={nextSlide}
           >
-            <ChevronRightIcon className="h-6 w-6 lg:h-8 lg:w-8" />
+            <ChevronRightIcon className="size-6 lg:size-8" />
           </Button>
         </div>
         <div className="mt-auto flex justify-center rounded-full">
@@ -117,7 +117,7 @@ export default function Carousel({ children }: CarouselProps) {
             >
               <span
                 className={clsx(
-                  "block h-4 w-4 rounded-full border border-muted-foreground",
+                  "block size-4 rounded-full border border-muted-foreground",
                   current === index
                     ? "bg-card/80 dark:bg-card-foreground/80"
                     : "bg-card/25"
