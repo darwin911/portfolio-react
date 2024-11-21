@@ -12,6 +12,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { GlobeAmericasIcon } from "@heroicons/react/24/solid";
+import { DocumentArrowDownIcon } from "@heroicons/react/24/outline";
 
 export default function Home() {
   return (
@@ -53,6 +54,14 @@ export default function Home() {
                 <small>GMT-4 (ET)</small>
               </div>
               <div className="flex gap-4">
+                <Link
+                  href="/resume-nov-24-2024.pdf"
+                  download="darwin-smith-resume.pdf"
+                  className="flex flex-col items-center justify-center gap-2"
+                >
+                  <DocumentArrowDownIcon className="size-6" />
+                  <small>Resume</small>
+                </Link>
                 <Link
                   href="https://www.github.com/darwin911"
                   target="_blank"
