@@ -105,22 +105,28 @@ export default function Home() {
               </p>
               <p className="text-md tracking-tighter">
                 Lately, my favorite stack includes{" "}
-                <strong className="text-[#0070f3]">Next.js</strong>,{" "}
-                <strong className="text-[#3178c6]">TypeScript</strong>, and{" "}
-                <strong className="text-[#06b6d4]">Tailwind CSS</strong>. I have
-                experience with{" "}
-                <strong className="text-[#3dcf8e]">Postgres (Supabase)</strong>,{" "}
-                <strong className="text-[#306998]">Python</strong>,{" "}
-                <strong className="text-[#43853d]">Node.js (Express)</strong>{" "}
+                <strong className="hover:text-[#0070f3]">Next.js</strong>,{" "}
+                <strong className="hover:text-[#3178c6]">TypeScript</strong>,
+                and{" "}
+                <strong className="hover:text-[#06b6d4]">Tailwind CSS</strong>.
+                I have experience with{" "}
+                <strong className="hover:text-[#3dcf8e]">
+                  Postgres (Supabase)
+                </strong>
+                , <strong className="hover:text-[#306998]">Python</strong>,{" "}
+                <strong className="hover:text-[#43853d]">
+                  Node.js (Express)
+                </strong>{" "}
                 and familiar with{" "}
-                <strong className="text-[#1D63ED]">Docker</strong> and various{" "}
-                <strong className="text-[#ff9900]">AWS</strong> services,{" "}
-                <strong className="text-[#181717] dark:text-white">
+                <strong className="hover:text-[#1D63ED]">Docker</strong> and
+                various <strong className="hover:text-[#ff9900]">AWS</strong>{" "}
+                services,{" "}
+                <strong className="hover:text-[#181717] dark:text-white">
                   Git/Github
                 </strong>
                 , and various tracking systems like{" "}
-                <strong className="text-[#0052cc]">Jira</strong>/
-                <strong className="text-[#6563ff]">Linear</strong>.
+                <strong className="hover:text-[#0052cc]">Jira</strong>/
+                <strong className="hover:text-[#6563ff]">Linear</strong>.
               </p>
             </div>
           </CardContent>
