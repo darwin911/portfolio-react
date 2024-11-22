@@ -80,6 +80,9 @@ const config: Config = {
         "accordion-up": "accordion-up 0.2s ease-out",
         "rainbow-scroll": "rainbow 3s linear infinite",
       },
+      transitionTimingFunction: {
+        "custom-cubic": "cubic-bezier(0.95, 0.05, 0.795, 0.035)",
+      },
     },
   },
   plugins: [require("tailwindcss-animate"), require("@tailwindcss/typography")],
