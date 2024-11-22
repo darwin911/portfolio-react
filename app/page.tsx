@@ -92,17 +92,35 @@ export default function Home() {
                 </Link>
               </div>
             </div>
-            <div className="rounded bg-card px-4 py-6 text-sm tracking-tight sm:px-10 sm:text-base md:text-lg">
-              <p className="leading-relaxed">
-                <span className="inline-block animate-rainbow-scroll bg-gradient-to-r from-sky-400 via-green-400 to-sky-400 bg-clip-text text-lg font-black leading-relaxed tracking-normal text-transparent transition-all">
+            <div className="rounded bg-card px-4 py-6 text-sm tracking-tighter sm:px-10 sm:text-base md:text-lg leading-relaxed space-y-2">
+              <p>
+                <span className="inline-block animate-rainbow-scroll bg-gradient-to-r from-sky-400 via-green-400 to-sky-400 bg-clip-text text-4xl font-bold text-transparent transition-all drop-shadow-md">
                   Hello world!
                 </span>{" "}
+              </p>
+              <p className="text-md tracking-tighter">
                 I&apos;m a software developer with{" "}
-                {new Date().getFullYear() - 2019} years of experience who&apos;s
-                passionate about creating awesome web applications. Lately, my
-                favorite stack includes <strong>Next.js</strong>,{" "}
-                <strong>TypeScript</strong>, and <strong>Tailwind CSS</strong>.
-                I enjoy making things work well and look great.
+                {new Date().getFullYear() - 2019} years of experience,
+                passionate about creating great web applications and software.
+              </p>
+              <p className="text-md tracking-tighter">
+                Lately, my favorite stack includes{" "}
+                <strong className="text-[#0070f3]">Next.js</strong>,{" "}
+                <strong className="text-[#3178c6]">TypeScript</strong>, and{" "}
+                <strong className="text-[#06b6d4]">Tailwind CSS</strong>. I have
+                experience with{" "}
+                <strong className="text-[#3dcf8e]">Postgres (Supabase)</strong>,{" "}
+                <strong className="text-[#306998]">Python</strong>,{" "}
+                <strong className="text-[#43853d]">Node.js (Express)</strong>{" "}
+                and familiar with{" "}
+                <strong className="text-[#1D63ED]">Docker</strong> and various{" "}
+                <strong className="text-[#ff9900]">AWS</strong> services,{" "}
+                <strong className="text-[#181717] dark:text-white">
+                  Git/Github
+                </strong>
+                , and various tracking systems like{" "}
+                <strong className="text-[#0052cc]">Jira</strong>/
+                <strong className="text-[#6563ff]">Linear</strong>.
               </p>
             </div>
           </CardContent>
