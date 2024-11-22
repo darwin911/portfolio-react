@@ -23,7 +23,7 @@ export default function Home() {
         alt=""
         quality={15}
         placeholder="blur"
-        loading="lazy"
+        priority
       />
       <div className="mb-5 mt-10 w-full max-w-7xl">
         <Card className="max-w-3xl bg-card/80 sm:flex sm:flex-col">
