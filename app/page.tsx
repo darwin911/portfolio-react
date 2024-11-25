@@ -23,6 +23,7 @@ export default function Home() {
         alt="Darwin Smith's headshot"
         quality={10}
         width={112}
+        height={112}
         placeholder="blur"
         priority
       />
