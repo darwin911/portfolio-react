@@ -80,7 +80,7 @@ export default function Carousel({ children }: CarouselProps) {
     >
       <div
         className={clsx(
-          "ease-custom-cubic flex snap-x flex-row transition-transform duration-300"
+          "flex snap-x flex-row transition-transform duration-300 ease-custom-cubic"
         )}
         style={{
           transform: `translateX(-${current * 100}%)`,

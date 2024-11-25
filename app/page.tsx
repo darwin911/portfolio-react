@@ -13,6 +13,33 @@ import {
 } from "@/components/ui/card";
 import { GlobeAmericasIcon } from "@heroicons/react/24/solid";
 import { DocumentArrowDownIcon } from "@heroicons/react/24/outline";
+import { PropsWithChildren } from "react";
+
+function FancyText({ children, color }: PropsWithChildren<{ color: string }>) {
+  return (
+    <strong
+      /* eslint-disable-next-line tailwindcss/no-custom-classname */
+      className={`hover:text-[${color}] cursor-cell duration-150 hover:animate-pulse`}
+    >
+      {children}
+    </strong>
+  );
+}
+
+function Avatar() {
+  return (
+    <Image
+      src={ProfilePic}
+      alt="Darwin Smith headshot"
+      className="size-20 rounded-full border-2 border-card-foreground/20 object-cover shadow-sm sm:size-28"
+      priority
+      quality={50}
+      width={112}
+      height={112}
+      placeholder="blur"
+    />
+  );
+}
 
 export default function Home() {
   return (
@@ -29,16 +56,7 @@ export default function Home() {
         <Card className="max-w-3xl bg-card/80 sm:flex sm:flex-col">
           <CardHeader className="w-full flex-row">
             <div className="flex w-full flex-row flex-wrap items-center gap-4">
-              <Image
-                src={ProfilePic}
-                alt="Darwin Smith headshot"
-                className="size-20 rounded-full border-2 border-card-foreground/20 object-cover shadow-sm sm:size-28"
-                priority
-                quality={50}
-                width={112}
-                height={112}
-                placeholder="blur"
-              />
+              <Avatar />
               <div className="flex flex-col items-start justify-center rounded px-2 py-0">
                 <CardTitle className="text-3xl font-semibold tracking-tighter text-stone-800 drop-shadow-heading dark:text-zinc-50  dark:drop-shadow-heading-light sm:text-5xl md:text-7xl lg:whitespace-nowrap">
                   Darwin Smith
@@ -94,38 +112,29 @@ export default function Home() {
                 </Link>
               </div>
             </div>
-            <div className="rounded bg-card px-4 py-6 text-sm tracking-tighter sm:px-10 sm:text-base md:text-lg leading-relaxed space-y-2">
-              <p className="inline-block animate-rainbow-scroll bg-gradient-to-r from-sky-400 via-green-400 to-sky-400 bg-clip-text text-4xl font-bold text-transparent transition-all drop-shadow-sm">
+            <div className="space-y-2 rounded bg-card px-4 py-6 text-sm leading-relaxed tracking-tighter sm:px-10 sm:text-base md:text-lg">
+              <p className="inline-block animate-rainbow-scroll bg-gradient-to-r from-sky-400 via-green-400 to-sky-400 bg-clip-text text-4xl font-bold text-transparent drop-shadow-sm transition-all">
                 Hello world!
               </p>
-              <p className="text-md tracking-tighter">
+              <p className="tracking-tighter">
                 I&apos;m a software developer with 6 years of experience,
                 passionate about creating great web applications and software.
               </p>
-              <p className="text-md tracking-tighter">
+              <p className="tracking-tighter">
                 Lately, my favorite stack includes{" "}
-                <strong className="hover:text-[#0070f3]">Next.js</strong>,{" "}
-                <strong className="hover:text-[#3178c6]">TypeScript</strong>,
-                and{" "}
-                <strong className="hover:text-[#06b6d4]">Tailwind CSS</strong>.
-                I have experience with{" "}
-                <strong className="hover:text-[#3dcf8e]">
-                  Postgres (Supabase)
-                </strong>
-                , <strong className="hover:text-[#306998]">Python</strong>,{" "}
-                <strong className="hover:text-[#43853d]">
-                  Node.js (Express)
-                </strong>{" "}
-                and familiar with{" "}
-                <strong className="hover:text-[#1D63ED]">Docker</strong> and
-                various <strong className="hover:text-[#ff9900]">AWS</strong>{" "}
-                services,{" "}
-                <strong className="hover:text-[#181717] dark:text-white">
-                  Git/Github
-                </strong>
-                , and various tracking systems like{" "}
-                <strong className="hover:text-[#0052cc]">Jira</strong>/
-                <strong className="hover:text-[#6563ff]">Linear</strong>.
+                <FancyText color="#0070f3">Next.js</FancyText>,{" "}
+                <FancyText color="#3178c6">TypeScript</FancyText>, and{" "}
+                <FancyText color="#06b6d4">Tailwind CSS</FancyText>. I have
+                experience with{" "}
+                <FancyText color="#3dcf8e">Postgres (Supabase)</FancyText>,{" "}
+                <FancyText color="#306998">Python</FancyText>,{" "}
+                <FancyText color="#43853d">Node.js (Express)</FancyText> and
+                familiar with <FancyText color="#1D63ED">Docker</FancyText> and
+                various <FancyText color="#ff9900">AWS</FancyText> services,{" "}
+                <FancyText color="#181717">Git/Github</FancyText>, and various
+                tracking systems like{" "}
+                <FancyText color="#0052cc">Jira</FancyText>/
+                <FancyText color="#6563ff">Linear</FancyText>.
               </p>
             </div>
           </CardContent>
