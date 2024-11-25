@@ -20,8 +20,9 @@ export default function Home() {
       <Image
         className="absolute inset-y-0 left-0 -z-10 min-h-full grow object-cover opacity-30"
         src={HeroBg}
-        alt=""
-        quality={15}
+        alt="Darwin Smith's headshot"
+        quality={10}
+        width={112}
         placeholder="blur"
         priority
       />
