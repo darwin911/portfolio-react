@@ -22,6 +22,7 @@ export default function ModeToggle({ className = "" }: { className?: string }) {
       className={cn("rounded-xl h-8 w-8", className)}
       onClick={handleToggleDarkMode}
       size="icon"
+      aria-label="Toggle dark mode"
     >
       {theme === "dark" ? (
         <SunIcon className="size-5" />
