@@ -32,9 +32,9 @@ export default function Home() {
               <Image
                 src={ProfilePic}
                 alt="Darwin Smith headshot"
-                className="size-20 rounded-full border-4 border-card-foreground/25 object-cover shadow-sm sm:size-28"
+                className="size-20 rounded-full border-2 border-card-foreground/20 object-cover shadow-sm sm:size-28"
                 priority
-                quality={80}
+                quality={50}
                 width={112}
                 height={112}
                 placeholder="blur"
@@ -95,14 +95,11 @@ export default function Home() {
               </div>
             </div>
             <div className="rounded bg-card px-4 py-6 text-sm tracking-tighter sm:px-10 sm:text-base md:text-lg leading-relaxed space-y-2">
-              <p>
-                <span className="inline-block animate-rainbow-scroll bg-gradient-to-r from-sky-400 via-green-400 to-sky-400 bg-clip-text text-4xl font-bold text-transparent transition-all drop-shadow-md">
-                  Hello world!
-                </span>{" "}
+              <p className="inline-block animate-rainbow-scroll bg-gradient-to-r from-sky-400 via-green-400 to-sky-400 bg-clip-text text-4xl font-bold text-transparent transition-all drop-shadow-sm">
+                Hello world!
               </p>
               <p className="text-md tracking-tighter">
-                I&apos;m a software developer with{" "}
-                {new Date().getFullYear() - 2019} years of experience,
+                I&apos;m a software developer with 6 years of experience,
                 passionate about creating great web applications and software.
               </p>
               <p className="text-md tracking-tighter">
