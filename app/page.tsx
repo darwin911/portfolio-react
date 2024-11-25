@@ -35,6 +35,8 @@ export default function Home() {
                 className="size-20 rounded-full border-4 border-card-foreground/25 object-cover shadow-sm sm:size-28"
                 priority
                 quality={80}
+                width={112}
+                height={112}
                 placeholder="blur"
               />
               <div className="flex flex-col items-start justify-center rounded px-2 py-0">
