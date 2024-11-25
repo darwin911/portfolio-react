@@ -21,9 +21,7 @@ export default function Home() {
         className="absolute inset-y-0 left-0 -z-10 min-h-full grow object-cover opacity-30"
         src={HeroBg}
         alt="Darwin Smith's headshot"
-        quality={10}
-        width={112}
-        height={112}
+        quality={15}
         placeholder="blur"
         priority
       />
