@@ -59,7 +59,7 @@ export default function Home() {
               <Avatar />
               <div className="flex flex-col items-start justify-center rounded px-2 py-0">
                 <CardTitle className="text-3xl font-semibold tracking-tighter text-stone-800 drop-shadow-heading dark:text-zinc-50  dark:drop-shadow-heading-light sm:text-5xl md:text-7xl lg:whitespace-nowrap">
-                  Darwin Smith
+                  Darwin P. Smith
                 </CardTitle>
                 <CardDescription className="whitespace-nowrap font-light sm:text-xl md:text-2xl">
                   Software Developer
