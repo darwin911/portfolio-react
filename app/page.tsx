@@ -3,7 +3,7 @@ import GithubDark from "@/public/github-mark.svg";
 import LinkedInIcon from "@/public/linkedin-icon.svg";
 import ProfilePic from "@/public/profilepic_white-bg.jpg";
 import Link from "next/link";
-import HeroBg from "@/public/hero-bg.jpeg";
+import BackgroundSVG from "@/public/background.svg";
 import {
   Card,
   CardContent,
@@ -45,11 +45,10 @@ export default function Home() {
   return (
     <main className="relative flex h-full flex-col items-center justify-center px-4 py-8 sm:px-8 sm:py-20 md:py-24">
       <Image
-        className="absolute inset-y-0 left-0 -z-10 min-h-full grow object-cover opacity-30"
-        src={HeroBg}
+        className="absolute -z-10 object-cover w-full h-full dark:invert"
+        src={BackgroundSVG}
         alt="Darwin Smith's headshot"
         quality={15}
-        placeholder="blur"
         priority
       />
       <div className="mb-5 mt-10 w-full max-w-7xl">
@@ -113,7 +112,7 @@ export default function Home() {
               </div>
             </div>
             <div className="space-y-2 rounded bg-card px-4 py-6 text-sm leading-relaxed tracking-tighter sm:px-10 sm:text-base md:text-lg">
-              <p className="inline-block animate-rainbow-scroll bg-gradient-to-r from-sky-400 via-green-400 to-sky-400 bg-clip-text text-4xl font-bold text-transparent drop-shadow-sm transition-all">
+              <p className="inline-block animate-rainbow-scroll bg-gradient-to-r from-sky-400 via-green-400 to-sky-400 bg-clip-text text-4xl font-bold text-transparent drop-shadow-sm transition-all dark:invert">
                 Hello world!
               </p>
               <p className="tracking-tighter">
