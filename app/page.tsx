@@ -111,8 +111,8 @@ export default function Home() {
                 </Link>
               </div>
             </div>
-            <div className="space-y-2 rounded bg-card px-4 py-6 text-sm leading-relaxed tracking-tighter sm:px-10 sm:text-base md:text-lg">
-              <p className="inline-block animate-rainbow-scroll bg-gradient-to-r from-sky-400 via-green-400 to-sky-400 bg-clip-text text-4xl font-bold text-transparent drop-shadow-sm transition-all dark:invert">
+            <div className="space-y-2 rounded bg-card text-sm leading-relaxed tracking-tighter sm:text-base md:text-lg">
+              <p className="inline-block animate-rainbow-scroll bg-gradient-to-r from-sky-400 via-green-400 to-sky-400 bg-clip-text text-2xl sm:text-3xl md:text-4xl font-bold text-transparent drop-shadow-sm transition-all dark:invert">
                 Hello world!
               </p>
               <p className="tracking-tighter">
