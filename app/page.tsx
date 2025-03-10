@@ -47,7 +47,7 @@ export default function Home() {
       <Image
         className="absolute -z-10 object-cover w-full h-full dark:invert"
         src={BackgroundSVG}
-        alt="Darwin Smith's headshot"
+        alt="" // this is a decorative bg image
         quality={15}
         priority
       />
