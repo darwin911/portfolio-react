@@ -12,7 +12,6 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { GlobeAmericasIcon } from "@heroicons/react/24/solid";
-import { DocumentArrowDownIcon } from "@heroicons/react/24/outline";
 import { PropsWithChildren } from "react";
 
 function FancyText({ children, color }: PropsWithChildren<{ color: string }>) {
