@@ -74,14 +74,6 @@ export default function Home() {
               </div>
               <div className="flex gap-4">
                 <Link
-                  href="/resume-nov-24-2024.pdf"
-                  download="darwin-smith-resume.pdf"
-                  className="flex flex-col items-center justify-center gap-2"
-                >
-                  <DocumentArrowDownIcon className="size-6" />
-                  <small>Resume</small>
-                </Link>
-                <Link
                   href="https://www.github.com/darwin911"
                   target="_blank"
                   rel="noopener noreferrer"
