@@ -86,9 +86,11 @@ export default function Carousel({ children }: CarouselProps) {
           transform: `translateX(-${current * 100}%)`,
         }}
       >
-        {React.Children.map(children, (child: React.ReactElement) => {
-          return React.cloneElement(child, { setCurrent, current });
-        })}
+        {React.Children.map(children, (child) =>
+          React.isValidElement<CarouselChildProps>(child)
+            ? React.cloneElement(child, { setCurrent, current })
+            : child
+        )}
       </div>
       <div className="absolute inset-x-0 top-0 flex aspect-4/3 flex-col items-center justify-center px-4 md:py-4">
         <div className="mt-auto flex w-full justify-between">
