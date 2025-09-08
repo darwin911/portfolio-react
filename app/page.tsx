@@ -1,7 +1,7 @@
 import Image from "next/image";
 import GithubDark from "@/public/github-mark.svg";
 import LinkedInIcon from "@/public/linkedin-icon.svg";
-import ProfilePic from "@/public/profilepic_white-bg.jpg";
+import ProfilePic from "@/public/profilepic_optimized.webp";
 import Link from "next/link";
 import BackgroundSVG from "@/public/background.svg";
 import {
