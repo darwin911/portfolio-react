@@ -30,7 +30,7 @@ function Avatar() {
     <Image
       src={ProfilePic}
       alt="Darwin Smith headshot"
-      className="size-20 rounded-full border-2 border-card-foreground/20 object-cover shadow-sm sm:size-28"
+      className="size-20 rounded-full border-2 border-card-foreground/20 object-cover shadow-xs sm:size-28"
       priority
       quality={50}
       width={112}
@@ -103,7 +103,7 @@ export default function Home() {
               </div>
             </div>
             <div className="space-y-2 rounded bg-card text-sm leading-relaxed tracking-tighter sm:text-base md:text-lg">
-              <p className="inline-block animate-rainbow-scroll bg-gradient-to-r from-sky-400 via-green-400 to-sky-400 bg-clip-text text-2xl font-bold text-transparent drop-shadow-sm transition-all dark:invert sm:text-3xl md:text-4xl">
+              <p className="inline-block animate-rainbow-scroll bg-linear-to-r from-sky-400 via-green-400 to-sky-400 bg-clip-text text-2xl font-bold text-transparent drop-shadow-xs transition-all dark:invert sm:text-3xl md:text-4xl">
                 Hello world!
               </p>
               <p className="tracking-tighter">

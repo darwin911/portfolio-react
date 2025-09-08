@@ -35,7 +35,7 @@ export default function ProjectCard({
       <Image
         src={imgSrc}
         alt={title}
-        className="aspect-[4/3] w-full bg-muted/90 object-contain md:w-[512px] lg:w-[1024px]"
+        className="aspect-4/3 w-full bg-muted/90 object-contain md:w-[512px] lg:w-[1024px]"
         placeholder="blur"
       />
       <div className="max-w-full shrink p-4 lg:p-8">

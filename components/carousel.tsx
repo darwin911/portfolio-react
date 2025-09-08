@@ -74,7 +74,7 @@ export default function Carousel({ children }: CarouselProps) {
 
   return (
     <div
-      className="relative z-0 ring-zinc-800/10 focus-visible:outline-none"
+      className="relative z-0 ring-zinc-800/10 focus-visible:outline-hidden"
       ref={carouselRef}
       tabIndex={0}
     >
@@ -90,7 +90,7 @@ export default function Carousel({ children }: CarouselProps) {
           return React.cloneElement(child, { setCurrent, current });
         })}
       </div>
-      <div className="absolute inset-x-0 top-0 flex aspect-[4/3] flex-col items-center justify-center px-4 md:py-4">
+      <div className="absolute inset-x-0 top-0 flex aspect-4/3 flex-col items-center justify-center px-4 md:py-4">
         <div className="mt-auto flex w-full justify-between">
           <Button
             className="rounded-full border border-secondary dark:border-primary dark:bg-muted dark:text-primary lg:size-14"
