@@ -17,7 +17,6 @@ import { PropsWithChildren } from "react";
 function FancyText({ children, color }: PropsWithChildren<{ color: string }>) {
   return (
     <strong
-       
       className={`hover:text-[${color}] cursor-cell duration-150 hover:animate-pulse`}
     >
       {children}
@@ -106,11 +105,8 @@ export default function Home() {
               <p className="inline-block animate-rainbow-scroll bg-linear-to-r from-sky-400 via-green-400 to-sky-400 bg-clip-text text-2xl font-bold text-transparent drop-shadow-xs transition-all dark:invert sm:text-3xl md:text-4xl">
                 Hello world!
               </p>
-              <p className="tracking-tighter">
-                I&apos;m a software developer with 6 years of experience,
-                passionate about creating great web applications and software.
-              </p>
-              <p className="tracking-tighter">
+              <p>I enjoy building well built web applications and software.</p>
+              <p>
                 Lately, my favorite stack includes{" "}
                 <FancyText color="#0070f3">Next.js</FancyText>,{" "}
                 <FancyText color="#3178c6">TypeScript</FancyText>, and{" "}
