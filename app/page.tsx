@@ -56,7 +56,7 @@ export default function Home() {
             <div className="flex w-full flex-row flex-wrap items-center gap-4">
               <Avatar />
               <div className="flex flex-col items-start justify-center rounded px-2 py-0">
-                <CardTitle className="text-3xl sm:text-5xl md:text-7xl font-semibold tracking-tighter lg:whitespace-nowrap text-stone-800 dark:text-zinc-50 sm:drop-shadow-heading dark:drop-shadow-heading-light">
+                <CardTitle className="text-3xl sm:text-5xl md:text-7xl font-semibold tracking-tighter text-stone-800 dark:text-zinc-50 lg:whitespace-nowrap sm:drop-shadow-heading dark:drop-shadow-heading-light">
                   Darwin Smith
                 </CardTitle>
                 <CardDescription className="whitespace-nowrap font-light sm:text-xl md:text-2xl">
@@ -103,7 +103,7 @@ export default function Home() {
               </div>
             </div>
             <div className="space-y-2 rounded bg-card text-sm leading-relaxed tracking-tighter sm:text-base md:text-lg">
-              <p className="inline-block text-2xl sm:text-3xl md:text-4xl font-bold bg-gradient-to-r from-sky-400 via-green-400 to-sky-400 bg-clip-text text-transparent transition-all animate-rainbow-scroll drop-shadow-sm dark:invert">
+              <p className="inline-block text-2xl sm:text-3xl md:text-4xl font-bold text-transparent bg-gradient-to-r from-sky-400 via-green-400 to-sky-400 bg-clip-text drop-shadow-sm dark:invert transition-all animate-rainbow-scroll">
                 Hello world!
               </p>
               <p className="tracking-tighter">
