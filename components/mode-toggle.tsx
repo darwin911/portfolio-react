@@ -19,7 +19,7 @@ export default function ModeToggle({ className = "" }: { className?: string }) {
   return (
     <Button
       variant="outline"
-      className={cn("rounded-xl h-8 w-8", className)}
+      className={cn("rounded-xl h-8 w-8 hover:cursor-pointer", className)}
       onClick={handleToggleDarkMode}
       size="icon"
       aria-label="Toggle dark mode"
