@@ -108,7 +108,10 @@ export default function Home() {
               <p className="inline-block animate-rainbow-scroll bg-linear-to-r from-sky-400 via-green-400 to-sky-400 bg-clip-text text-2xl font-bold text-transparent drop-shadow-xs transition-all dark:invert sm:text-3xl md:text-4xl">
                 Hello world!
               </p>
-              <p>I enjoy building well built web applications and software.</p>
+              <p>
+                I enjoy building well built, performant, well written web
+                applications and software. I also like building them well.
+              </p>
               <p>
                 Lately, my favorite stack includes{" "}
                 <FancyText color="#0070f3">Next.js</FancyText>,{" "}
@@ -124,6 +127,18 @@ export default function Home() {
                 tracking systems like{" "}
                 <FancyText color="#0052cc">Jira</FancyText>/
                 <FancyText color="#6563ff">Linear</FancyText>.
+              </p>
+              <p>
+                I'm currently working as a Senior Software Engineer at{" "}
+                <Link
+                  href="https://www.thebigpixel.net/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-underline text-[#EE7523] hover:text-[#EE7523]/80"
+                >
+                  <strong>Big Pixel</strong>
+                </Link>
+                .
               </p>
             </div>
           </CardContent>
