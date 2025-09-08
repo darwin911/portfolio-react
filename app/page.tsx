@@ -14,6 +14,8 @@ import {
 import { GlobeAmericasIcon } from "@heroicons/react/24/solid";
 import { PropsWithChildren } from "react";
 
+export const dynamic = "force-static";
+
 function FancyText({ children, color }: PropsWithChildren<{ color: string }>) {
   return (
     <strong
@@ -35,6 +37,7 @@ function Avatar() {
       width={112}
       height={112}
       placeholder="blur"
+      sizes="(max-width: 640px) 80px, (max-width: 768px) 112px, 112px"
     />
   );
 }
@@ -46,8 +49,6 @@ export default function Home() {
         className="absolute -z-10 size-full object-cover dark:invert"
         src={BackgroundSVG}
         alt="" // this is a decorative bg image
-        quality={15}
-        priority
       />
       <div className="mb-5 mt-10 w-full max-w-7xl">
         <Card className="max-w-3xl bg-card/80 sm:flex sm:flex-col">
@@ -82,6 +83,7 @@ export default function Home() {
                     src={GithubDark}
                     alt="Darwin's Github Account"
                     width={24}
+                    height={24}
                   />
                   <small>Github</small>
                 </Link>
@@ -96,6 +98,7 @@ export default function Home() {
                     src={LinkedInIcon}
                     alt="Darwin's LinkedIn Account"
                     width={24}
+                    height={24}
                   />
                   <small>LinkedIn</small>
                 </Link>
