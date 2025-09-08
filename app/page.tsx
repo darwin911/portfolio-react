@@ -51,7 +51,7 @@ export default function Home() {
         alt="" // this is a decorative bg image
       />
       <div className="mb-5 mt-10 w-full max-w-7xl">
-        <Card className="max-w-3xl bg-card/80 sm:flex sm:flex-col">
+        <Card className="max-w-3xl bg-transparent shadow-none border-none sm:flex sm:flex-col">
           <CardHeader className="w-full flex-row">
             <div className="flex w-full flex-row flex-wrap items-center gap-4">
               <Avatar />
@@ -104,7 +104,7 @@ export default function Home() {
                 </Link>
               </div>
             </div>
-            <div className="space-y-2 rounded bg-card text-sm leading-relaxed tracking-tighter sm:text-base md:text-lg h-sm:text-sm">
+            <div className="space-y-2 rounded text-sm leading-relaxed tracking-tighter sm:text-base md:text-lg h-sm:text-sm">
               <p className="inline-block animate-rainbow-scroll bg-linear-to-r from-sky-400 via-green-400 to-sky-400 bg-clip-text text-2xl font-bold text-transparent drop-shadow-xs transition-all dark:invert sm:text-3xl md:text-4xl">
                 Hello world!
               </p>
