@@ -1,7 +1,7 @@
 import Image from "next/image";
 import GithubDark from "@/public/github-mark.svg";
 import LinkedInIcon from "@/public/linkedin-icon.svg";
-import ProfilePic from "@/public/profilepic_white-bg.jpg";
+import ProfilePic from "@/public/profilepic_optimized.webp";
 import Link from "next/link";
 import BackgroundSVG from "@/public/background.svg";
 import {
@@ -17,7 +17,7 @@ import { PropsWithChildren } from "react";
 function FancyText({ children, color }: PropsWithChildren<{ color: string }>) {
   return (
     <strong
-      /* eslint-disable-next-line tailwindcss/no-custom-classname */
+       
       className={`hover:text-[${color}] cursor-cell duration-150 hover:animate-pulse`}
     >
       {children}
@@ -44,7 +44,7 @@ export default function Home() {
   return (
     <main className="relative flex h-full flex-col items-center justify-center px-4 py-8 sm:px-8 sm:py-20 md:py-24">
       <Image
-        className="absolute -z-10 object-cover w-full h-full dark:invert"
+        className="absolute -z-10 size-full object-cover dark:invert"
         src={BackgroundSVG}
         alt="" // this is a decorative bg image
         quality={15}
@@ -56,7 +56,7 @@ export default function Home() {
             <div className="flex w-full flex-row flex-wrap items-center gap-4">
               <Avatar />
               <div className="flex flex-col items-start justify-center rounded px-2 py-0">
-                <CardTitle className="text-3xl font-semibold tracking-tighter text-stone-800 sm:drop-shadow-heading dark:text-zinc-50  dark:drop-shadow-heading-light sm:text-5xl md:text-7xl lg:whitespace-nowrap">
+                <CardTitle className="text-3xl font-semibold tracking-tighter text-stone-800 dark:text-zinc-50 dark:drop-shadow-heading-light sm:text-5xl sm:drop-shadow-heading md:text-7xl lg:whitespace-nowrap">
                   Darwin Smith
                 </CardTitle>
                 <CardDescription className="whitespace-nowrap font-light sm:text-xl md:text-2xl">
@@ -103,7 +103,7 @@ export default function Home() {
               </div>
             </div>
             <div className="space-y-2 rounded bg-card text-sm leading-relaxed tracking-tighter sm:text-base md:text-lg">
-              <p className="inline-block animate-rainbow-scroll bg-gradient-to-r from-sky-400 via-green-400 to-sky-400 bg-clip-text text-2xl sm:text-3xl md:text-4xl font-bold text-transparent drop-shadow-sm transition-all dark:invert">
+              <p className="inline-block animate-rainbow-scroll bg-gradient-to-r from-sky-400 via-green-400 to-sky-400 bg-clip-text text-2xl font-bold text-transparent drop-shadow-sm transition-all dark:invert sm:text-3xl md:text-4xl">
                 Hello world!
               </p>
               <p className="tracking-tighter">
