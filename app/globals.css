@@ -1,6 +1,9 @@
-@import 'tailwindcss';
+@import "tailwindcss";
 
 @custom-variant dark (&:is(.dark *));
+@custom-variant h-lg (@media (max-height: 700px));
+@custom-variant h-md (@media (max-height: 600px));
+@custom-variant h-sm (@media (max-height: 500px));
 
 @utility container {
   margin-inline: auto;
@@ -45,10 +48,10 @@
   --radius-md: calc(var(--radius) - 2px);
   --radius-sm: calc(var(--radius) - 4px);
 
-  --drop-shadow-heading:
-    rgba(0, 0, 0, 0.2) 1px 4px 2px, rgba(0, 0, 0, 0.2) -2px 3px 8px;
-  --drop-shadow-heading-light:
-    rgba(255, 255, 255, 0.2) 1px 4px 2px, rgba(255, 255, 255, 0.2) -2px 3px 8px;
+  --drop-shadow-heading: rgba(0, 0, 0, 0.2) 1px 4px 2px,
+    rgba(0, 0, 0, 0.2) -2px 3px 8px;
+  --drop-shadow-heading-light: rgba(255, 255, 255, 0.2) 1px 4px 2px,
+    rgba(255, 255, 255, 0.2) -2px 3px 8px;
 
   --animate-accordion-down: accordion-down 0.2s ease-out;
   --animate-accordion-up: accordion-up 0.2s ease-out;

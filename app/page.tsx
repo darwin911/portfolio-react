@@ -29,7 +29,7 @@ function Avatar() {
     <Image
       src={ProfilePic}
       alt="Darwin Smith headshot"
-      className="size-20 rounded-full border-2 border-card-foreground/20 object-cover shadow-xs sm:size-28"
+      className="size-20 rounded-full border-2 border-card-foreground/20 object-cover shadow-xs sm:size-28 h-sm:size-16"
       priority
       quality={50}
       width={112}
@@ -41,7 +41,7 @@ function Avatar() {
 
 export default function Home() {
   return (
-    <main className="relative flex h-full flex-col items-center justify-center px-4 py-8 sm:px-8 sm:py-20 md:py-24">
+    <main className="relative flex h-full flex-col items-center justify-center px-4 py-8 sm:px-8 sm:py-20 md:py-24 h-sm:pt-44">
       <Image
         className="absolute -z-10 size-full object-cover dark:invert"
         src={BackgroundSVG}
@@ -55,10 +55,10 @@ export default function Home() {
             <div className="flex w-full flex-row flex-wrap items-center gap-4">
               <Avatar />
               <div className="flex flex-col items-start justify-center rounded px-2 py-0">
-                <CardTitle className="text-3xl font-semibold tracking-tighter text-stone-800 dark:text-zinc-50 dark:drop-shadow-heading-light sm:text-5xl sm:drop-shadow-heading md:text-7xl lg:whitespace-nowrap">
+                <CardTitle className="text-3xl font-semibold tracking-tighter text-stone-800 dark:text-zinc-50 dark:drop-shadow-heading-light sm:text-5xl sm:drop-shadow-heading md:text-7xl lg:whitespace-nowrap h-lg:text-4xl h-md:text-3xl h-sm:text-2xl">
                   Darwin Smith
                 </CardTitle>
-                <CardDescription className="whitespace-nowrap font-light sm:text-xl md:text-2xl">
+                <CardDescription className="whitespace-nowrap font-light sm:text-xl md:text-2xl h-md:text-base h-sm:text-sm">
                   Software Developer
                 </CardDescription>
               </div>
@@ -101,7 +101,7 @@ export default function Home() {
                 </Link>
               </div>
             </div>
-            <div className="space-y-2 rounded bg-card text-sm leading-relaxed tracking-tighter sm:text-base md:text-lg">
+            <div className="space-y-2 rounded bg-card text-sm leading-relaxed tracking-tighter sm:text-base md:text-lg h-sm:text-sm">
               <p className="inline-block animate-rainbow-scroll bg-linear-to-r from-sky-400 via-green-400 to-sky-400 bg-clip-text text-2xl font-bold text-transparent drop-shadow-xs transition-all dark:invert sm:text-3xl md:text-4xl">
                 Hello world!
               </p>
