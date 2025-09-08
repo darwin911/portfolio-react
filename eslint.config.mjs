@@ -1,5 +1,4 @@
 import tsParser from "@typescript-eslint/parser";
-import tailwind from "eslint-plugin-tailwindcss";
 
 export default [
   {
@@ -22,19 +21,6 @@ export default [
         JSX: "readonly",
       },
     },
-    plugins: {
-      tailwindcss: tailwind,
-    },
-    settings: {
-      tailwindcss: {
-        callees: ["cn", "cva"],
-        config: "tailwind.config.ts",
-      },
-    },
-    rules: {
-      "tailwindcss/classnames-order": "warn",
-      "tailwindcss/enforces-shorthand": "warn",
-      "tailwindcss/no-custom-classname": "off",
-    },
+    rules: {},
   },
 ];
