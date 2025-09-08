@@ -16,9 +16,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: PropsWithChildren) {
   return (
     <html lang="en" className="h-full">
-      <body
-        className={clsx(inter.className, "flex h-full flex-col antialiased")}
-      >
+      <body className={clsx(inter.className, "flex h-full flex-col")}>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
