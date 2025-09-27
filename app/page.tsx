@@ -44,10 +44,10 @@ export default function Home() {
                   Darwin Smith
                 </CardTitle>
                 <CardDescription className="whitespace-nowrap flex items-center gap-4 justify-between w-full ">
-                  <div className="flex items-center gap-1">
+                  <span className="flex items-center gap-1">
                     <GlobeAmericasIcon className="size-6" />
                     <small>GMT-4 (ET)</small>
-                  </div>
+                  </span>
                   <span className="font-light sm:text-xl md:text-2xl h-md:text-base h-sm:text-sm">
                     Software Developer
                   </span>
@@ -95,31 +95,44 @@ export default function Home() {
             </div>
             <div className="space-y-2 md:space-y-4 lg:space-y-6 rounded text-sm leading-relaxed tracking-tighter sm:text-base md:text-lg h-sm:text-sm lg:text-xl xl:text-2xl">
               <p>
-                I enjoy building well built, performant, well written web
-                applications and software. I also like building them well.
+                I specialize in building scalable, high-performance web
+                applications with clean, maintainable code and exceptional user
+                experiences across diverse tech stacks and environments.
               </p>
-              <p>Lately, my favorite stack includes:</p>
-              <ul className="list-disc list-inside">
+              <p>
+                I'm comfortable working across both legacy and modern codebases,
+                from older <FancyText color="#61dafb">React</FancyText>{" "}
+                applications with{" "}
+                <FancyText color="#1d365d">CSS preprocessors</FancyText> to
+                modern projects using:
+              </p>
+              <ul className="list-disc list-inside space-y-1">
                 <li>
-                  <FancyText color="#0070f3">Next.js</FancyText>
+                  <FancyText color="#0070f3">Next.js</FancyText> for full-stack
+                  React applications
                 </li>
                 <li>
-                  <FancyText color="#3178c6">TypeScript</FancyText>
+                  <FancyText color="#3178c6">TypeScript</FancyText> for
+                  type-safe development
                 </li>
                 <li>
-                  <FancyText color="#06b6d4">Tailwind CSS</FancyText>
+                  <FancyText color="#06b6d4">Tailwind CSS</FancyText> for
+                  responsive design
                 </li>
-                I have experience with{" "}
+              </ul>
+              <p>
+                I'm adaptable across technologies including{" "}
                 <FancyText color="#3dcf8e">Postgres (Supabase)</FancyText>,{" "}
                 <FancyText color="#306998">Python</FancyText>,{" "}
-                <FancyText color="#43853d">Node.js (Express)</FancyText> and
-                familiar with <FancyText color="#1D63ED">Docker</FancyText> and
-                various <FancyText color="#ff9900">AWS</FancyText> services,{" "}
-                <FancyText color="#181717">Git/Github</FancyText>, and various
-                tracking systems like{" "}
-                <FancyText color="#0052cc">Jira</FancyText>/
+                <FancyText color="#43853d">Node.js (Express)</FancyText>, and
+                have experience with{" "}
+                <FancyText color="#1D63ED">Docker</FancyText>,{" "}
+                <FancyText color="#ff9900">AWS</FancyText> services,{" "}
+                <FancyText color="#181717">Git/GitHub</FancyText>, and project
+                management tools like{" "}
+                <FancyText color="#0052cc">Jira</FancyText> and{" "}
                 <FancyText color="#6563ff">Linear</FancyText>.
-              </ul>
+              </p>
               <p>
                 I'm currently working as a Senior Software Engineer at{" "}
                 <Link
