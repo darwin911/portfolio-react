@@ -30,17 +30,17 @@ export default function Home() {
   return (
     <main className="relative flex h-full flex-col items-center justify-center px-4 py-8 sm:px-8 sm:py-20 md:py-24 h-sm:pt-44">
       <Image
-        className="absolute -z-10 size-full object-cover dark:invert"
+        className="absolute -z-10 size-full object-cover dark:invert max-w-7xl"
         src={BackgroundSVG}
         alt="" // this is a decorative bg image
       />
       <div className="mb-5 mt-10 w-full max-w-7xl">
-        <Card className="max-w-3xl bg-transparent shadow-none border-none sm:flex sm:flex-col lg:max-w-4xl xl:max-w-6xl">
+        <Card className="max-w-3xl bg-transparent shadow-none border-none sm:flex sm:flex-col lg:max-w-4xl xl:max-w-6xl xl:p-20">
           <CardHeader className="w-full flex-row">
             <div className="flex w-full flex-row flex-wrap items-center gap-4">
               <Avatar />
               <div className="flex flex-col items-start justify-center rounded px-2 py-0">
-                <CardTitle className="text-3xl font-semibold tracking-tighter text-stone-800 dark:text-zinc-50 dark:drop-shadow-heading-light sm:text-5xl sm:drop-shadow-heading md:text-7xl lg:whitespace-nowrap h-lg:text-4xl h-md:text-3xl h-sm:text-2xl">
+                <CardTitle className="text-3xl font-semibold tracking-tighter text-emerald-500 dark:text-emerald-300 dark:drop-shadow-heading-light sm:text-5xl sm:drop-shadow-heading md:text-7xl lg:whitespace-nowrap h-lg:text-4xl h-md:text-3xl h-sm:text-2xl">
                   Darwin Smith
                 </CardTitle>
                 <CardDescription className="whitespace-nowrap flex items-center gap-4 justify-between w-full ">
@@ -48,7 +48,7 @@ export default function Home() {
                     <GlobeAmericasIcon className="size-6" />
                     <small>GMT-4 (ET)</small>
                   </span>
-                  <span className="font-light sm:text-xl md:text-2xl h-md:text-base h-sm:text-sm">
+                  <span className="font-medium tracking-tight sm:text-xl md:text-2xl h-md:text-base h-sm:text-sm text-sky-800 dark:text-white">
                     Software Developer
                   </span>
                 </CardDescription>
@@ -93,7 +93,7 @@ export default function Home() {
                 </Link>
               </div>
             </div>
-            <div className="space-y-2 md:space-y-4 lg:space-y-6 rounded text-sm leading-relaxed tracking-tighter sm:text-base md:text-lg h-sm:text-sm lg:text-xl xl:text-2xl">
+            <div className="space-y-2 md:space-y-4 lg:space-y-6 rounded text-sm leading-relaxed tracking-tighter sm:text-base md:text-lg h-sm:text-sm lg:text-xl text-cyan-900 dark:text-white">
               <p>
                 I specialize in building scalable, high-performance web
                 applications with clean, maintainable code and exceptional user
