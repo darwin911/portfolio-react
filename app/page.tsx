@@ -100,9 +100,9 @@ export default function Home() {
                 experiences across diverse tech stacks and environments.
               </p>
               <p>
-                I'm comfortable working across both legacy and modern codebases,
-                from older <FancyText color="#61dafb">React</FancyText>{" "}
-                applications with{" "}
+                I&apos;m comfortable working across both legacy and modern
+                codebases, from older{" "}
+                <FancyText color="#61dafb">React</FancyText> applications with{" "}
                 <FancyText color="#1d365d">CSS preprocessors</FancyText> to
                 modern projects using:
               </p>
@@ -121,7 +121,7 @@ export default function Home() {
                 </li>
               </ul>
               <p>
-                I'm adaptable across technologies including{" "}
+                I&apos;m adaptable across technologies including{" "}
                 <FancyText color="#3dcf8e">Postgres (Supabase)</FancyText>,{" "}
                 <FancyText color="#306998">Python</FancyText>,{" "}
                 <FancyText color="#43853d">Node.js (Express)</FancyText>, and
@@ -134,14 +134,14 @@ export default function Home() {
                 <FancyText color="#6563ff">Linear</FancyText>.
               </p>
               <p>
-                I'm currently working as a Senior Software Engineer at{" "}
+                I&apos;m currently working as a Senior Software Engineer at{" "}
                 <Link
                   href="https://www.thebigpixel.net/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-underline text-[#EE7523] hover:text-[#EE7523]/80"
                 >
-                  <strong>Big Pixel</strong>
+                  <strong className="text-2xl">The Big Pixel</strong>
                 </Link>
                 .
               </p>
