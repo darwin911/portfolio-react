@@ -12,6 +12,7 @@ const S = "font-semibold text-foreground";
 const EXPERIENCE: {
   title: string;
   company: string;
+  companyHref?: string;
   period: string;
   bullets: React.ReactNode[];
   tech?: string[];
@@ -19,12 +20,14 @@ const EXPERIENCE: {
   {
     title: "Senior Developer",
     company: "BigPixel",
+    companyHref: "https://www.thebigpixel.net/",
     period: "Jan 2025 – Present",
     bullets: [
       <>Delivered full-stack features across a <strong className={S}>React/TypeScript</strong> dashboard and mobile app for an industrial asset management platform.</>,
       <>Owned a <strong className={S}>mobile/tablet responsiveness overhaul</strong> — eliminating iOS-specific keyboard, scroll, and layout bugs across the product.</>,
       <>Shipped new <strong className={S}>API endpoints</strong> for equipment filtering, inspection dates, and work order history; fixed data integrity bugs in merge/queue flows and added <strong className={S}>CSV export</strong> for event history.</>,
       <>Worked end-to-end — <strong className={S}>SQL query tuning</strong>, .NET controller logic, React state, and responsive CSS — through test, staging, and production.</>,
+      <>Acted as the <strong className={S}>front-end authority</strong> on the team — advising on implementation approaches and pushing back on PM and client requests that lacked technical or design grounding.</>,
     ],
     tech: ["React", "TypeScript", ".NET Core", "Azure SQL", "LINQ"],
   },
@@ -216,7 +219,18 @@ export default function ResumePage() {
                     </span>
                   </div>
                   <p className="text-sm font-semibold text-slate-500 dark:text-slate-400">
-                    {job.company}
+                    {job.companyHref ? (
+                      <Link
+                        href={job.companyHref}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="hover:text-indigo-500 hover:underline underline-offset-4"
+                      >
+                        {job.company}
+                      </Link>
+                    ) : (
+                      job.company
+                    )}
                   </p>
                 </CardHeader>
                 <CardContent>
