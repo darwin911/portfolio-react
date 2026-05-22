@@ -14,6 +14,10 @@ export const MAIN_NAV_LINKS = [
     href: "/projects",
   },
   {
+    label: "Resume",
+    href: "/resume",
+  },
+  {
     label: "Contact",
     href: "/contact",
   },
