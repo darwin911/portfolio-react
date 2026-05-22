@@ -67,7 +67,7 @@ const EXPERIENCE: {
     company: "Freeman Company",
     period: "Jun 2020 – May 2022",
     bullets: [
-      <>Delivered client-specific virtual conference experiences on the <strong className={S}>Online Event Pro</strong> platform — adapting features and UI to each client's spec during the rapid industry shift to remote events in 2020.</>,
+      <>Delivered client-specific virtual conference experiences on the <strong className={S}>Online Event Pro</strong> platform — adapting features and UI to each client&apos;s spec during the rapid industry shift to remote events in 2020.</>,
       <>Maintained and expanded a custom component library aligned to design systems in <strong className={S}>Adobe XD</strong> and <strong className={S}>Zeplin</strong>.</>,
       <>Led cross-functional meetings for feature planning, bug triage, and client requests.</>,
       <>Integrated multiple <strong className={S}>third-party services</strong> and user registration data providers.</>,
