@@ -118,10 +118,19 @@ const SKILLS = [
   "Claude / Cursor",
 ];
 
+function SectionHeading({ children }: { children: React.ReactNode }) {
+  return (
+    <h2 className="mb-4 text-xs font-semibold uppercase tracking-widest text-emerald-600 dark:text-emerald-400">
+      {children}
+    </h2>
+  );
+}
+
 export default function ResumePage() {
   return (
-    <main className="mx-auto w-full max-w-4xl px-4 pb-16 pt-24 sm:px-8">
-      <div className="mb-10 flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
+    <main className="mx-auto w-full max-w-7xl px-4 pb-16 pt-24 sm:px-8">
+      {/* Header */}
+      <div className="mb-8 flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
         <div>
           <h1 className="text-4xl font-semibold tracking-tighter text-emerald-500 dark:text-emerald-300 sm:text-5xl">
             Darwin Smith
@@ -138,96 +147,87 @@ export default function ResumePage() {
         </Link>
       </div>
 
-      <p className="mb-10 text-sm leading-relaxed text-muted-foreground sm:text-base">
+      <p className="mb-10 max-w-3xl text-sm leading-relaxed text-muted-foreground sm:text-base">
         I specialize in building modern web applications with current tech
         stacks. I have a track record of delivering responsive front-end and
         full-stack solutions across legacy and greenfield codebases.
       </p>
 
-      {/* Skills */}
-      <section className="mb-10">
-        <h2 className="mb-4 text-xs font-semibold uppercase tracking-widest text-emerald-600 dark:text-emerald-400">
-          Skills &amp; Tools
-        </h2>
-        <div className="flex flex-wrap gap-2">
-          {SKILLS.map((skill) => (
-            <span
-              key={skill}
-              className="rounded-full border border-border bg-muted px-3 py-1 text-xs font-medium text-muted-foreground"
-            >
-              {skill}
-            </span>
-          ))}
-        </div>
-      </section>
+      {/* Two-column layout on large screens */}
+      <div className="flex flex-col gap-10 lg:flex-row lg:gap-12">
+        {/* Sidebar */}
+        <aside className="flex flex-col gap-10 lg:w-64 lg:shrink-0">
+          <section>
+            <SectionHeading>Skills &amp; Tools</SectionHeading>
+            <div className="flex flex-wrap gap-2">
+              {SKILLS.map((skill) => (
+                <span
+                  key={skill}
+                  className="rounded-full border border-border bg-muted px-3 py-1 text-xs font-medium text-muted-foreground"
+                >
+                  {skill}
+                </span>
+              ))}
+            </div>
+          </section>
 
-      {/* Experience */}
-      <section className="mb-10">
-        <h2 className="mb-6 text-xs font-semibold uppercase tracking-widest text-emerald-600 dark:text-emerald-400">
-          Experience
-        </h2>
-        <div className="flex flex-col gap-4">
-          {EXPERIENCE.map((job) => (
-            <Card key={`${job.company}-${job.period}`}>
-              <CardHeader className="pb-2">
-                <div className="flex flex-col gap-0.5 sm:flex-row sm:items-baseline sm:justify-between">
-                  <CardTitle className="text-base font-semibold">
-                    {job.title}
-                  </CardTitle>
-                  <span className="text-xs text-muted-foreground">
-                    {job.period}
-                  </span>
-                </div>
-                <p className="text-sm font-medium text-sky-700 dark:text-sky-400">
-                  {job.company}
-                </p>
-              </CardHeader>
-              <CardContent>
-                <ul className="space-y-1.5">
-                  {job.bullets.map((bullet, i) => (
-                    <li
-                      key={i}
-                      className="flex gap-2 text-sm leading-relaxed text-muted-foreground"
-                    >
-                      <span className="mt-1.5 size-1.5 shrink-0 rounded-full bg-emerald-500" />
-                      {bullet}
-                    </li>
-                  ))}
-                </ul>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
-      </section>
-
-      {/* Education */}
-      <section>
-        <h2 className="mb-6 text-xs font-semibold uppercase tracking-widest text-emerald-600 dark:text-emerald-400">
-          Education
-        </h2>
-        <div className="flex flex-col gap-4">
-          {EDUCATION.map((edu) => (
-            <Card key={edu.degree}>
-              <CardHeader className="pb-2">
-                <div className="flex flex-col gap-0.5 sm:flex-row sm:items-baseline sm:justify-between">
-                  <CardTitle className="text-base font-semibold">
+          <section>
+            <SectionHeading>Education</SectionHeading>
+            <div className="flex flex-col gap-4">
+              {EDUCATION.map((edu) => (
+                <div key={edu.degree}>
+                  <p className="text-sm font-semibold leading-snug">
                     {edu.degree}
-                  </CardTitle>
-                  <span className="text-xs text-muted-foreground">
-                    {edu.period}
-                  </span>
+                  </p>
+                  <p className="mt-0.5 text-sm font-medium text-sky-700 dark:text-sky-400">
+                    {edu.school}
+                  </p>
+                  <p className="text-xs text-muted-foreground">
+                    {edu.period} · {edu.location}
+                  </p>
                 </div>
-                <p className="text-sm font-medium text-sky-700 dark:text-sky-400">
-                  {edu.school}
-                  <span className="ml-2 font-normal text-muted-foreground">
-                    · {edu.location}
-                  </span>
-                </p>
-              </CardHeader>
-            </Card>
-          ))}
-        </div>
-      </section>
+              ))}
+            </div>
+          </section>
+        </aside>
+
+        {/* Experience */}
+        <section className="min-w-0 flex-1">
+          <SectionHeading>Experience</SectionHeading>
+          <div className="flex flex-col gap-4">
+            {EXPERIENCE.map((job) => (
+              <Card key={`${job.company}-${job.period}`}>
+                <CardHeader className="pb-2">
+                  <div className="flex flex-col gap-0.5 sm:flex-row sm:items-baseline sm:justify-between">
+                    <CardTitle className="text-base font-semibold">
+                      {job.title}
+                    </CardTitle>
+                    <span className="shrink-0 text-xs text-muted-foreground">
+                      {job.period}
+                    </span>
+                  </div>
+                  <p className="text-sm font-medium text-sky-700 dark:text-sky-400">
+                    {job.company}
+                  </p>
+                </CardHeader>
+                <CardContent>
+                  <ul className="space-y-1.5">
+                    {job.bullets.map((bullet, i) => (
+                      <li
+                        key={i}
+                        className="flex gap-2 text-sm leading-relaxed text-muted-foreground"
+                      >
+                        <span className="mt-1.5 size-1.5 shrink-0 rounded-full bg-emerald-500" />
+                        {bullet}
+                      </li>
+                    ))}
+                  </ul>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </section>
+      </div>
     </main>
   );
 }
