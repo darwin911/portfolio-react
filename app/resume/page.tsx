@@ -64,7 +64,8 @@ const EXPERIENCE: {
     remote: true,
     period: "Jun 2022 – Apr 2023",
     bullets: [
-      <>Built custom platform components and <strong className={S}>brand-specific features</strong> end-to-end across multiple client codebases.</>,
+      <>Built brand-specific <strong className={S}>NFT storefront</strong> experiences end-to-end for major entertainment IP (ViacomCBS, Sanrio, Paramount) — adapting shared platform components to each brand&apos;s design spec across multiple client codebases.</>,
+      <>Contributed to a <strong className={S}>mobile-first NFT marketplace</strong> that abstracted wallet and crypto complexity into familiar e-commerce patterns, enabling a mainstream consumer experience across all brand storefronts.</>,
       <>Co-created a <strong className={S}>product design system in Figma</strong> with the design team; presented feature work in bi-weekly engineering demos.</>,
     ],
     tech: ["Next.js", "Remix", "Tailwind CSS", "Material UI"],
