@@ -25,7 +25,7 @@ const EXPERIENCE: {
     remote: true,
     period: "Jan 2025 – Present",
     bullets: [
-      <>Delivered full-stack features across a <strong className={S}>React/TypeScript</strong> dashboard and mobile app for an industrial asset management platform.</>,
+      <>Delivered full-stack features across a <strong className={S}>React/TypeScript</strong> dashboard and mobile app for <strong className={S}>MyMedGas</strong>, an industrial asset management platform for the medical gas industry.</>,
       <>Owned a <strong className={S}>mobile/tablet responsiveness overhaul</strong> across two applications — resolving iOS-specific keyboard, scroll, and layout issues across dozens of views, forms, and components.</>,
       <>Shipped new <strong className={S}>API endpoints</strong> for equipment filtering, inspection dates, and work order history; added <strong className={S}>CSV export</strong> for event history used by hundreds of field service users and admins.</>,
       <>Contributed to a <strong className={S}>~50% reduction in initial page load time</strong> through SQL query restructuring and frontend architecture improvements.</>,
@@ -76,10 +76,10 @@ const EXPERIENCE: {
     remote: true,
     period: "Jun 2020 – May 2022",
     bullets: [
-      <>Delivered client-specific virtual conference experiences on the <strong className={S}>Online Event Pro</strong> platform — adapting features and UI to each client&apos;s spec during the rapid industry shift to remote events in 2020.</>,
+      <>Delivered client-specific <strong className={S}>virtual conference experiences</strong> on Freeman&apos;s Online Event Pro platform — building custom homepage modules, virtual exhibit halls, and session flows for enterprise clients during the industry&apos;s rapid 2020 pivot to remote events.</>,
+      <>Integrated <strong className={S}>Stream Chat</strong> for real-time conference messaging alongside multiple third-party <strong className={S}>user registration</strong> and data providers.</>,
       <>Maintained and expanded a custom component library aligned to design systems in <strong className={S}>Adobe XD</strong> and <strong className={S}>Zeplin</strong>.</>,
       <>Led cross-functional meetings for feature planning, bug triage, and client requests.</>,
-      <>Integrated multiple <strong className={S}>third-party services</strong> and user registration data providers.</>,
     ],
     tech: ["React", "Express", "AWS Serverless", "S3", "Adobe XD", "Zeplin"],
   },
@@ -88,8 +88,8 @@ const EXPERIENCE: {
     company: "Vessel Technologies, Inc.",
     period: "Jun 2019 – Jan 2020",
     bullets: [
-      <>Built a mobile-first marketing page with a <strong className={S}>custom carousel</strong> and interactive home builder tool.</>,
-      <>Migrated a <strong className={S}>Vaadin (Android) Java</strong> control panel UI to a modern responsive web interface.</>,
+      <>Built a <strong className={S}>mobile-first marketing site</strong> for a modular net-zero housing startup — including a custom carousel and an interactive home configurator tool.</>,
+      <>Migrated a legacy <strong className={S}>Vaadin (Java)</strong> control panel to a modern responsive web interface for the company&apos;s <strong className={S}>smart building management platform</strong> (vOS).</>,
     ],
     tech: ["React", "Express", "CSS", "Java", "Heroku", "Netlify"],
   },
