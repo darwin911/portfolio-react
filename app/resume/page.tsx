@@ -14,6 +14,7 @@ const EXPERIENCE: {
   company: string;
   companyHref?: string;
   remote?: boolean;
+  location?: string;
   period: string;
   bullets: React.ReactNode[];
   tech?: string[];
@@ -86,6 +87,7 @@ const EXPERIENCE: {
   {
     title: "Developer",
     company: "Vessel Technologies, Inc.",
+    location: "Manhattan, New York, NY",
     period: "Jun 2019 – Jan 2020",
     bullets: [
       <>Built a <strong className={S}>mobile-first marketing site</strong> for a modular net-zero housing startup — including a custom carousel and an interactive home configurator tool.</>,
@@ -275,6 +277,11 @@ export default function ResumePage() {
                     {job.remote && (
                       <span className="rounded-full border border-indigo-300 px-2 py-0.5 text-xs font-medium text-indigo-500 dark:border-indigo-700 dark:text-indigo-400">
                         Remote
+                      </span>
+                    )}
+                    {job.location && (
+                      <span className="text-xs font-normal text-muted-foreground">
+                        {job.location}
                       </span>
                     )}
                   </p>
