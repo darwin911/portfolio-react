@@ -51,10 +51,12 @@ const EXPERIENCE: {
     remote: true,
     period: "Apr 2023 – Oct 2023",
     bullets: [
-      <>Designed and built a bespoke product landing page from <strong className={S}>Figma</strong> wireframes, including <strong className={S}>custom SVGs</strong> and scroll animations.</>,
-      <>Refactored and modernized UI components for reusability; established a clean, consistent <strong className={S}>Next.js 13.4+</strong> / TypeScript / Tailwind codebase.</>,
+      <>Built core features of a <strong className={S}>Solana developer platform</strong> — program management dashboard with client-side search, multi-step program creation flow, <strong className={S}>RPC Gateway</strong> configuration, and a settings system covering API keys, billing, team management, and <strong className={S}>webhook integration via Svix</strong>.</>,
+      <>Developed a shareable <strong className={S}>API Playground</strong> (Requests Library) — implementing save/restore of requests, shareable URL generation, collection management, and paginated data export modes for RPC calls.</>,
+      <>Designed and shipped the <strong className={S}>marketing site</strong> from Figma wireframes, including custom animated SVG hero assets, a pricing page with dynamic formatting logic, and a contact/demo form.</>,
+      <>Established <strong className={S}>Playwright E2E test infrastructure</strong> from scratch; wrote reference tests covering core user flows across the dashboard.</>,
     ],
-    tech: ["Next.js", "TypeScript", "Tailwind CSS", "framer-motion", "Figma"],
+    tech: ["Next.js", "TypeScript", "Tailwind CSS", "Radix UI", "Playwright", "Svix", "Stripe", "Figma"],
   },
   {
     title: "Software Engineer II",
