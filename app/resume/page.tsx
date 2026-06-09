@@ -29,7 +29,7 @@ const EXPERIENCE: {
       <>Delivered full-stack features across a <strong className={S}>React/TypeScript</strong> dashboard and mobile app for <strong className={S}>MyMedGas</strong>, an industrial asset management platform for the medical gas industry.</>,
       <>Owned a <strong className={S}>mobile/tablet responsiveness overhaul</strong> across two applications — resolving iOS-specific keyboard, scroll, and layout issues across dozens of views, forms, and components.</>,
       <>Shipped new <strong className={S}>API endpoints</strong> for equipment filtering, inspection dates, and work order history; added <strong className={S}>CSV export</strong> for event history used by hundreds of field service users and admins.</>,
-      <>Contributed to a <strong className={S}>~50% reduction in initial page load time</strong> through SQL query restructuring and frontend architecture improvements.</>,
+      <>Contributed to a <strong className={S}>~50% reduction in initial page load time</strong> through SQL query restructuring, code splitting, and frontend architecture improvements targeting <strong className={S}>Core Web Vitals</strong> (LCP, CLS).</>,
       <>Acted as the <strong className={S}>front-end authority</strong> on the team — advising on implementation approaches and pushing back on PM and client requests that lacked technical or design grounding.</>,
     ],
     tech: ["React", "TypeScript", ".NET Core", "Azure SQL", "LINQ"],
@@ -65,7 +65,7 @@ const EXPERIENCE: {
     remote: true,
     period: "Jun 2022 – Apr 2023",
     bullets: [
-      <>Built brand-specific <strong className={S}>NFT storefront</strong> experiences end-to-end for major entertainment IP (ViacomCBS, Sanrio, Paramount) — adapting shared platform components to each brand&apos;s design spec across multiple client codebases.</>,
+      <>Built <strong className={S}>white-labeled, brand-specific NFT storefronts</strong> on a shared <strong className={S}>multi-tenant platform</strong> for major entertainment IP (ViacomCBS, Sanrio, Paramount) — adapting shared components and theming to each brand&apos;s design spec across multiple client codebases.</>,
       <>Contributed to a <strong className={S}>mobile-first NFT marketplace</strong> that abstracted wallet and crypto complexity into familiar e-commerce patterns, enabling a mainstream consumer experience across all brand storefronts.</>,
       <>Co-created a <strong className={S}>product design system in Figma</strong> with the design team; presented feature work in bi-weekly engineering demos.</>,
     ],
