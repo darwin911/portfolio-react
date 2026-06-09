@@ -198,17 +198,13 @@ export default function ResumePage() {
       </div>
 
       <p className="mb-10 text-sm leading-relaxed text-muted-foreground sm:text-base">
-        Full-stack developer with 7 years of experience building web
-        applications across the entire stack — from responsive React UIs and
-        mobile layouts to .NET APIs and SQL query optimization. I&apos;ve
-        shipped production features at early-stage startups, including a
-        YC-backed AI company, and at established product teams serving
-        hundreds of users in the field. I&apos;m known for bridging the gap
-        between technical and non-technical stakeholders — translating
-        tradeoffs into clear decisions for founders, PMs, and clients, and
-        pushing back when a proposed approach would hurt the product.
-        Comfortable owning features end-to-end, moving fast in greenfield
-        codebases, and bringing clarity to legacy ones.
+        Full-stack TypeScript engineer with 7 years building production web
+        applications across startups and scale-ups. I gravitate toward
+        greenfield platform work — defining API contracts and the patterns
+        teams build on top of. I&apos;ve led technical direction as a founding
+        engineer, shaped design systems, and shipped end-to-end across
+        React/Next.js frontends and Node.js backends. I use AI tooling daily
+        as a core part of how I design, build, and iterate.
       </p>
 
       <div className="flex flex-col gap-10 lg:flex-row lg:gap-12">
