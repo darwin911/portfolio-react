@@ -129,23 +129,25 @@ const EDUCATION = [
   },
 ];
 
-const SKILLS = [
-  "JavaScript (ES6)",
-  "TypeScript",
-  "React",
-  "Next.js",
-  "Remix",
-  "Express / Node.js",
-  "HTML5 / CSS",
-  "Tailwind CSS",
-  "Python",
-  "AWS",
-  "PostgreSQL",
-  "Supabase",
-  "SQL / MySQL",
-  "Redux",
-  "React Query",
-  "Claude / Cursor",
+const CDN = "https://cdn.jsdelivr.net/gh/gilbarbara/logos/logos";
+
+const SKILLS: { name: string; icon?: string }[] = [
+  { name: "JavaScript (ES6)", icon: `${CDN}/javascript.svg` },
+  { name: "TypeScript", icon: `${CDN}/typescript-icon.svg` },
+  { name: "React", icon: `${CDN}/react.svg` },
+  { name: "Next.js", icon: `${CDN}/nextjs-icon.svg` },
+  { name: "Remix", icon: `${CDN}/remix-icon.svg` },
+  { name: "Express / Node.js", icon: `${CDN}/nodejs-icon.svg` },
+  { name: "HTML5 / CSS", icon: `${CDN}/html-5.svg` },
+  { name: "Tailwind CSS", icon: `${CDN}/tailwindcss-icon.svg` },
+  { name: "Python", icon: `${CDN}/python.svg` },
+  { name: "AWS", icon: `${CDN}/aws.svg` },
+  { name: "PostgreSQL", icon: `${CDN}/postgresql.svg` },
+  { name: "Supabase", icon: `${CDN}/supabase-icon.svg` },
+  { name: "SQL / MySQL", icon: `${CDN}/mysql.svg` },
+  { name: "Redux", icon: `${CDN}/redux.svg` },
+  { name: "React Query", icon: `${CDN}/react-query-icon.svg` },
+  { name: "Claude / Cursor" },
 ];
 
 function SectionHeading({ children }: { children: React.ReactNode }) {
@@ -216,12 +218,16 @@ export default function ResumePage() {
           <section>
             <SectionHeading>Skills &amp; Tools</SectionHeading>
             <div className="flex flex-wrap gap-2">
-              {SKILLS.map((skill) => (
+              {SKILLS.map(({ name, icon }) => (
                 <span
-                  key={skill}
-                  className="rounded-full border border-border bg-muted px-3 py-1 text-xs font-medium text-muted-foreground"
+                  key={name}
+                  className="flex items-center gap-1.5 rounded-full border border-border bg-muted px-3 py-1 text-xs font-medium text-muted-foreground"
                 >
-                  {skill}
+                  {icon && (
+                    // eslint-disable-next-line @next/next/no-img-element
+                    <img src={icon} alt="" aria-hidden="true" className="size-3.5 shrink-0" />
+                  )}
+                  {name}
                 </span>
               ))}
             </div>
