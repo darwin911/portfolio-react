@@ -158,6 +158,63 @@ function SectionHeading({ children }: { children: React.ReactNode }) {
   );
 }
 
+function JobCard({ job }: { job: typeof EXPERIENCE[number] }) {
+  return (
+    <Card>
+      <CardHeader className="pb-2">
+        <div className="flex flex-col gap-0.5 sm:flex-row sm:items-baseline sm:justify-between">
+          <CardTitle className="text-base font-semibold">{job.title}</CardTitle>
+          <span className="shrink-0 text-xs text-muted-foreground">{job.period}</span>
+        </div>
+        <p className="flex flex-wrap items-center gap-2 text-sm font-semibold text-slate-500 dark:text-slate-400">
+          {job.companyHref ? (
+            <Link
+              href={job.companyHref}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-indigo-500 hover:underline underline-offset-4"
+            >
+              {job.company}
+            </Link>
+          ) : (
+            job.company
+          )}
+          {job.remote && (
+            <span className="rounded-full border border-indigo-300 px-2 py-0.5 text-xs font-medium text-indigo-500 dark:border-indigo-700 dark:text-indigo-400">
+              Remote
+            </span>
+          )}
+          {job.location && (
+            <span className="text-xs font-normal text-muted-foreground">{job.location}</span>
+          )}
+        </p>
+      </CardHeader>
+      <CardContent>
+        <ul className="mb-3 space-y-1.5">
+          {job.bullets.map((bullet, i) => (
+            <li key={i} className="flex gap-2 text-sm leading-relaxed text-muted-foreground">
+              <span className="mt-1.5 size-1.5 shrink-0 rounded-full bg-indigo-400" />
+              <span>{bullet}</span>
+            </li>
+          ))}
+        </ul>
+        {job.tech && (
+          <div className="flex flex-wrap gap-1.5 border-t border-border pt-3">
+            {job.tech.map((t) => (
+              <span
+                key={t}
+                className="rounded bg-muted px-2 py-0.5 text-xs font-medium text-muted-foreground"
+              >
+                {t}
+              </span>
+            ))}
+          </div>
+        )}
+      </CardContent>
+    </Card>
+  );
+}
+
 export default function ResumePage() {
   return (
     <main className="mx-auto w-full max-w-7xl px-4 pb-16 pt-24 sm:px-8">
@@ -238,9 +295,7 @@ export default function ResumePage() {
             <div className="flex flex-col gap-4">
               {EDUCATION.map((edu) => (
                 <div key={edu.degree}>
-                  <p className="text-sm font-semibold leading-snug">
-                    {edu.degree}
-                  </p>
+                  <p className="text-sm font-semibold leading-snug">{edu.degree}</p>
                   <p className="mt-0.5 text-sm font-semibold text-slate-500 dark:text-slate-400">
                     {edu.school}
                   </p>
@@ -255,69 +310,35 @@ export default function ResumePage() {
 
         <section className="min-w-0 flex-1">
           <SectionHeading>Experience</SectionHeading>
-          <div className="flex flex-col gap-4">
-            {EXPERIENCE.map((job) => (
-              <Card key={`${job.company}-${job.period}`}>
-                <CardHeader className="pb-2">
-                  <div className="flex flex-col gap-0.5 sm:flex-row sm:items-baseline sm:justify-between">
-                    <CardTitle className="text-base font-semibold">
-                      {job.title}
-                    </CardTitle>
-                    <span className="shrink-0 text-xs text-muted-foreground">
+
+          {/* Desktop: horizontal scrollable timeline */}
+          <div className="hidden lg:block">
+            <div className="overflow-x-auto pb-4 [scrollbar-color:theme(colors.border)_transparent] [scrollbar-width:thin] [&::-webkit-scrollbar]:h-1 [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-thumb]:bg-border [&::-webkit-scrollbar-track]:bg-transparent">
+              <div className="flex min-w-max">
+                {EXPERIENCE.map((job) => (
+                  <div
+                    key={`${job.company}-${job.period}`}
+                    className="relative w-80 shrink-0 pr-4 last:pr-0"
+                  >
+                    {/* Timeline track segment */}
+                    <div className="absolute inset-x-0 top-6 h-px bg-border" />
+                    {/* Timeline dot */}
+                    <div className="absolute left-1/2 top-6 z-10 size-2.5 -translate-x-1/2 -translate-y-1/2 rounded-full bg-indigo-400 ring-2 ring-background" />
+                    {/* Period label */}
+                    <p className="mb-2 whitespace-nowrap pt-9 text-center text-xs text-muted-foreground">
                       {job.period}
-                    </span>
+                    </p>
+                    <JobCard job={job} />
                   </div>
-                  <p className="flex items-center gap-2 text-sm font-semibold text-slate-500 dark:text-slate-400">
-                    {job.companyHref ? (
-                      <Link
-                        href={job.companyHref}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="hover:text-indigo-500 hover:underline underline-offset-4"
-                      >
-                        {job.company}
-                      </Link>
-                    ) : (
-                      job.company
-                    )}
-                    {job.remote && (
-                      <span className="rounded-full border border-indigo-300 px-2 py-0.5 text-xs font-medium text-indigo-500 dark:border-indigo-700 dark:text-indigo-400">
-                        Remote
-                      </span>
-                    )}
-                    {job.location && (
-                      <span className="text-xs font-normal text-muted-foreground">
-                        {job.location}
-                      </span>
-                    )}
-                  </p>
-                </CardHeader>
-                <CardContent>
-                  <ul className="mb-3 space-y-1.5">
-                    {job.bullets.map((bullet, i) => (
-                      <li
-                        key={i}
-                        className="flex gap-2 text-sm leading-relaxed text-muted-foreground"
-                      >
-                        <span className="mt-1.5 size-1.5 shrink-0 rounded-full bg-indigo-400" />
-                        <span>{bullet}</span>
-                      </li>
-                    ))}
-                  </ul>
-                  {job.tech && (
-                    <div className="flex flex-wrap gap-1.5 border-t border-border pt-3">
-                      {job.tech.map((t) => (
-                        <span
-                          key={t}
-                          className="rounded bg-muted px-2 py-0.5 text-xs font-medium text-muted-foreground"
-                        >
-                          {t}
-                        </span>
-                      ))}
-                    </div>
-                  )}
-                </CardContent>
-              </Card>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          {/* Mobile: vertical stack */}
+          <div className="flex flex-col gap-4 lg:hidden">
+            {EXPERIENCE.map((job) => (
+              <JobCard key={`${job.company}-${job.period}`} job={job} />
             ))}
           </div>
         </section>
