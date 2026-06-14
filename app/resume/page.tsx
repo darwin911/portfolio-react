@@ -10,8 +10,8 @@ export const metadata: Metadata = {
 const S = "font-semibold text-foreground";
 
 // ── Timeline layout knobs ─────────────────────────────────────────────────────
-const CARD_WIDTH = 720; // px — visual width of each experience card
-const CARD_GAP = 64; // px — space between cards
+const CARD_WIDTH = 800; // px — visual width of each experience card
+const CARD_GAP = 128; // px — space between cards
 // ─────────────────────────────────────────────────────────────────────────────
 
 const EXPERIENCE: {
