@@ -44,12 +44,8 @@ export default function Home() {
                   Darwin Smith
                 </CardTitle>
                 <CardDescription className="whitespace-nowrap flex items-center gap-4 justify-between w-full ">
-                  <span className="flex items-center gap-1">
-                    <GlobeAmericasIcon className="size-6" />
-                    <small>GMT-4 (ET)</small>
-                  </span>
                   <span className="font-medium tracking-tight sm:text-xl md:text-2xl h-md:text-base h-sm:text-sm text-sky-800 dark:text-white">
-                    Software Developer
+                    Senior Frontend Engineer
                   </span>
                 </CardDescription>
               </div>
