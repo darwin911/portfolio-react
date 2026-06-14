@@ -165,7 +165,7 @@ export default function ResumePage() {
             Darwin Smith
           </h1>
           <p className="mt-1 text-lg font-medium tracking-tight text-muted-foreground">
-            Senior Frontend Engineer · 7 years experience
+            Senior Full-Stack Engineer · 7 years experience
           </p>
         </div>
         <div className="flex flex-wrap items-center gap-4">
