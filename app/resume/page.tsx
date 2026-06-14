@@ -9,6 +9,11 @@ export const metadata: Metadata = {
 
 const S = "font-semibold text-foreground";
 
+// ── Timeline layout knobs ─────────────────────────────────────────────────────
+const CARD_WIDTH = 340; // px — visual width of each experience card
+const CARD_GAP   =  32; // px — space between cards
+// ─────────────────────────────────────────────────────────────────────────────
+
 const EXPERIENCE: {
   title: string;
   company: string;
@@ -353,19 +358,29 @@ export default function ResumePage() {
 
           {/* Desktop: horizontal scrollable timeline */}
           <div className="hidden lg:block">
-            <div className="overflow-x-auto pb-4 [scrollbar-color:theme(colors.border)_transparent] [scrollbar-width:thin] [&::-webkit-scrollbar]:h-1 [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-thumb]:bg-border [&::-webkit-scrollbar-track]:bg-transparent">
+            <div className="overflow-x-auto pb-4 [scrollbar-color:theme(colors.border)_transparent] [scrollbar-width:thin] [&::-webkit-scrollbar]:h-1 [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-thumb]:bg-border [&::-webkit-scrollbar-track]:bg-transparent snap-x snap-mandatory">
               <div className="flex min-w-max">
                 {EXPERIENCE.map((job) => (
                   <div
                     key={`${job.company}-${job.period}`}
-                    className="relative w-80 shrink-0 pr-4 last:pr-0"
+                    className="relative shrink-0 snap-start"
+                    style={{
+                      width: CARD_WIDTH + CARD_GAP,
+                      paddingRight: CARD_GAP,
+                    }}
                   >
-                    {/* Timeline track segment */}
+                    {/* Timeline track segment — inset-x-0 covers card + gap so segments chain */}
                     <div className="absolute inset-x-0 top-6 h-px bg-border" />
                     {/* Timeline dot */}
-                    <div className="absolute left-1/2 top-6 z-10 size-2.5 -translate-x-1/2 -translate-y-1/2 rounded-full bg-indigo-400 ring-2 ring-background" />
+                    <div
+                      className="absolute top-6 z-10 size-2.5 -translate-x-1/2 -translate-y-1/2 rounded-full bg-indigo-400 ring-2 ring-background"
+                      style={{ left: CARD_WIDTH / 2 }}
+                    />
                     {/* Period label */}
-                    <p className="mb-2 whitespace-nowrap pt-9 text-center text-xs text-muted-foreground">
+                    <p
+                      className="mb-2 whitespace-nowrap pt-9 text-center text-xs text-muted-foreground"
+                      style={{ width: CARD_WIDTH }}
+                    >
                       {job.period}
                     </p>
                     <JobCard job={job} />
