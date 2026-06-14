@@ -40,15 +40,16 @@ const EXPERIENCE: {
     remote: true,
     period: "Jan 2024 – Nov 2024",
     bullets: [
-      <>Built and launched a custom <strong className={S}>marketing landing page</strong> and dashboard backed by Postgres on <strong className={S}>Supabase</strong>.</>,
+      <>Joined as the <strong className={S}>sole engineer</strong> on a pre-launch AI startup — owned all technical decisions from stack selection and architecture through deployment and infrastructure.</>,
+      <>Built a custom <strong className={S}>marketing landing page</strong> and dashboard backed by Postgres on <strong className={S}>Supabase</strong>, self-hosted on AWS.</>,
       <>Developed a greenfield <strong className={S}>AI product</strong> integrating <strong className={S}>OpenAI</strong> and custom LLMs for context-aware role-play assistants on web and phone.</>,
-      <>Advised product and operations teams on technical direction for features and development priorities.</>,
+      <>Translated ambiguous product ideas into concrete implementations — guiding co-founders through architectural trade-offs, scope decisions, and delivery priorities.</>,
     ],
     tech: ["Next.js", "Python", "FastAPI", "AWS", "Supabase", "OpenAI"],
   },
   {
     title: "Senior Developer",
-    company: "Ironforge",
+    company: "Ironforge (acquired)",
     remote: true,
     period: "Apr 2023 – Oct 2023",
     bullets: [
@@ -61,11 +62,11 @@ const EXPERIENCE: {
   },
   {
     title: "Software Engineer II",
-    company: "RECUR Forever Inc.",
+    company: "RECUR Forever Inc. (shut down)",
     remote: true,
     period: "Jun 2022 – Apr 2023",
     bullets: [
-      <>Built <strong className={S}>white-labeled, brand-specific NFT storefronts</strong> on a shared <strong className={S}>multi-tenant platform</strong> for major entertainment IP (ViacomCBS, Sanrio, Paramount) — adapting shared components and theming to each brand&apos;s design spec across multiple client codebases.</>,
+      <>Built <strong className={S}>white-labeled, brand-specific NFT storefronts</strong> on a shared <strong className={S}>multi-tenant platform</strong> for major entertainment IP (ViacomCBS, Sanrio, Paramount) — serving thousands of users across branded storefronts, adapting shared components and theming to each brand&apos;s design spec.</>,
       <>Contributed to a <strong className={S}>mobile-first NFT marketplace</strong> that abstracted wallet and crypto complexity into familiar e-commerce patterns, enabling a mainstream consumer experience across all brand storefronts.</>,
       <>Co-created a <strong className={S}>product design system in Figma</strong> with the design team; presented feature work in bi-weekly engineering demos.</>,
     ],
@@ -200,13 +201,14 @@ export default function ResumePage() {
       </div>
 
       <p className="mb-10 text-sm leading-relaxed text-muted-foreground sm:text-base">
-        Full-stack TypeScript engineer with 7 years building production web
-        applications across startups and scale-ups. I gravitate toward
-        greenfield platform work — defining API contracts and the patterns
-        teams build on top of. I&apos;ve led technical direction as a founding
-        engineer, shaped design systems, and shipped end-to-end across
-        React/Next.js frontends and Node.js backends. I use AI tooling daily
-        as a core part of how I design, build, and iterate.
+        Senior Frontend Engineer with 7 years building across startups and
+        scale-ups — including as the sole engineer at a YC-backed startup where
+        I owned every technical decision from architecture to deployment. I
+        thrive in early-stage environments: translating ambiguous product ideas
+        into working software, defining the patterns teams build on, and
+        shipping end-to-end across React/Next.js frontends and Node.js/Python
+        backends. I use AI tooling (Claude Code, Cursor) daily as a core part
+        of how I design, build, and iterate.
       </p>
 
       <div className="flex flex-col gap-10 lg:flex-row lg:gap-12">
