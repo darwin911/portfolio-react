@@ -38,7 +38,7 @@ const EXPERIENCE: {
     title: "Founding Engineer",
     company: "Ruffo (YC S22)",
     remote: true,
-    period: "Feb 2024 – Nov 2024",
+    period: "Jan 2024 – Nov 2024",
     bullets: [
       <>Built and launched a custom <strong className={S}>marketing landing page</strong> and dashboard backed by Postgres on <strong className={S}>Supabase</strong>.</>,
       <>Developed a greenfield <strong className={S}>AI product</strong> integrating <strong className={S}>OpenAI</strong> and custom LLMs for context-aware role-play assistants on web and phone.</>,
@@ -142,6 +142,8 @@ const SKILLS = [
   "PostgreSQL",
   "Supabase",
   "SQL / MySQL",
+  "Redux",
+  "React Query",
   "Claude / Cursor",
 ];
 
@@ -162,7 +164,7 @@ export default function ResumePage() {
             Darwin Smith
           </h1>
           <p className="mt-1 text-lg font-medium tracking-tight text-muted-foreground">
-            Software Developer · 7 years experience
+            Senior Frontend Engineer · 7 years experience
           </p>
         </div>
         <div className="flex flex-wrap items-center gap-4">
