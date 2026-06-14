@@ -203,7 +203,7 @@ export default function ResumePage() {
       </div>
 
       <p className="mb-10 text-sm leading-relaxed text-muted-foreground sm:text-base">
-        Senior Frontend Engineer with 7 years building across startups and
+        Senior Full-Stack Engineer with 7 years building across startups and
         scale-ups — including as the sole engineer at a YC-backed startup where
         I owned every technical decision from architecture to deployment. I
         thrive in early-stage environments: translating ambiguous product ideas
