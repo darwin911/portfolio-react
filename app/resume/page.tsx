@@ -17,8 +17,8 @@ export const metadata: Metadata = {
 const S = "font-semibold text-foreground";
 
 // ── Timeline layout knobs ─────────────────────────────────────────────────────
-const CARD_WIDTH = 560; // px — visual width of each experience card
-const CARD_GAP = 140; // px — space between cards
+const CARD_WIDTH = 640; // px — visual width of each experience card
+const CARD_GAP = 80; // px — space between cards
 // ─────────────────────────────────────────────────────────────────────────────
 
 const EXPERIENCE: {
@@ -507,10 +507,15 @@ export default function ResumePage() {
                       className="absolute top-6 z-10 size-2.5 -translate-x-1/2 -translate-y-1/2 rounded-full bg-indigo-400 ring-2 ring-background"
                       style={{ left: CARD_GAP / 2 + CARD_WIDTH / 2 }}
                     />
-                    {/* Period label — sits inside the padded content area, centered */}
-                    <p className="mb-2 whitespace-nowrap pt-9 text-center text-xs text-muted-foreground">
-                      {job.period}
-                    </p>
+                    {/* Timeline label — company + title + period above the dot */}
+                    <div className="mb-2 pt-9 text-center">
+                      <p className="whitespace-nowrap text-xs font-semibold text-foreground">
+                        {job.company}
+                      </p>
+                      <p className="whitespace-nowrap text-xs text-muted-foreground">
+                        {job.title} · {job.period}
+                      </p>
+                    </div>
                     <JobCard job={job} />
                   </div>
                 ))}
