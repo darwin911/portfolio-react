@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import Link from "next/link";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { ExperienceScrollWrapper } from "@/components/experience-scroll-wrapper";
 
 export const metadata: Metadata = {
   title: "Darwin Smith | Senior Frontend Engineer",
@@ -16,8 +17,8 @@ export const metadata: Metadata = {
 const S = "font-semibold text-foreground";
 
 // ── Timeline layout knobs ─────────────────────────────────────────────────────
-const CARD_WIDTH = 800; // px — visual width of each experience card
-const CARD_GAP = 128; // px — space between cards
+const CARD_WIDTH = 560; // px — visual width of each experience card
+const CARD_GAP = 140; // px — space between cards
 // ─────────────────────────────────────────────────────────────────────────────
 
 const EXPERIENCE: {
@@ -54,11 +55,10 @@ const EXPERIENCE: {
         , photo capture in private browsing, and dashboard routing improvements.
       </>,
       <>
-        Extended{" "}
-        <strong className={S}>.NET Core API controllers</strong> and improved{" "}
-        <strong className={S}>LINQ query performance</strong> against Azure SQL,
-        supporting new dashboard endpoints for equipment filtering, inspection
-        dates, and work order history.
+        Extended <strong className={S}>.NET Core API controllers</strong> and
+        improved <strong className={S}>LINQ query performance</strong> against
+        Azure SQL, supporting new dashboard endpoints for equipment filtering,
+        inspection dates, and work order history.
       </>,
       <>
         Managed releases across test, staging, and production in a
@@ -109,9 +109,8 @@ const EXPERIENCE: {
         billing, team management, and webhook integration.
       </>,
       <>
-        Developed a shareable{" "}
-        <strong className={S}>API Playground</strong> with save/restore state,
-        shareable URL generation, and paginated data export.
+        Developed a shareable <strong className={S}>API Playground</strong> with
+        save/restore state, shareable URL generation, and paginated data export.
       </>,
       <>
         Led development of a custom product landing page using{" "}
@@ -489,12 +488,12 @@ export default function ResumePage() {
           <div className="hidden lg:block">
             {/* direction:rtl anchors scrollLeft=0 to the right edge, so most recent card is visible on load.
                 Each card resets to direction:ltr so text and layout are unaffected. */}
-            <div className="overflow-x-auto pb-4 [direction:rtl] [scrollbar-color:theme(colors.border)_transparent] [scrollbar-width:thin] [&::-webkit-scrollbar]:h-1 [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-thumb]:bg-border [&::-webkit-scrollbar-track]:bg-transparent snap-x snap-mandatory">
+            <ExperienceScrollWrapper step={CARD_WIDTH + CARD_GAP}>
               <div className="flex min-w-max [direction:rtl]">
                 {EXPERIENCE.map((job) => (
                   <div
                     key={`${job.company}-${job.period}`}
-                    className="relative shrink-0 snap-center [direction:ltr]"
+                    className="relative shrink-0 snap-center [scroll-snap-stop:always] [direction:ltr]"
                     style={{
                       width: CARD_WIDTH + CARD_GAP,
                       paddingLeft: CARD_GAP / 2,
@@ -516,7 +515,7 @@ export default function ResumePage() {
                   </div>
                 ))}
               </div>
-            </div>
+            </ExperienceScrollWrapper>
           </div>
 
           {/* Mobile: vertical stack */}
