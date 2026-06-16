@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, useState } from "react";
 
 interface Props {
   children: React.ReactNode;
@@ -9,6 +9,9 @@ interface Props {
 
 export function ExperienceScrollWrapper({ children, step }: Props) {
   const ref = useRef<HTMLDivElement>(null);
+  const targetLeft = useRef<number>(0);
+  const [atNewest, setAtNewest] = useState(true);
+  const [atOldest, setAtOldest] = useState(false);
 
   useEffect(() => {
     const container = ref.current;
@@ -38,15 +41,22 @@ export function ExperienceScrollWrapper({ children, step }: Props) {
       });
     }
 
-    function onScroll() {
-      // Track in real-time while scrolling — no transition lag
-      setOpacities("none");
+    function updateEdges() {
+      const min = -(container!.scrollWidth - container!.clientWidth);
+      const sl = container!.scrollLeft;
+      setAtNewest(sl >= 0);
+      setAtOldest(sl <= min + 1);
+    }
 
-      // Re-enable cubic-bezier transition once scroll settles
+    function onScroll() {
+      setOpacities("none");
+      updateEdges();
       clearTimeout(scrollEndTimer);
       scrollEndTimer = setTimeout(() => setOpacities(TRANSITION), 80);
     }
 
+    targetLeft.current = container.scrollLeft;
+    updateEdges();
     setOpacities(TRANSITION);
     container.addEventListener("scroll", onScroll, { passive: true });
     return () => {
@@ -56,13 +66,23 @@ export function ExperienceScrollWrapper({ children, step }: Props) {
   }, []);
 
   function scrollPrev() {
-    // Scroll left (toward older entries)
-    ref.current?.scrollBy({ left: -step, behavior: "smooth" });
+    const container = ref.current;
+    if (!container) return;
+    const min = -(container.scrollWidth - container.clientWidth);
+    targetLeft.current = Math.max(min, targetLeft.current - step);
+    setAtNewest(false);
+    setAtOldest(targetLeft.current <= min + 1);
+    container.scrollTo({ left: targetLeft.current, behavior: "smooth" });
   }
 
   function scrollNext() {
-    // Scroll right (toward newer entries)
-    ref.current?.scrollBy({ left: step, behavior: "smooth" });
+    const container = ref.current;
+    if (!container) return;
+    const min = -(container.scrollWidth - container.clientWidth);
+    targetLeft.current = Math.min(0, targetLeft.current + step);
+    setAtOldest(false);
+    setAtNewest(targetLeft.current >= 0);
+    container.scrollTo({ left: targetLeft.current, behavior: "smooth" });
   }
 
   return (
@@ -77,8 +97,9 @@ export function ExperienceScrollWrapper({ children, step }: Props) {
       <div className="mt-2 flex justify-end gap-2">
         <button
           onClick={scrollPrev}
+          disabled={atOldest}
           aria-label="Older experience"
-          className="flex size-8 items-center justify-center rounded-full border border-border bg-background text-muted-foreground transition-colors hover:border-indigo-400 hover:text-indigo-500 dark:hover:border-indigo-500 dark:hover:text-indigo-400"
+          className="flex size-8 items-center justify-center rounded-full border border-border bg-background text-muted-foreground transition-colors hover:border-indigo-400 hover:text-indigo-500 disabled:cursor-not-allowed disabled:opacity-30 dark:hover:border-indigo-500 dark:hover:text-indigo-400"
         >
           <svg
             viewBox="0 0 24 24"
@@ -94,8 +115,9 @@ export function ExperienceScrollWrapper({ children, step }: Props) {
         </button>
         <button
           onClick={scrollNext}
+          disabled={atNewest}
           aria-label="Newer experience"
-          className="flex size-8 items-center justify-center rounded-full border border-border bg-background text-muted-foreground transition-colors hover:border-indigo-400 hover:text-indigo-500 dark:hover:border-indigo-500 dark:hover:text-indigo-400"
+          className="flex size-8 items-center justify-center rounded-full border border-border bg-background text-muted-foreground transition-colors hover:border-indigo-400 hover:text-indigo-500 disabled:cursor-not-allowed disabled:opacity-30 dark:hover:border-indigo-500 dark:hover:text-indigo-400"
         >
           <svg
             viewBox="0 0 24 24"
