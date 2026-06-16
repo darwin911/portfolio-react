@@ -3,8 +3,14 @@ import Link from "next/link";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 export const metadata: Metadata = {
-  title: "Resume | Darwin Smith",
-  robots: { index: false, follow: false },
+  title: "Darwin Smith | Senior Frontend Engineer",
+  description:
+    "Darwin Smith — Senior Frontend Engineer · React / Next.js / TypeScript",
+  openGraph: {
+    title: "Darwin Smith — Senior Frontend Engineer",
+    description:
+      "Senior Frontend Engineer with 7 years building React and Next.js applications across startups and scale-ups.",
+  },
 };
 
 const S = "font-semibold text-foreground";
@@ -32,34 +38,31 @@ const EXPERIENCE: {
     period: "Jan 2025 – Present",
     bullets: [
       <>
-        Delivered full-stack features across a{" "}
-        <strong className={S}>React/TypeScript</strong> dashboard and mobile app
-        for <strong className={S}>MyMedGas</strong>, an industrial asset
-        management platform for the medical gas industry.
+        Led a{" "}
+        <strong className={S}>
+          mobile and tablet responsiveness initiative
+        </strong>{" "}
+        across a Bootstrap 3 codebase, resolving 100+ tracked issues spanning
+        iOS-specific keyboard, scroll, and layout bugs, modal stacking, and
+        viewport layouts.
       </>,
       <>
-        Owned a{" "}
-        <strong className={S}>mobile/tablet responsiveness overhaul</strong>{" "}
-        across two applications — resolving iOS-specific keyboard, scroll, and
-        layout issues across dozens of views, forms, and components.
+        Delivered features including a{" "}
+        <strong className={S}>
+          country selector with SVG flags and keyboard navigation
+        </strong>
+        , photo capture in private browsing, and dashboard routing improvements.
       </>,
       <>
-        Shipped new <strong className={S}>API endpoints</strong> for equipment
-        filtering, inspection dates, and work order history; added{" "}
-        <strong className={S}>CSV export</strong> for event history used by
-        hundreds of field service users and admins.
+        Extended{" "}
+        <strong className={S}>.NET Core API controllers</strong> and improved{" "}
+        <strong className={S}>LINQ query performance</strong> against Azure SQL,
+        supporting new dashboard endpoints for equipment filtering, inspection
+        dates, and work order history.
       </>,
       <>
-        Contributed to a{" "}
-        <strong className={S}>~50% reduction in initial page load time</strong>{" "}
-        through SQL query restructuring, code splitting, and frontend
-        architecture improvements targeting{" "}
-        <strong className={S}>Core Web Vitals</strong> (LCP, CLS).
-      </>,
-      <>
-        Acted as the <strong className={S}>front-end authority</strong> on the
-        team — advising on implementation approaches and pushing back on PM and
-        client requests that lacked technical or design grounding.
+        Managed releases across test, staging, and production in a
+        cross-functional team of ~5.
       </>,
     ],
     tech: ["React", "TypeScript", ".NET Core", "Azure SQL", "LINQ"],
@@ -71,24 +74,24 @@ const EXPERIENCE: {
     period: "Jan 2024 – Nov 2024",
     bullets: [
       <>
-        Joined as the <strong className={S}>sole engineer</strong> on a
-        pre-launch AI startup — owned all technical decisions from stack
-        selection and architecture through deployment and infrastructure.
+        Sole engineer on a greenfield{" "}
+        <strong className={S}>Next.js application</strong> self-hosted on AWS,
+        owning all architecture and rendering decisions from PoC to
+        prospect-ready product.
       </>,
       <>
-        Built a custom <strong className={S}>marketing landing page</strong> and
-        dashboard backed by Postgres on <strong className={S}>Supabase</strong>,
-        self-hosted on AWS.
-      </>,
-      <>
-        Developed a greenfield <strong className={S}>AI product</strong>{" "}
+        Built an <strong className={S}>AI role-play assistant</strong>{" "}
         integrating <strong className={S}>OpenAI</strong> and custom LLMs for
-        context-aware role-play assistants on web and phone.
+        context-aware web and phone call interactions.
       </>,
       <>
-        Translated ambiguous product ideas into concrete implementations —
-        guiding co-founders through architectural trade-offs, scope decisions,
-        and delivery priorities.
+        Ran a parallel{" "}
+        <strong className={S}>Python/FastAPI backend on Fly.io</strong>{" "}
+        connected to a PostgreSQL database on Supabase.
+      </>,
+      <>
+        Advised co-founders on technical direction across product and
+        operations.
       </>,
     ],
     tech: ["Next.js", "Python", "FastAPI", "AWS", "Supabase", "OpenAI"],
@@ -100,29 +103,20 @@ const EXPERIENCE: {
     period: "Apr 2023 – Oct 2023",
     bullets: [
       <>
-        Built core features of a{" "}
+        Built core features for a{" "}
         <strong className={S}>Solana developer platform</strong> — program
-        management dashboard with client-side search, multi-step program
-        creation flow, <strong className={S}>RPC Gateway</strong> configuration,
-        and a settings system covering API keys, billing, team management, and{" "}
-        <strong className={S}>webhook integration via Svix</strong>.
+        management dashboard, RPC Gateway configuration, API key management,
+        billing, team management, and webhook integration.
       </>,
       <>
-        Developed a shareable <strong className={S}>API Playground</strong>{" "}
-        (Requests Library) — implementing save/restore of requests, shareable
-        URL generation, collection management, and paginated data export modes
-        for RPC calls.
+        Developed a shareable{" "}
+        <strong className={S}>API Playground</strong> with save/restore state,
+        shareable URL generation, and paginated data export.
       </>,
       <>
-        Designed and shipped the <strong className={S}>marketing site</strong>{" "}
-        from Figma wireframes, including custom animated SVG hero assets, a
-        pricing page with dynamic formatting logic, and a contact/demo form.
-      </>,
-      <>
-        Established{" "}
-        <strong className={S}>Playwright E2E test infrastructure</strong> from
-        scratch; wrote reference tests covering core user flows across the
-        dashboard.
+        Led development of a custom product landing page using{" "}
+        <strong className={S}>Framer Motion</strong> and Tailwind with custom
+        SVGs designed in Figma.
       </>,
     ],
     tech: [
@@ -143,26 +137,18 @@ const EXPERIENCE: {
     period: "Jun 2022 – Apr 2023",
     bullets: [
       <>
-        Built{" "}
-        <strong className={S}>
-          white-labeled, brand-specific NFT storefronts
-        </strong>{" "}
-        on a shared <strong className={S}>multi-tenant platform</strong> for
-        major entertainment IP (ViacomCBS, Sanrio, Paramount) — serving
-        thousands of users across branded storefronts, adapting shared
-        components and theming to each brand&apos;s design spec.
+        Built custom components and features for platform and brand-specific
+        clients using{" "}
+        <strong className={S}>Next.js, Remix, Tailwind CSS</strong>, and
+        Material UI.
       </>,
       <>
-        Contributed to a{" "}
-        <strong className={S}>mobile-first NFT marketplace</strong> that
-        abstracted wallet and crypto complexity into familiar e-commerce
-        patterns, enabling a mainstream consumer experience across all brand
-        storefronts.
+        Collaborated with the design team to build and maintain a{" "}
+        <strong className={S}>product design system in Figma</strong>.
       </>,
       <>
-        Co-created a{" "}
-        <strong className={S}>product design system in Figma</strong> with the
-        design team; presented feature work in bi-weekly engineering demos.
+        Presented feature work in bi-weekly engineering demos across a
+        cross-functional team.
       </>,
     ],
     tech: ["Next.js", "Remix", "Tailwind CSS", "Material UI"],
@@ -171,28 +157,29 @@ const EXPERIENCE: {
     title: "Lead Developer",
     company: "Freeman Company",
     remote: true,
-    period: "Jun 2020 – May 2022",
+    period: "Jun 2020 – Jun 2022",
     bullets: [
       <>
-        Delivered client-specific{" "}
-        <strong className={S}>virtual conference experiences</strong> on
-        Freeman&apos;s Online Event Pro platform — building custom homepage
-        modules, virtual exhibit halls, and session flows for enterprise clients
-        during the industry&apos;s rapid 2020 pivot to remote events.
+        Led development on a{" "}
+        <strong className={S}>
+          mobile-first, full-stack online event conference application
+        </strong>{" "}
+        (Online Event Pro) built with React, Express, and AWS Serverless/S3.
       </>,
       <>
-        Integrated <strong className={S}>Stream Chat</strong> for real-time
-        conference messaging alongside multiple third-party{" "}
-        <strong className={S}>user registration</strong> and data providers.
+        Coordinated 2–3 rotating developers per project sprint through code
+        reviews, daily standups, and unblocking sessions.
       </>,
       <>
-        Maintained and expanded a custom component library aligned to design
-        systems in <strong className={S}>Adobe XD</strong> and{" "}
-        <strong className={S}>Zeplin</strong>.
+        Maintained and expanded a custom component library with a focus on{" "}
+        <strong className={S}>
+          accessibility and cross-browser consistency
+        </strong>
+        .
       </>,
       <>
-        Led cross-functional meetings for feature planning, bug triage, and
-        client requests.
+        Integrated multiple third-party services and user registration data
+        providers.
       </>,
     ],
     tech: ["React", "Express", "AWS Serverless", "S3", "Adobe XD", "Zeplin"],
@@ -200,18 +187,13 @@ const EXPERIENCE: {
   {
     title: "Developer",
     company: "Vessel Technologies, Inc.",
-    location: "Manhattan, New York, NY",
-    period: "Jun 2019 – Jan 2020",
+    location: "New York, NY",
+    period: "Aug 2019 – Jan 2020",
     bullets: [
       <>
-        Built a <strong className={S}>mobile-first marketing site</strong> for a
-        modular net-zero housing startup — including a custom carousel and an
-        interactive home configurator tool.
-      </>,
-      <>
-        Migrated a legacy <strong className={S}>Vaadin (Java)</strong> control
-        panel to a modern responsive web interface for the company&apos;s{" "}
-        <strong className={S}>smart building management platform</strong> (vOS).
+        Built a custom <strong className={S}>React product page</strong> and
+        contributed to a <strong className={S}>Java codebase</strong> for
+        bespoke smart home solutions.
       </>,
     ],
     tech: ["React", "Express", "CSS", "Java", "Heroku", "Netlify"],
@@ -446,14 +428,13 @@ export default function ResumePage() {
       </div>
 
       <p className="mb-10 text-sm leading-relaxed text-muted-foreground sm:text-base">
-        Senior Full-Stack Engineer with 7 years building across startups and
-        scale-ups — including as the sole engineer at a YC-backed startup where
-        I owned every technical decision from architecture to deployment. I
-        thrive in early-stage environments: translating ambiguous product ideas
-        into working software, defining the patterns teams build on, and
-        shipping end-to-end across React/Next.js frontends and Node.js/Python
-        backends. I use AI tooling (Claude Code, Cursor) daily as a core part of
-        how I design, build, and iterate.
+        Senior Frontend Engineer with 7 years building production React and
+        Next.js applications across startups, scale-ups, and product companies.
+        I care about the details that often get skipped: accessibility (WCAG),
+        semantic HTML, cross-browser and device compatibility, and UIs that hold
+        up under real usage. I&apos;ve led technical direction as a founding
+        engineer and shipped across the full stack when the team needed it. AI
+        tooling (Claude Code, Cursor) is a core part of how I build and iterate.
       </p>
 
       <div className="flex flex-col gap-10 lg:flex-row lg:gap-12">
@@ -506,29 +487,29 @@ export default function ResumePage() {
 
           {/* Desktop: horizontal scrollable timeline */}
           <div className="hidden lg:block">
-            <div className="overflow-x-auto pb-4 [scrollbar-color:theme(colors.border)_transparent] [scrollbar-width:thin] [&::-webkit-scrollbar]:h-1 [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-thumb]:bg-border [&::-webkit-scrollbar-track]:bg-transparent snap-x snap-mandatory">
-              <div className="flex min-w-max">
+            {/* direction:rtl anchors scrollLeft=0 to the right edge, so most recent card is visible on load.
+                Each card resets to direction:ltr so text and layout are unaffected. */}
+            <div className="overflow-x-auto pb-4 [direction:rtl] [scrollbar-color:theme(colors.border)_transparent] [scrollbar-width:thin] [&::-webkit-scrollbar]:h-1 [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-thumb]:bg-border [&::-webkit-scrollbar-track]:bg-transparent snap-x snap-mandatory">
+              <div className="flex min-w-max [direction:rtl]">
                 {EXPERIENCE.map((job) => (
                   <div
                     key={`${job.company}-${job.period}`}
-                    className="relative shrink-0 snap-start"
+                    className="relative shrink-0 snap-center [direction:ltr]"
                     style={{
                       width: CARD_WIDTH + CARD_GAP,
-                      paddingRight: CARD_GAP,
+                      paddingLeft: CARD_GAP / 2,
+                      paddingRight: CARD_GAP / 2,
                     }}
                   >
-                    {/* Timeline track segment — inset-x-0 covers card + gap so segments chain */}
+                    {/* Timeline track segment — inset-x-0 spans the full cell (card + gap) so segments chain */}
                     <div className="absolute inset-x-0 top-6 h-px bg-border" />
-                    {/* Timeline dot */}
+                    {/* Timeline dot — centered over the card content, offset by the left padding */}
                     <div
                       className="absolute top-6 z-10 size-2.5 -translate-x-1/2 -translate-y-1/2 rounded-full bg-indigo-400 ring-2 ring-background"
-                      style={{ left: CARD_WIDTH / 2 }}
+                      style={{ left: CARD_GAP / 2 + CARD_WIDTH / 2 }}
                     />
-                    {/* Period label */}
-                    <p
-                      className="mb-2 whitespace-nowrap pt-9 text-center text-xs text-muted-foreground"
-                      style={{ width: CARD_WIDTH }}
-                    >
+                    {/* Period label — sits inside the padded content area, centered */}
+                    <p className="mb-2 whitespace-nowrap pt-9 text-center text-xs text-muted-foreground">
                       {job.period}
                     </p>
                     <JobCard job={job} />
