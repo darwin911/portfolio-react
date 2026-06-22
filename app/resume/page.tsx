@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Reveal } from "@/components/reveal";
 
 export const metadata: Metadata = {
   title: "Darwin Smith | Senior Software Developer",
@@ -31,6 +32,7 @@ const EXPERIENCE: {
     company: "BigPixel",
     companyHref: "https://www.thebigpixel.net/",
     remote: true,
+    location: "USA",
     period: "Jan 2025 – Present",
     bullets: [
       <>
@@ -66,6 +68,7 @@ const EXPERIENCE: {
     title: "Founding Engineer",
     company: "Ruffo (YC S22)",
     remote: true,
+    location: "USA",
     period: "Jan 2024 – Nov 2024",
     bullets: [
       <>
@@ -95,6 +98,7 @@ const EXPERIENCE: {
     title: "Senior Developer",
     company: "Ironforge (acquired)",
     remote: true,
+    location: "USA",
     period: "Apr 2023 – Oct 2023",
     bullets: [
       <>
@@ -128,6 +132,7 @@ const EXPERIENCE: {
     title: "Software Engineer II",
     company: "RECUR Forever Inc. (shut down)",
     remote: true,
+    location: "USA",
     period: "Jun 2022 – Apr 2023",
     bullets: [
       <>
@@ -151,6 +156,7 @@ const EXPERIENCE: {
     title: "Lead Developer",
     company: "Freeman Company",
     remote: true,
+    location: "New York, USA",
     period: "Jun 2020 – Jun 2022",
     bullets: [
       <>
@@ -181,7 +187,7 @@ const EXPERIENCE: {
   {
     title: "Developer",
     company: "Vessel Technologies, Inc.",
-    location: "New York, NY",
+    location: "New York, USA",
     period: "Aug 2019 – Jan 2020",
     bullets: [
       <>
@@ -195,6 +201,7 @@ const EXPERIENCE: {
   {
     title: "Web Development Immersive Fellow",
     company: "General Assembly NYC",
+    location: "New York, USA",
     period: "Jan 2019 – Apr 2019",
     bullets: [
       <>
@@ -539,8 +546,9 @@ export default function ResumePage() {
               {EXPERIENCE.map((job, i) => {
                 const cardOnLeft = i % 2 === 0;
                 return (
-                  <div
+                  <Reveal
                     key={`${job.company}-${job.period}`}
+                    disabled={i < 2}
                     className="relative grid grid-cols-2 items-start gap-x-12"
                   >
                     {/* Dot on the spine, aligned with the card header */}
@@ -575,7 +583,7 @@ export default function ResumePage() {
                         </div>
                       </>
                     )}
-                  </div>
+                  </Reveal>
                 );
               })}
             </div>
@@ -583,8 +591,10 @@ export default function ResumePage() {
 
           {/* Mobile / tablet: vertical stack */}
           <div className="flex flex-col gap-4 lg:hidden">
-            {EXPERIENCE.map((job) => (
-              <JobCard key={`${job.company}-${job.period}`} job={job} />
+            {EXPERIENCE.map((job, i) => (
+              <Reveal key={`${job.company}-${job.period}`} disabled={i < 2}>
+                <JobCard job={job} />
+              </Reveal>
             ))}
           </div>
         </section>
