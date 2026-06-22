@@ -231,6 +231,11 @@ const EDUCATION = [
   },
 ];
 
+const LANGUAGES = [
+  { name: "English", level: "Native" },
+  { name: "Spanish", level: "Native" },
+];
+
 const CDN = "https://cdn.jsdelivr.net/gh/gilbarbara/logos/logos";
 
 const TECH_ICONS: Record<string, string> = {
@@ -276,15 +281,20 @@ const SKILLS: { name: string; icon?: string }[] = [
   { name: "Next.js" },
   { name: "Remix" },
   { name: "Express / Node.js" },
+  { name: ".NET Core" },
   { name: "HTML5 / CSS" },
   { name: "Tailwind CSS" },
   { name: "Python" },
+  { name: "FastAPI" },
   { name: "AWS" },
   { name: "PostgreSQL" },
   { name: "Supabase" },
   { name: "SQL / MySQL" },
   { name: "Redux" },
   { name: "React Query" },
+  { name: "Playwright" },
+  { name: "Figma" },
+  { name: "OpenAI" },
   { name: "Claude / Cursor" },
 ];
 
@@ -371,7 +381,7 @@ function JobCard({ job }: { job: (typeof EXPERIENCE)[number] }) {
 
 export default function ResumePage() {
   return (
-    <main className="mx-auto w-full max-w-7xl px-4 pb-16 pt-24 sm:px-8">
+    <main className="mx-auto w-full max-w-7xl 2xl:max-w-8xl px-4 pb-16 pt-24 sm:px-8">
       <div className="mb-8 flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
         <div>
           <h1 className="text-4xl font-semibold tracking-tighter text-indigo-500 dark:text-indigo-400 sm:text-5xl">
@@ -495,6 +505,23 @@ export default function ResumePage() {
                   <p className="text-xs text-muted-foreground">
                     {edu.period} · {edu.location}
                   </p>
+                </div>
+              ))}
+            </div>
+          </section>
+
+          <section>
+            <SectionHeading>Languages</SectionHeading>
+            <div className="flex flex-col gap-2">
+              {LANGUAGES.map((lang) => (
+                <div
+                  key={lang.name}
+                  className="flex items-baseline justify-between gap-2"
+                >
+                  <span className="text-sm font-semibold">{lang.name}</span>
+                  <span className="text-xs text-muted-foreground">
+                    {lang.level}
+                  </span>
                 </div>
               ))}
             </div>

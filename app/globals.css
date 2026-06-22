@@ -48,6 +48,8 @@
   --radius-md: calc(var(--radius) - 2px);
   --radius-sm: calc(var(--radius) - 4px);
 
+  --container-8xl: 92rem; /* 1472px — site content width (max-w-8xl) */
+
   --drop-shadow-heading: rgba(0, 0, 0, 0.2) 1px 4px 2px,
     rgba(0, 0, 0, 0.2) -2px 3px 8px;
   --drop-shadow-heading-light: rgba(255, 255, 255, 0.2) 1px 4px 2px,

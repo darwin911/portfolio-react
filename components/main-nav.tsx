@@ -11,7 +11,7 @@ export default function MainNav() {
   return (
     <header className="relative">
       <nav className="fixed z-10 mx-auto w-full overflow-hidden bg-background py-4 shadow-md">
-        <div className="container flex items-center justify-between max-w-7xl">
+        <div className="container flex items-center justify-between max-w-7xl 2xl:max-w-8xl">
           <ul className="flex gap-4">
             {MAIN_NAV_LINKS.map((item) => {
               const isMatchingSegment =

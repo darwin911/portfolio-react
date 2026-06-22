@@ -30,11 +30,11 @@ export default function Home() {
   return (
     <main className="relative flex h-full flex-col items-center justify-center px-4 py-8 sm:px-8 sm:py-20 md:py-24 h-sm:pt-44">
       <Image
-        className="absolute -z-10 size-full object-cover dark:invert max-w-7xl"
+        className="absolute -z-10 size-full object-cover dark:invert max-w-7xl 2xl:max-w-8xl"
         src={BackgroundSVG}
         alt="" // this is a decorative bg image
       />
-      <div className="mb-5 mt-10 w-full max-w-7xl">
+      <div className="mb-5 mt-10 w-full max-w-7xl 2xl:max-w-8xl">
         <Card className="max-w-3xl bg-transparent shadow-none border-none sm:flex sm:flex-col lg:max-w-4xl xl:max-w-6xl xl:p-20">
           <CardHeader className="w-full flex-row">
             <div className="flex w-full flex-row flex-wrap items-center gap-4">
