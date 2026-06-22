@@ -2,7 +2,6 @@ import { Metadata } from "next";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { ExperienceScrollWrapper } from "@/components/experience-scroll-wrapper";
 
 export const metadata: Metadata = {
   title: "Darwin Smith | Senior Software Developer",
@@ -16,11 +15,6 @@ export const metadata: Metadata = {
 };
 
 const S = "font-semibold text-foreground";
-
-// ── Timeline layout knobs ─────────────────────────────────────────────────────
-const CARD_WIDTH = 640; // px — visual width of each experience card
-const CARD_GAP = 80; // px — space between cards
-// ─────────────────────────────────────────────────────────────────────────────
 
 const EXPERIENCE: {
   title: string;
@@ -463,7 +457,7 @@ export default function ResumePage() {
       </p>
 
       <div className="flex flex-col gap-10 lg:flex-row lg:gap-12">
-        <aside className="flex flex-col gap-10 lg:w-64 lg:shrink-0">
+        <aside className="flex flex-col gap-10 lg:w-64 lg:shrink-0 lg:sticky lg:top-24 lg:self-start">
           <section>
             <SectionHeading>Skills &amp; Tools</SectionHeading>
             <div className="flex flex-wrap gap-2">
@@ -510,46 +504,57 @@ export default function ResumePage() {
         <section className="min-w-0 flex-1">
           <SectionHeading>Experience</SectionHeading>
 
-          {/* Desktop: horizontal scrollable timeline */}
-          <div className="hidden lg:block">
-            {/* direction:rtl anchors scrollLeft=0 to the right edge, so most recent card is visible on load.
-                Each card resets to direction:ltr so text and layout are unaffected. */}
-            <ExperienceScrollWrapper step={CARD_WIDTH + CARD_GAP}>
-              <div className="flex min-w-max [direction:rtl]">
-                {EXPERIENCE.map((job) => (
+          {/* Desktop: center-spine alternating vertical timeline */}
+          <div className="relative hidden lg:block">
+            {/* Center spine — vertical rail down the middle */}
+            <div className="absolute inset-y-0 left-1/2 w-px -translate-x-1/2 bg-border" />
+            <div className="flex flex-col gap-12">
+              {EXPERIENCE.map((job, i) => {
+                const cardOnLeft = i % 2 === 0;
+                return (
                   <div
                     key={`${job.company}-${job.period}`}
-                    className="relative shrink-0 snap-center [scroll-snap-stop:always] [direction:ltr]"
-                    style={{
-                      width: CARD_WIDTH + CARD_GAP,
-                      paddingLeft: CARD_GAP / 2,
-                      paddingRight: CARD_GAP / 2,
-                    }}
+                    className="relative grid grid-cols-2 items-start gap-x-12"
                   >
-                    {/* Timeline track segment — inset-x-0 spans the full cell (card + gap) so segments chain */}
-                    <div className="absolute inset-x-0 top-6 h-px bg-border" />
-                    {/* Timeline dot — centered over the card content, offset by the left padding */}
-                    <div
-                      className="absolute top-6 z-10 size-2.5 -translate-x-1/2 -translate-y-1/2 rounded-full bg-indigo-400 ring-2 ring-background"
-                      style={{ left: CARD_GAP / 2 + CARD_WIDTH / 2 }}
-                    />
-                    {/* Timeline label — company + title + period above the dot */}
-                    <div className="mb-2 pt-9 text-center">
-                      <p className="whitespace-nowrap text-xs font-semibold text-foreground">
-                        {job.company}
-                      </p>
-                      <p className="whitespace-nowrap text-xs text-muted-foreground">
-                        {job.title} · {job.period}
-                      </p>
-                    </div>
-                    <JobCard job={job} />
+                    {/* Dot on the spine, aligned with the card header */}
+                    <div className="absolute left-1/2 top-6 z-10 size-3 -translate-x-1/2 -translate-y-1/2 rounded-full bg-indigo-400 ring-4 ring-background" />
+                    {cardOnLeft ? (
+                      <>
+                        <div className="min-w-0">
+                          <JobCard job={job} />
+                        </div>
+                        {/* Period marker on the opposite side, near the spine */}
+                        <div className="pt-5 pl-2">
+                          <p className="text-sm font-semibold text-foreground">
+                            {job.company}
+                          </p>
+                          <p className="text-xs text-muted-foreground">
+                            {job.period}
+                          </p>
+                        </div>
+                      </>
+                    ) : (
+                      <>
+                        <div className="pt-5 pr-2 text-right">
+                          <p className="text-sm font-semibold text-foreground">
+                            {job.company}
+                          </p>
+                          <p className="text-xs text-muted-foreground">
+                            {job.period}
+                          </p>
+                        </div>
+                        <div className="min-w-0">
+                          <JobCard job={job} />
+                        </div>
+                      </>
+                    )}
                   </div>
-                ))}
-              </div>
-            </ExperienceScrollWrapper>
+                );
+              })}
+            </div>
           </div>
 
-          {/* Mobile: vertical stack */}
+          {/* Mobile / tablet: vertical stack */}
           <div className="flex flex-col gap-4 lg:hidden">
             {EXPERIENCE.map((job) => (
               <JobCard key={`${job.company}-${job.period}`} job={job} />
