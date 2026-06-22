@@ -1,16 +1,17 @@
 import { Metadata } from "next";
 import Link from "next/link";
+import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { ExperienceScrollWrapper } from "@/components/experience-scroll-wrapper";
 
 export const metadata: Metadata = {
-  title: "Darwin Smith | Senior Frontend Engineer",
+  title: "Darwin Smith | Senior Software Developer",
   description:
-    "Darwin Smith — Senior Frontend Engineer · React / Next.js / TypeScript",
+    "Darwin Smith — Senior Software Developer · React / Next.js / TypeScript",
   openGraph: {
-    title: "Darwin Smith — Senior Frontend Engineer",
+    title: "Darwin Smith — Senior Software Developer",
     description:
-      "Senior Frontend Engineer with 7 years building React and Next.js applications across startups and scale-ups.",
+      "Senior Software Developer with 7 years building React and Next.js applications across startups and scale-ups.",
   },
 };
 
@@ -383,7 +384,17 @@ export default function ResumePage() {
             Darwin Smith
           </h1>
           <p className="mt-1 text-lg font-medium tracking-tight text-muted-foreground">
-            Senior Full-Stack Engineer · 7 years experience
+            Senior Software Developer · 7 years experience
+          </p>
+          <p className="mt-1 flex items-center gap-1.5 text-sm text-muted-foreground">
+            <svg
+              viewBox="0 0 24 24"
+              className="size-4 shrink-0 fill-current"
+              aria-hidden="true"
+            >
+              <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z" />
+            </svg>
+            Girona, Spain · CET (UTC+1)
           </p>
         </div>
         <div className="flex flex-wrap items-center gap-4">
@@ -423,11 +434,26 @@ export default function ResumePage() {
           >
             Get in touch →
           </Link>
+          <Button asChild size="sm">
+            <a
+              href="/DarwinSmithResume-june-2026.pdf"
+              download="Darwin-Smith-Resume.pdf"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                className="fill-current"
+                aria-hidden="true"
+              >
+                <path d="M12 16l-5-5h3V4h4v7h3l-5 5zm-7 2h14v2H5v-2z" />
+              </svg>
+              Download PDF
+            </a>
+          </Button>
         </div>
       </div>
 
       <p className="mb-10 text-sm leading-relaxed text-muted-foreground sm:text-base">
-        Senior Frontend Engineer with 7 years building production React and
+        Senior Software Developer with 7 years building production React and
         Next.js applications across startups, scale-ups, and product companies.
         I care about the details that often get skipped: accessibility (WCAG),
         semantic HTML, cross-browser and device compatibility, and UIs that hold

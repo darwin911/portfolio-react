@@ -45,7 +45,7 @@ export default function Home() {
                 </CardTitle>
                 <CardDescription className="whitespace-nowrap flex items-center gap-4 justify-between w-full ">
                   <span className="font-medium tracking-tight sm:text-xl md:text-2xl h-md:text-base h-sm:text-sm text-sky-800 dark:text-white">
-                    Senior Full-Stack Engineer
+                    Senior Software Developer
                   </span>
                 </CardDescription>
               </div>
@@ -130,7 +130,7 @@ export default function Home() {
                 <FancyText color="#6563ff">Linear</FancyText>.
               </p>
               <p>
-                I&apos;m currently working as a Senior Software Engineer at{" "}
+                I&apos;m currently working as a Senior Software Developer at{" "}
                 <Link
                   href="https://www.thebigpixel.net/"
                   target="_blank"
