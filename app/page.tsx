@@ -91,9 +91,11 @@ export default function Home() {
             </div>
             <div className="space-y-2 md:space-y-4 lg:space-y-6 rounded text-sm leading-relaxed tracking-tighter sm:text-base md:text-lg h-sm:text-sm lg:text-xl text-cyan-900 dark:text-white">
               <p>
-                I specialize in building scalable, high-performance web
+                I specialize in building accessible, high-performance web
                 applications with clean, maintainable code and exceptional user
-                experiences across diverse tech stacks and environments.
+                experiences. I care about the details that often get skipped —{" "}
+                <FancyText color="#3dcf8e">accessibility (WCAG)</FancyText>,
+                semantic HTML, and cross-browser and device compatibility.
               </p>
               <p>
                 I&apos;m comfortable working across both legacy and modern
@@ -117,17 +119,19 @@ export default function Home() {
                 </li>
               </ul>
               <p>
-                I&apos;m adaptable across technologies including{" "}
-                <FancyText color="#3dcf8e">Postgres (Supabase)</FancyText>,{" "}
-                <FancyText color="#306998">Python</FancyText>,{" "}
-                <FancyText color="#43853d">Node.js (Express)</FancyText>, and
-                have experience with{" "}
-                <FancyText color="#1D63ED">Docker</FancyText>,{" "}
-                <FancyText color="#ff9900">AWS</FancyText> services,{" "}
-                <FancyText color="#181717">Git/GitHub</FancyText>, and project
-                management tools like{" "}
-                <FancyText color="#0052cc">Jira</FancyText> and{" "}
-                <FancyText color="#6563ff">Linear</FancyText>.
+                I&apos;ve shipped across the full stack when the team needed it —{" "}
+                <FancyText color="#306998">Python (FastAPI)</FancyText>,{" "}
+                <FancyText color="#43853d">Node.js (Express)</FancyText>, and{" "}
+                <FancyText color="#512bd4">.NET Core</FancyText>, backed by{" "}
+                <FancyText color="#3dcf8e">Postgres (Supabase)</FancyText> and{" "}
+                <FancyText color="#ff9900">AWS</FancyText>.
+              </p>
+              <p>
+                I&apos;ve led technical direction as a founding engineer, and AI
+                tooling like{" "}
+                <FancyText color="#d97757">Claude Code</FancyText> and{" "}
+                <FancyText color="#000000">Cursor</FancyText> is a core part of
+                how I build and iterate today.
               </p>
               <p>
                 I&apos;m currently working as a Senior Software Developer at{" "}
