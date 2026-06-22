@@ -384,7 +384,7 @@ export default function ResumePage() {
             Darwin Smith
           </h1>
           <p className="mt-1 text-lg font-medium tracking-tight text-muted-foreground">
-            Senior Software Developer · 7 years experience
+            Senior Software Developer
           </p>
           <p className="mt-1 flex items-center gap-1.5 text-sm text-muted-foreground">
             <svg
