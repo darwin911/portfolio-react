@@ -9,7 +9,7 @@ export default function MainNav() {
   const segment = useSelectedLayoutSegment();
 
   return (
-    <header className="relative">
+    <header className="relative mb-16">
       <nav className="fixed z-10 mx-auto w-full overflow-hidden bg-background py-4 shadow-md">
         <div className="container flex items-center justify-between max-w-7xl 2xl:max-w-8xl">
           <ul className="flex gap-4">
