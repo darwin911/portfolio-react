@@ -8,7 +8,6 @@ import {
   CardContent,
   CardDescription,
   CardHeader,
-  CardTitle,
 } from "@/components/ui/card";
 import { GlobeAmericasIcon } from "@heroicons/react/24/solid";
 import { PropsWithChildren } from "react";
@@ -19,7 +18,7 @@ export const dynamic = "force-static";
 function FancyText({ children, color }: PropsWithChildren<{ color: string }>) {
   return (
     <strong
-      className={`hover:text-[${color}] cursor-cell duration-150 hover:animate-pulse`}
+      className={`hover:text-[${color}] cursor-cell duration-150 motion-safe:hover:animate-pulse`}
     >
       {children}
     </strong>
@@ -40,11 +39,11 @@ export default function Home() {
             <div className="flex w-full flex-row flex-wrap items-center gap-4">
               <Avatar />
               <div className="flex flex-col items-start justify-center rounded px-2 py-0">
-                <CardTitle className="text-3xl font-semibold tracking-tighter text-indigo-500 dark:text-indigo-400 dark:drop-shadow-heading-light sm:text-5xl sm:drop-shadow-heading md:text-7xl lg:whitespace-nowrap h-lg:text-4xl h-md:text-3xl h-sm:text-2xl">
+                <h1 className="text-3xl font-semibold leading-none tracking-tight text-indigo-500 dark:text-indigo-400 sm:text-5xl md:text-6xl lg:whitespace-nowrap h-lg:text-4xl h-md:text-3xl h-sm:text-2xl">
                   Darwin Smith
-                </CardTitle>
+                </h1>
                 <CardDescription className="whitespace-nowrap flex items-center gap-4 justify-between w-full ">
-                  <span className="font-medium tracking-tight sm:text-xl md:text-2xl h-md:text-base h-sm:text-sm text-muted-foreground">
+                  <span className="tracking-tight sm:text-xl md:text-2xl h-md:text-base h-sm:text-sm text-foreground">
                     Senior Software Developer
                   </span>
                 </CardDescription>
@@ -53,7 +52,7 @@ export default function Home() {
           </CardHeader>
           <CardContent>
             <div className="mb-3 flex justify-between items-end">
-              <p className="inline-block animate-rainbow-scroll tracking-tighter bg-linear-to-r from-sky-400 via-green-400 to-sky-400 bg-clip-text text-2xl font-bold text-transparent drop-shadow-xs transition-all dark:invert sm:text-3xl lg:text-4xl">
+              <p className="inline-block animate-rainbow-scroll tracking-tight bg-linear-to-r from-indigo-500 via-orange-400 to-indigo-500 bg-clip-text text-2xl font-bold text-transparent drop-shadow-xs transition-all dark:invert sm:text-3xl lg:text-4xl">
                 Hello world!
               </p>
               <div className="flex gap-4">
@@ -61,35 +60,39 @@ export default function Home() {
                   href="https://www.github.com/darwin911"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex flex-col items-center justify-center gap-2"
+                  className="flex flex-col items-center justify-center gap-2 text-muted-foreground"
                 >
                   <Image
                     className="dark:invert"
                     src={GithubDark}
-                    alt="Darwin's Github Account"
-                    width={24}
-                    height={24}
+                    alt=""
+                    width={20}
+                    height={20}
                   />
-                  <small>Github</small>
+                  <small>
+                    Github<span className="sr-only"> (opens in new tab)</span>
+                  </small>
                 </Link>
                 <Link
                   href="https://www.linkedin.com/in/darwinpsmith/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex flex-col items-center justify-center gap-2"
+                  className="flex flex-col items-center justify-center gap-2 text-muted-foreground"
                 >
                   <Image
                     className="grayscale"
                     src={LinkedInIcon}
-                    alt="Darwin's LinkedIn Account"
-                    width={24}
-                    height={24}
+                    alt=""
+                    width={20}
+                    height={20}
                   />
-                  <small>LinkedIn</small>
+                  <small>
+                    LinkedIn<span className="sr-only"> (opens in new tab)</span>
+                  </small>
                 </Link>
               </div>
             </div>
-            <div className="space-y-2 md:space-y-4 lg:space-y-6 rounded text-sm leading-relaxed tracking-tighter sm:text-base md:text-lg h-sm:text-sm lg:text-xl text-muted-foreground">
+            <div className="space-y-2 md:space-y-4 lg:space-y-6 rounded-2xl border border-indigo-500/20 bg-card p-8 text-sm leading-relaxed tracking-tight text-muted-foreground shadow-sm sm:text-base md:text-lg h-sm:text-sm lg:text-xl">
               <p>
                 I specialize in building accessible, high-performance web
                 applications with clean, maintainable code and exceptional user
@@ -119,29 +122,36 @@ export default function Home() {
                 </li>
               </ul>
               <p>
-                I&apos;ve shipped across the full stack when the team needed it —{" "}
-                <FancyText color="#306998">Python (FastAPI)</FancyText>,{" "}
-                <FancyText color="#43853d">Node.js (Express)</FancyText>, and{" "}
-                <FancyText color="#512bd4">.NET Core</FancyText>, backed by{" "}
-                <FancyText color="#3dcf8e">Postgres (Supabase)</FancyText> and{" "}
-                <FancyText color="#ff9900">AWS</FancyText>.
+                I&apos;ve shipped across the full stack when the team needed it
+                — <FancyText color="#306998">Python (FastAPI)</FancyText>{" "}
+                backed by{" "}
+                <FancyText color="#3dcf8e">Postgres (Supabase)</FancyText>,
+                and <FancyText color="#43853d">Node.js (Express)</FancyText> on
+                AWS, with some .NET Core work along the way.
               </p>
               <p>
-                I&apos;ve led technical direction as a founding engineer, and AI
-                tooling like{" "}
-                <FancyText color="#d97757">Claude Code</FancyText> and{" "}
-                <FancyText color="#000000">Cursor</FancyText> is a core part of
-                how I build and iterate today.
+                I&apos;ve led technical direction as a founding engineer. AI
+                tooling like <FancyText color="#d97757">Claude Code</FancyText>{" "}
+                and <FancyText color="#000000">Cursor</FancyText> is a core part
+                of how I build and iterate today.
               </p>
               <p>
-                I&apos;m currently working as a Senior Software Developer at{" "}
+                Most recently, I worked as a Senior Developer at{" "}
                 <Link
                   href="https://www.thebigpixel.net/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-underline text-[#EE7523] hover:text-[#EE7523]/80"
                 >
-                  <strong className="text-2xl">The Big Pixel</strong>
+                  <strong>The Big Pixel</strong>
+                  <span className="sr-only"> (opens in new tab)</span>
+                </Link>
+                . I&apos;m currently open to new opportunities —{" "}
+                <Link
+                  href="/contact"
+                  className="text-underline text-indigo-500 hover:text-indigo-500/80 dark:text-indigo-400"
+                >
+                  let&apos;s talk
                 </Link>
                 .
               </p>

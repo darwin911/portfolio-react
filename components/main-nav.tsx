@@ -2,6 +2,7 @@
 
 import ModeToggle from "@/components/mode-toggle";
 import { MAIN_NAV_LINKS } from "@/components/shared/shared";
+import { cn } from "@/lib/utils";
 import Link from "next/link";
 import { useSelectedLayoutSegment } from "next/navigation";
 
@@ -19,12 +20,15 @@ export default function MainNav() {
                 item.label?.toLowerCase() === segment;
 
               const linkClassName = isMatchingSegment
-                ? "opacity-100 underline underline-offset-2"
-                : "opacity-80";
+                ? "underline underline-offset-2"
+                : "text-muted-foreground";
 
               return (
                 <li key={item.href}>
-                  <Link href={item.href} className={linkClassName}>
+                  <Link
+                    href={item.href}
+                    className={cn("font-medium", linkClassName)}
+                  >
                     {item.label}
                   </Link>
                 </li>

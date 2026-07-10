@@ -6,11 +6,11 @@ export default function Avatar() {
     <Image
       src={ProfilePic}
       alt="Darwin Smith headshot"
-      className="size-20 rounded-full border-2 border-emerald-500 dark:border-emerald-300 object-cover shadow-xs sm:size-28 h-sm:size-16"
-      width={112}
-      height={112}
+      className="size-20 rounded-full border-2 border-indigo-500 dark:border-indigo-300 object-cover sm:size-24 h-sm:size-16"
+      width={100}
+      height={100}
       placeholder="blur"
-      sizes="(max-width: 640px) 80px, (max-width: 768px) 112px, 112px"
+      sizes="(max-width: 640px) 80px, 96px"
     />
   );
 }

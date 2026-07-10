@@ -29,7 +29,7 @@ export default function ProjectCard({
         "relative w-96 min-w-full snap-center overflow-hidden rounded-xl border transition-all duration-200  md:w-[512px] lg:w-[1024px]",
         isCurrent
           ? "animate-in zoom-in-75"
-          : "rotate-12 scale-75 opacity-0 zoom-in-90"
+          : "rotate-12 scale-75 opacity-0 zoom-in-90",
       )}
     >
       <Image
@@ -40,8 +40,8 @@ export default function ProjectCard({
       />
       <div className="max-w-full shrink p-4 lg:p-8">
         <div className="flex w-full flex-wrap items-center justify-between">
-          <h2 className="mb-4 text-2xl font-bold tracking-tighter">{title}</h2>
-          <div className="flex items-center gap-4 tracking-tighter text-muted-foreground">
+          <h2 className="mb-4 text-2xl font-bold tracking-tight">{title}</h2>
+          <div className="flex items-center gap-4 tracking-tight text-muted-foreground">
             <Link
               href={href}
               target="_blank"

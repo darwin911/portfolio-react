@@ -33,7 +33,7 @@ const EXPERIENCE: {
     companyHref: "https://www.thebigpixel.net/",
     remote: true,
     location: "USA",
-    period: "Jan 2025 – Present",
+    period: "Jan 2025 – Jul 2026",
     bullets: [
       <>
         Led a{" "}
@@ -391,7 +391,7 @@ export default function ResumePage() {
     <main className="mx-auto w-full max-w-7xl 2xl:max-w-8xl px-4 pb-16 pt-24 sm:px-8">
       <div className="mb-8 flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
         <div>
-          <h1 className="text-4xl font-semibold tracking-tighter text-indigo-500 dark:text-indigo-400 sm:text-5xl">
+          <h1 className="text-4xl font-semibold tracking-tight text-indigo-500 dark:text-indigo-400 sm:text-5xl">
             Darwin Smith
           </h1>
           <p className="mt-1 text-lg font-medium tracking-tight text-muted-foreground">
