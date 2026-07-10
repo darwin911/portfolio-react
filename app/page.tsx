@@ -40,11 +40,11 @@ export default function Home() {
             <div className="flex w-full flex-row flex-wrap items-center gap-4">
               <Avatar />
               <div className="flex flex-col items-start justify-center rounded px-2 py-0">
-                <CardTitle className="text-3xl font-semibold tracking-tighter text-emerald-500 dark:text-emerald-300 dark:drop-shadow-heading-light sm:text-5xl sm:drop-shadow-heading md:text-7xl lg:whitespace-nowrap h-lg:text-4xl h-md:text-3xl h-sm:text-2xl">
+                <CardTitle className="text-3xl font-semibold tracking-tighter text-indigo-500 dark:text-indigo-400 dark:drop-shadow-heading-light sm:text-5xl sm:drop-shadow-heading md:text-7xl lg:whitespace-nowrap h-lg:text-4xl h-md:text-3xl h-sm:text-2xl">
                   Darwin Smith
                 </CardTitle>
                 <CardDescription className="whitespace-nowrap flex items-center gap-4 justify-between w-full ">
-                  <span className="font-medium tracking-tight sm:text-xl md:text-2xl h-md:text-base h-sm:text-sm text-sky-800 dark:text-white">
+                  <span className="font-medium tracking-tight sm:text-xl md:text-2xl h-md:text-base h-sm:text-sm text-muted-foreground">
                     Senior Software Developer
                   </span>
                 </CardDescription>
@@ -89,7 +89,7 @@ export default function Home() {
                 </Link>
               </div>
             </div>
-            <div className="space-y-2 md:space-y-4 lg:space-y-6 rounded text-sm leading-relaxed tracking-tighter sm:text-base md:text-lg h-sm:text-sm lg:text-xl text-cyan-900 dark:text-white">
+            <div className="space-y-2 md:space-y-4 lg:space-y-6 rounded text-sm leading-relaxed tracking-tighter sm:text-base md:text-lg h-sm:text-sm lg:text-xl text-muted-foreground">
               <p>
                 I specialize in building accessible, high-performance web
                 applications with clean, maintainable code and exceptional user
